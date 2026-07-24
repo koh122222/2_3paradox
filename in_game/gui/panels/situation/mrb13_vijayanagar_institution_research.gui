@@ -1,0 +1,139 @@
+types Mrb13VijayanagarInstitutionResearchTypes {
+	type mrb13_asia_stage_threshold_icon = widget {
+		ignore_layout = yes
+		block "mrb13_asia_stage_threshold_icon_position" { position = { 87 4 } }
+		size = { 34 38 }
+		icon = {
+			parentanchor = center
+			size = { 34 34 }
+			block "mrb13_asia_stage_threshold_texture" { texture = "gfx/interface/progressbars/yellow_circle_bg.dds" }
+			text_single = {
+				margin_left = 1
+				maximumsize = { 26 18 }
+				autoresize = yes
+				parentanchor = center
+				fontsize = 13
+				block "mrb13_asia_stage_threshold_text" {}
+			}
+		}
+	}
+}
+
+situation_panel = {
+	blockoverride "situation_top_subheader_content" {
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			background = { texture = "gfx/interface/progressbars/tension_header_bg.dds" }
+			hbox = {
+				using = bg_cabinet_card_frame
+				margin = { 4 4 }
+				using = situation_disaster_progressbar_with_thresholds
+				blockoverride "progressbar_with_thresholds_size" { size = { 420 10 } }
+				blockoverride "progress_bar_min_max" { min = 0 max = 100 }
+				blockoverride "progress_bar_progresstexture_low" { progresstexture = "gfx/interface/progressbars/progress_bar_yellow.dds" }
+				blockoverride "progress_bar_value_low" { value = "[Min_float(FixedPointToFloat(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb13_asia_research_overall_progress').GetValue), '(float)100')]" }
+				blockoverride "progress_bar_size_mid" { size = { 0 0 } }
+				blockoverride "progress_bar_size_high" { size = { 0 0 } }
+			}
+			expand = {}
+		}
+		mrb13_asia_stage_threshold_icon = { blockoverride "mrb13_asia_stage_threshold_icon_position" { position = { 87 4 } } enabled = "[GreaterThanOrEqualTo_CFixedPoint(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb13_asia_research_overall_progress').GetValue, '(CFixedPoint)20')]" blockoverride "mrb13_asia_stage_threshold_text" { text = "mrb13_asia_research_marker_1" } }
+		mrb13_asia_stage_threshold_icon = { blockoverride "mrb13_asia_stage_threshold_icon_position" { position = { 171 4 } } enabled = "[GreaterThanOrEqualTo_CFixedPoint(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb13_asia_research_overall_progress').GetValue, '(CFixedPoint)40')]" blockoverride "mrb13_asia_stage_threshold_text" { text = "mrb13_asia_research_marker_2" } }
+		mrb13_asia_stage_threshold_icon = { blockoverride "mrb13_asia_stage_threshold_icon_position" { position = { 255 4 } } enabled = "[GreaterThanOrEqualTo_CFixedPoint(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb13_asia_research_overall_progress').GetValue, '(CFixedPoint)60')]" blockoverride "mrb13_asia_stage_threshold_text" { text = "mrb13_asia_research_marker_3" } }
+		mrb13_asia_stage_threshold_icon = { blockoverride "mrb13_asia_stage_threshold_icon_position" { position = { 339 4 } } enabled = "[GreaterThanOrEqualTo_CFixedPoint(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb13_asia_research_overall_progress').GetValue, '(CFixedPoint)80')]" blockoverride "mrb13_asia_stage_threshold_text" { text = "mrb13_asia_research_marker_4" } }
+		mrb13_asia_stage_threshold_icon = { blockoverride "mrb13_asia_stage_threshold_icon_position" { position = { 423 4 } } enabled = "[GreaterThanOrEqualTo_CFixedPoint(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb13_asia_research_overall_progress').GetValue, '(CFixedPoint)100')]" blockoverride "mrb13_asia_stage_threshold_texture" { texture = "gfx/interface/progressbars/orange_circle_bg.dds" } blockoverride "mrb13_asia_stage_threshold_text" { text = "mrb13_asia_research_marker_5" } }
+	}
+
+	blockoverride "situation_panel_image" {
+		using = one_country_header_template
+		blockoverride "one_country_header_background" {
+			background = {
+				texture = "gfx/interface/illustrations/situation/mrb13_vijayanagar_institution_research.dds"
+				modify_texture = {
+					texture = "gfx/interface/component_masks/mask_fade_horizontal_middle.dds"
+					texture_density = 2
+					spriteType = stretched
+					spriteborder = { 250 250 }
+					blend_mode = alphamultiply
+					alpha = 0.25
+				}
+			}
+		}
+		blockoverride "CountryContext" { datacontext = "[SituationView.GetPlayer]" }
+		blockoverride "character_religion_visibility" { visible = no }
+	}
+
+	blockoverride "situation_subheader_content" {}
+
+	blockoverride "situation_panel_main_content" {
+		vbox = {
+			layoutpolicy_horizontal = expanding
+			spacing = 8
+			widget = {
+				layoutpolicy_horizontal = expanding
+					size = { 510 132 }
+				using = bg_dark_paper_card
+				using = bg_cabinet_card_frame
+					text_multi = { margin = { 12 8 } size = { 486 116 } fontsize = 21 autoresize = no multiline = yes text = "mrb13_asia_research_overview" }
+			}
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				using = bg_dark_paper_card
+				using = bg_cabinet_card_frame
+				widget = { layoutpolicy_horizontal = expanding size = { 510 34 } using = bg_card_header_01_military text_single = { margin = { 10 7 } text = "mrb13_asia_research_current_stage" } }
+				vbox = {
+					margin = { 12 8 }
+					text_single = { visible = "[EqualTo_float(FixedPointToFloat(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb13_asia_research_phase').GetValue), '(float)1')]" text = "mrb13_asia_research_stage_1" }
+					text_single = { visible = "[EqualTo_float(FixedPointToFloat(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb13_asia_research_phase').GetValue), '(float)2')]" text = "mrb13_asia_research_stage_2" }
+					text_single = { visible = "[EqualTo_float(FixedPointToFloat(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb13_asia_research_phase').GetValue), '(float)3')]" text = "mrb13_asia_research_stage_3" }
+					text_single = { visible = "[EqualTo_float(FixedPointToFloat(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb13_asia_research_phase').GetValue), '(float)4')]" text = "mrb13_asia_research_stage_4" }
+					text_single = { visible = "[EqualTo_float(FixedPointToFloat(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb13_asia_research_phase').GetValue), '(float)5')]" text = "mrb13_asia_research_stage_5" }
+					text_single = { visible = "[EqualTo_float(FixedPointToFloat(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb13_asia_research_phase').GetValue), '(float)6')]" text = "mrb13_asia_research_stage_6" }
+					hbox = {
+						spacing = 4
+						text_single = { text = "mrb13_asia_research_progress" }
+						text_single = { text = "[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb13_asia_research_progress').GetValue|0]" }
+						text_single = { text = "/" }
+						text_single = { text = "[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb13_asia_research_required').GetValue|0]" }
+						text_single = { text = "mrb13_asia_research_months" }
+					}
+				}
+			}
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				using = bg_dark_paper_card
+				using = bg_cabinet_card_frame
+				widget = { layoutpolicy_horizontal = expanding size = { 510 34 } using = bg_card_header_01_military text_single = { margin = { 10 7 } text = "mrb13_asia_research_sacrifices" } }
+				vbox = {
+					margin = { 12 8 }
+					spacing = 4
+					hbox = {
+						layoutpolicy_horizontal = expanding
+						spacing = 4
+						button_regular = { size = { 239 28 } visible = "[Not(GreaterThan_CFixedPoint(SituationView.GetPlayer.MakeScope.GetVariable('mrb13_asia_research_population_sacrifice').GetValue, '(CFixedPoint)0'))]" enabled = "[EqualTo_CFixedPoint(SituationView.GetPlayer.MakeScope.GetVariable('mrb13_asia_research_population_sacrifice_cooldown').GetValue, '(CFixedPoint)0')]" text = "mrb13_asia_research_toggle_population" action_tooltip = { on_action = "[GetScriptedGui('mrb13_asia_research_toggle_population').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]" } tooltipwidget = { ContextualTooltipType = { blockoverride "title_text" { text = "mrb13_asia_research_toggle_population" } blockoverride "tooltip_content" { text_multi = { margin = { 15 0 } autoresize = yes multiline = yes text = "mrb13_asia_research_speed_population" } TooltipRowList = { blockoverride "block_title" { text = "mrb13_asia_research_sacrifice_effects" } textcontext = "[GetModifier('mrb13_asia_research_population_sacrifice_tooltip').GetDesc]" } } } } }
+						button_regular_green = { size = { 239 28 } visible = "[GreaterThan_CFixedPoint(SituationView.GetPlayer.MakeScope.GetVariable('mrb13_asia_research_population_sacrifice').GetValue, '(CFixedPoint)0')]" enabled = "[EqualTo_CFixedPoint(SituationView.GetPlayer.MakeScope.GetVariable('mrb13_asia_research_population_sacrifice_cooldown').GetValue, '(CFixedPoint)0')]" text = "mrb13_asia_research_toggle_population" action_tooltip = { on_action = "[GetScriptedGui('mrb13_asia_research_toggle_population').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]" } tooltipwidget = { ContextualTooltipType = { blockoverride "title_text" { text = "mrb13_asia_research_toggle_population" } blockoverride "tooltip_content" { text_multi = { margin = { 15 0 } autoresize = yes multiline = yes text = "mrb13_asia_research_speed_population" } TooltipRowList = { blockoverride "block_title" { text = "mrb13_asia_research_sacrifice_effects" } textcontext = "[GetModifier('mrb13_asia_research_population_sacrifice_tooltip').GetDesc]" } } } } }
+						button_regular = { size = { 239 28 } visible = "[Not(GreaterThan_CFixedPoint(SituationView.GetPlayer.MakeScope.GetVariable('mrb13_asia_research_science_sacrifice').GetValue, '(CFixedPoint)0'))]" enabled = "[EqualTo_CFixedPoint(SituationView.GetPlayer.MakeScope.GetVariable('mrb13_asia_research_science_sacrifice_cooldown').GetValue, '(CFixedPoint)0')]" text = "mrb13_asia_research_toggle_science" action_tooltip = { on_action = "[GetScriptedGui('mrb13_asia_research_toggle_science').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]" } tooltipwidget = { ContextualTooltipType = { blockoverride "title_text" { text = "mrb13_asia_research_toggle_science" } blockoverride "tooltip_content" { text_multi = { margin = { 15 0 } autoresize = yes multiline = yes text = "mrb13_asia_research_speed_standard" } TooltipRowList = { blockoverride "block_title" { text = "mrb13_asia_research_sacrifice_effects" } textcontext = "[GetModifier('mrb13_asia_research_science_sacrifice_tooltip').GetDesc]" } } } } }
+						button_regular_green = { size = { 239 28 } visible = "[GreaterThan_CFixedPoint(SituationView.GetPlayer.MakeScope.GetVariable('mrb13_asia_research_science_sacrifice').GetValue, '(CFixedPoint)0')]" enabled = "[EqualTo_CFixedPoint(SituationView.GetPlayer.MakeScope.GetVariable('mrb13_asia_research_science_sacrifice_cooldown').GetValue, '(CFixedPoint)0')]" text = "mrb13_asia_research_toggle_science" action_tooltip = { on_action = "[GetScriptedGui('mrb13_asia_research_toggle_science').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]" } tooltipwidget = { ContextualTooltipType = { blockoverride "title_text" { text = "mrb13_asia_research_toggle_science" } blockoverride "tooltip_content" { text_multi = { margin = { 15 0 } autoresize = yes multiline = yes text = "mrb13_asia_research_speed_standard" } TooltipRowList = { blockoverride "block_title" { text = "mrb13_asia_research_sacrifice_effects" } textcontext = "[GetModifier('mrb13_asia_research_science_sacrifice_tooltip').GetDesc]" } } } } }
+					}
+					hbox = {
+						layoutpolicy_horizontal = expanding
+						spacing = 4
+							button_regular = { size = { 239 28 } visible = "[Not(GreaterThan_CFixedPoint(SituationView.GetPlayer.MakeScope.GetVariable('mrb13_asia_research_diplomacy_sacrifice').GetValue, '(CFixedPoint)0'))]" enabled = "[EqualTo_CFixedPoint(SituationView.GetPlayer.MakeScope.GetVariable('mrb13_asia_research_diplomacy_sacrifice_cooldown').GetValue, '(CFixedPoint)0')]" text = "mrb13_asia_research_toggle_diplomacy" action_tooltip = { on_action = "[GetScriptedGui('mrb13_asia_research_toggle_diplomacy').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]" } tooltipwidget = { ContextualTooltipType = { blockoverride "title_text" { text = "mrb13_asia_research_toggle_diplomacy" } blockoverride "tooltip_content" { text_multi = { margin = { 15 0 } autoresize = yes multiline = yes text = "mrb13_asia_research_speed_standard" } TooltipRowList = { blockoverride "block_title" { text = "mrb13_asia_research_sacrifice_effects" } textcontext = "[GetModifier('mrb13_asia_research_diplomacy_sacrifice_tooltip').GetDesc]" } } } } }
+							button_regular_green = { size = { 239 28 } visible = "[GreaterThan_CFixedPoint(SituationView.GetPlayer.MakeScope.GetVariable('mrb13_asia_research_diplomacy_sacrifice').GetValue, '(CFixedPoint)0')]" enabled = "[EqualTo_CFixedPoint(SituationView.GetPlayer.MakeScope.GetVariable('mrb13_asia_research_diplomacy_sacrifice_cooldown').GetValue, '(CFixedPoint)0')]" text = "mrb13_asia_research_toggle_diplomacy" action_tooltip = { on_action = "[GetScriptedGui('mrb13_asia_research_toggle_diplomacy').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]" } tooltipwidget = { ContextualTooltipType = { blockoverride "title_text" { text = "mrb13_asia_research_toggle_diplomacy" } blockoverride "tooltip_content" { text_multi = { margin = { 15 0 } autoresize = yes multiline = yes text = "mrb13_asia_research_speed_standard" } TooltipRowList = { blockoverride "block_title" { text = "mrb13_asia_research_sacrifice_effects" } textcontext = "[GetModifier('mrb13_asia_research_diplomacy_sacrifice_tooltip').GetDesc]" } } } } }
+							button_regular = { size = { 239 28 } visible = "[Not(GreaterThan_CFixedPoint(SituationView.GetPlayer.MakeScope.GetVariable('mrb13_asia_research_integration_sacrifice').GetValue, '(CFixedPoint)0'))]" enabled = "[EqualTo_CFixedPoint(SituationView.GetPlayer.MakeScope.GetVariable('mrb13_asia_research_integration_sacrifice_cooldown').GetValue, '(CFixedPoint)0')]" text = "mrb13_asia_research_toggle_integration" action_tooltip = { on_action = "[GetScriptedGui('mrb13_asia_research_toggle_integration').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]" } tooltipwidget = { ContextualTooltipType = { blockoverride "title_text" { text = "mrb13_asia_research_toggle_integration" } blockoverride "tooltip_content" { text_multi = { margin = { 15 0 } autoresize = yes multiline = yes text = "mrb13_asia_research_speed_standard" } TooltipRowList = { blockoverride "block_title" { text = "mrb13_asia_research_sacrifice_effects" } textcontext = "[GetModifier('mrb13_asia_research_integration_sacrifice_tooltip').GetDesc]" } } } } }
+							button_regular_green = { size = { 239 28 } visible = "[GreaterThan_CFixedPoint(SituationView.GetPlayer.MakeScope.GetVariable('mrb13_asia_research_integration_sacrifice').GetValue, '(CFixedPoint)0')]" enabled = "[EqualTo_CFixedPoint(SituationView.GetPlayer.MakeScope.GetVariable('mrb13_asia_research_integration_sacrifice_cooldown').GetValue, '(CFixedPoint)0')]" text = "mrb13_asia_research_toggle_integration" action_tooltip = { on_action = "[GetScriptedGui('mrb13_asia_research_toggle_integration').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]" } tooltipwidget = { ContextualTooltipType = { blockoverride "title_text" { text = "mrb13_asia_research_toggle_integration" } blockoverride "tooltip_content" { text_multi = { margin = { 15 0 } autoresize = yes multiline = yes text = "mrb13_asia_research_speed_standard" } TooltipRowList = { blockoverride "block_title" { text = "mrb13_asia_research_sacrifice_effects" } textcontext = "[GetModifier('mrb13_asia_research_integration_sacrifice_tooltip').GetDesc]" } } } } }
+					}
+						button_regular = { layoutpolicy_horizontal = expanding size = { -1 28 } visible = "[Not(GreaterThan_CFixedPoint(SituationView.GetPlayer.MakeScope.GetVariable('mrb13_asia_research_culture_sacrifice').GetValue, '(CFixedPoint)0'))]" enabled = "[EqualTo_CFixedPoint(SituationView.GetPlayer.MakeScope.GetVariable('mrb13_asia_research_culture_sacrifice_cooldown').GetValue, '(CFixedPoint)0')]" text = "mrb13_asia_research_toggle_culture" action_tooltip = { on_action = "[GetScriptedGui('mrb13_asia_research_toggle_culture').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]" } tooltipwidget = { ContextualTooltipType = { blockoverride "title_text" { text = "mrb13_asia_research_toggle_culture" } blockoverride "tooltip_content" { text_multi = { margin = { 15 0 } autoresize = yes multiline = yes text = "mrb13_asia_research_speed_standard" } TooltipRowList = { blockoverride "block_title" { text = "mrb13_asia_research_sacrifice_effects" } textcontext = "[GetModifier('mrb13_asia_research_culture_sacrifice_tooltip').GetDesc]" } } } } }
+						button_regular_green = { layoutpolicy_horizontal = expanding size = { -1 28 } visible = "[GreaterThan_CFixedPoint(SituationView.GetPlayer.MakeScope.GetVariable('mrb13_asia_research_culture_sacrifice').GetValue, '(CFixedPoint)0')]" enabled = "[EqualTo_CFixedPoint(SituationView.GetPlayer.MakeScope.GetVariable('mrb13_asia_research_culture_sacrifice_cooldown').GetValue, '(CFixedPoint)0')]" text = "mrb13_asia_research_toggle_culture" action_tooltip = { on_action = "[GetScriptedGui('mrb13_asia_research_toggle_culture').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]" } tooltipwidget = { ContextualTooltipType = { blockoverride "title_text" { text = "mrb13_asia_research_toggle_culture" } blockoverride "tooltip_content" { text_multi = { margin = { 15 0 } autoresize = yes multiline = yes text = "mrb13_asia_research_speed_standard" } TooltipRowList = { blockoverride "block_title" { text = "mrb13_asia_research_sacrifice_effects" } textcontext = "[GetModifier('mrb13_asia_research_culture_sacrifice_tooltip').GetDesc]" } } } } }
+				}
+			}
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				using = bg_dark_paper_card
+				using = bg_cabinet_card_frame
+				widget = { layoutpolicy_horizontal = expanding size = { 510 34 } using = bg_card_header_01_military text_single = { margin = { 10 7 } text = "mrb13_asia_research_testing" } }
+				button_regular = { margin = { 12 8 } layoutpolicy_horizontal = expanding size = { -1 28 } text = "mrb13_asia_research_test_advance_stage" action_tooltip = { on_action = "[GetScriptedGui('mrb13_asia_research_test_advance_stage').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]" } tooltipwidget = { ContextualTooltipType = { blockoverride "title_text" { text = "mrb13_asia_research_test_advance_stage" } blockoverride "tooltip_content" { text_multi = { margin = { 15 0 } autoresize = yes multiline = yes text = "mrb13_asia_research_test_advance_stage_desc" } } } } }
+			}
+		}
+	}
+}

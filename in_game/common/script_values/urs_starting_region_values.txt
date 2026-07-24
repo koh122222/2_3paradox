@@ -1,0 +1,6 @@
+urs_total_population_with_subjects = {
+	add = total_population
+	every_subject_or_below = {
+		add = total_population
+	}
+}

@@ -1,0 +1,33 @@
+mrb13_low_legitimacy_crown_control_penalty = {
+	potential_trigger = {
+		uses_government_power = legitimacy
+	}
+	limit = {
+		legitimacy < 50
+	}
+	scales_with = {
+		value = legitimacy
+		multiply = -0.02
+		add = 1
+	}
+
+	crown_power_from_population = -0.5
+	global_max_control = -0.2
+}
+
+mrb13_low_republican_tradition_crown_control_penalty = {
+	potential_trigger = {
+		uses_government_power = republican_tradition
+	}
+	limit = {
+		republican_tradition < 50
+	}
+	scales_with = {
+		value = republican_tradition
+		multiply = -0.02
+		add = 1
+	}
+
+	crown_power_from_population = -0.5
+	global_max_control = -0.2
+}

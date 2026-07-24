@@ -1,0 +1,14 @@
+on_game_start = {
+	on_actions = { mrb13_poland_integrate_starting_vassals }
+}
+
+mrb13_poland_integrate_starting_vassals = {
+	effect = {
+		if = {
+			limit = { country_exists = c:POL }
+			c:POL = {
+				trigger_event_non_silently = mrb13_poland.1
+			}
+		}
+	}
+}

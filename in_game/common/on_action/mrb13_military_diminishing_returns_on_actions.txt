@@ -1,0 +1,14 @@
+monthly_country_pulse = {
+	on_actions = {
+		mrb13_military_diminishing_returns_pulse
+	}
+}
+
+mrb13_military_diminishing_returns_pulse = {
+	trigger = {
+		is_human = yes
+	}
+	events = {
+		mrb13_military.1
+	}
+}

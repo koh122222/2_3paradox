@@ -1,0 +1,341 @@
+types Mrb2PersianRestorationTypes {
+	type mrb2_persia_stage_threshold_icon = widget {
+		ignore_layout = yes
+		block "mrb2_persia_stage_threshold_icon_position" { position = { 276 4 } }
+		size = { 34 38 }
+
+		icon = {
+			parentanchor = center
+			size = { 34 34 }
+			block "mrb2_persia_stage_threshold_texture" {
+				texture = "gfx/interface/progressbars/yellow_circle_bg.dds"
+			}
+			text_single = {
+				margin_left = 1
+				maximumsize = { 26 18 }
+				autoresize = yes
+				parentanchor = center
+				fontsize = 13
+				block "mrb2_persia_stage_threshold_text" {}
+			}
+		}
+	}
+}
+
+situation_panel = {
+
+	##################################### TOP HEADER #####################################
+
+	blockoverride "situation_top_subheader_content" {
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			background = {
+				texture = "gfx/interface/progressbars/tension_header_bg.dds"
+			}
+
+			hbox = {
+				size = { 90 28 }
+				margin = { 6 5 }
+				icon = {
+					size = { 26 26 }
+					texture = "gfx/interface/icons/situations/mrb2_persian_restoration_icon.dds"
+				}
+				text_single = {
+					autoresize = yes
+					minimumsize = { 52 -1 }
+					maximumsize = { 52 -1 }
+					fontsize = 13
+					text = "mrb2_persian_restoration_stage_progress"
+				}
+			}
+
+			hbox = {
+				using = bg_cabinet_card_frame
+				margin = { 4 4 }
+				using = situation_disaster_progressbar_with_thresholds
+				blockoverride "progressbar_with_thresholds_size" {
+					size = { 420 10 }
+				}
+				blockoverride "progress_bar_min_max" {
+					min = 0
+					max = 50
+				}
+				blockoverride "progress_bar_progresstexture_low" {
+					progresstexture = "gfx/interface/progressbars/progress_bar_yellow.dds"
+				}
+				blockoverride "progress_bar_value_low" {
+					value = "[Min_float(FixedPointToFloat(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb2_persia_progress').GetValue), '(float)50')]"
+				}
+				blockoverride "progress_bar_size_mid" {
+					position = { 50% 0 }
+					size = { 50% 100% }
+				}
+				blockoverride "progress_bar_progresstexture_mid" {
+					progresstexture = "gfx/interface/progressbars/progress_bar_orange.dds"
+				}
+				blockoverride "progress_bar_value_mid" {
+					value = "[Max_float(Subtract_float(FixedPointToFloat(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb2_persia_progress').GetValue), '(float)50'), '(float)0')]"
+				}
+				blockoverride "progress_bar_size_high" {
+					size = { 0 0 }
+				}
+				blockoverride "progress_bar_value_high" {
+					value = 0
+				}
+			}
+
+			expand = {}
+		}
+
+		mrb2_persia_stage_threshold_icon = {
+			blockoverride "mrb2_persia_stage_threshold_icon_position" { position = { 276 4 } }
+			enabled = "[GreaterThanOrEqualTo_CFixedPoint(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb2_persia_progress').GetValue, '(CFixedPoint)50')]"
+			blockoverride "mrb2_persia_stage_threshold_text" { text = "mrb2_persia_stage_1_marker" }
+			tooltipwidget = {
+				ContextualTooltipType = {
+					blockoverride "title_icon" {
+						icon = {
+							using = tooltip_title_icon_size
+							texture = "gfx/interface/icons/situations/mrb2_persian_restoration_icon.dds"
+						}
+					}
+					blockoverride "title_text" {
+						text = "mrb2_persia_stage_1"
+					}
+					blockoverride "tooltip_content" {
+						text_multi = {
+							margin = { 15 0 }
+							layoutpolicy_horizontal = expanding
+							max_width = 500
+							autoresize = yes
+							multiline = yes
+							text = "mrb2_persia_stage_1_desc"
+						}
+						TooltipRowList = {
+							blockoverride "block_title" {
+								text = "mrb2_persia_stage_effects"
+							}
+							textcontext = "[GetModifier('mrb2_unification_of_persia_modifier').GetDesc]"
+						}
+						hbox = {
+							layoutpolicy_horizontal = expanding
+							spacing = 8
+							margin = { 15 2 }
+
+							icon = {
+								size = { 22 22 }
+								texture = "gfx/interface/icons/diplomatic_status/war.dds"
+							}
+
+							text_multi = {
+								layoutpolicy_horizontal = expanding
+								autoresize = yes
+								multiline = yes
+								max_width = 430
+								text = "mrb2_persia_stage_1_cb_effect"
+							}
+						}
+					}
+				}
+			}
+		}
+		mrb2_persia_stage_threshold_icon = {
+			blockoverride "mrb2_persia_stage_threshold_icon_position" { position = { 502 4 } }
+			enabled = "[GreaterThanOrEqualTo_CFixedPoint(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb2_persia_progress').GetValue, '(CFixedPoint)100')]"
+			blockoverride "mrb2_persia_stage_threshold_texture" { texture = "gfx/interface/progressbars/orange_circle_bg.dds" }
+			blockoverride "mrb2_persia_stage_threshold_text" { text = "mrb2_persia_stage_2_marker" }
+			tooltipwidget = {
+				ContextualTooltipType = {
+					blockoverride "title_icon" {
+						icon = {
+							using = tooltip_title_icon_size
+							texture = "gfx/interface/icons/situations/mrb2_persian_restoration_icon.dds"
+						}
+					}
+					blockoverride "title_text" {
+						text = "mrb2_persia_stage_2"
+					}
+					blockoverride "tooltip_content" {
+						text_multi = {
+							margin = { 15 0 }
+							layoutpolicy_horizontal = expanding
+							max_width = 500
+							autoresize = yes
+							multiline = yes
+							text = "mrb2_persia_stage_2_desc"
+						}
+						TooltipRowList = {
+							blockoverride "block_title" {
+								text = "mrb2_persia_stage_effects"
+							}
+							textcontext = "[GetModifier('mrb2_restoration_of_persia_modifier').GetDesc]"
+						}
+					}
+				}
+			}
+		}
+	}
+
+	##################################### MAIN IMAGE #####################################
+
+	blockoverride "situation_panel_image" {
+		using = one_country_header_template
+
+		blockoverride "CountryContext" {
+			datacontext = "[SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb2_persia_country').GetCountry]"
+		}
+
+		blockoverride "character_portrait_anchor" {
+			parentanchor = bottom|left
+		}
+
+		blockoverride "character_religion_visibility" {
+			visible = no
+		}
+
+		blockoverride "character_name_maximumsize" {
+			maximumsize = { 270 -1 }
+		}
+
+		blockoverride "country_header_extra" {
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				margin = { 10 10 }
+				spacing = 8
+
+				expand = {}
+			}
+		}
+	}
+
+	##################################### SUBHEADER #####################################
+
+	blockoverride "situation_subheader_content" {}
+
+	##################################### MAIN CONTENT #####################################
+
+	blockoverride "situation_panel_main_content" {
+		vbox = {
+			layoutpolicy_horizontal = expanding
+			spacing = 10
+
+			widget = {
+				layoutpolicy_horizontal = expanding
+				size = { 510 120 }
+				using = bg_dark_paper_card
+				using = bg_cabinet_card_frame
+
+				text_multi = {
+					margin = { 12 10 }
+					autoresize = no
+					multiline = yes
+					size = { 486 96 }
+					text = "mrb2_persian_restoration_overview"
+				}
+			}
+
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				size = { 510 215 }
+				using = bg_dark_paper_card
+				using = bg_cabinet_card_frame
+
+				widget = {
+					layoutpolicy_horizontal = expanding
+					size = { 510 40 }
+					using = bg_card_header_01_military
+
+					hbox = {
+						layoutpolicy_horizontal = expanding
+						spacing = 4
+						margin = { 10 0 }
+
+						expand = {}
+
+						icon = {
+							size = { 25 25 }
+							texture = "gfx/interface/icons/situations/mrb2_persian_restoration_icon.dds"
+							texture_density = 2
+						}
+
+						text_single = {
+							text = "mrb2_persian_restoration_current_stage"
+						}
+
+						expand = {}
+					}
+				}
+
+				vbox = {
+					margin = { 12 10 }
+					spacing = 8
+					layoutpolicy_horizontal = expanding
+
+					text_single = {
+						layoutpolicy_horizontal = expanding
+						align = center|nobaseline
+						visible = "[EqualTo_float( FixedPointToFloat(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb2_persia_phase').GetValue), '(float)1.0')]"
+						text = "mrb2_persia_stage_1"
+					}
+
+					text_single = {
+						layoutpolicy_horizontal = expanding
+						align = center|nobaseline
+						visible = "[EqualTo_float( FixedPointToFloat(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb2_persia_phase').GetValue), '(float)2.0')]"
+						text = "mrb2_persia_stage_2"
+					}
+
+					divider_flavor_03 = { size = { -1 8 } }
+
+					TooltipRowList = {
+						visible = "[EqualTo_float( FixedPointToFloat(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb2_persia_phase').GetValue), '(float)1.0')]"
+						blockoverride "block_title" {
+							text = "mrb2_persia_stage_effects"
+						}
+						textcontext = "[GetModifier('mrb2_unification_of_persia_modifier').GetDesc]"
+					}
+
+					TooltipRowList = {
+						visible = "[EqualTo_float( FixedPointToFloat(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb2_persia_phase').GetValue), '(float)2.0')]"
+						blockoverride "block_title" {
+							text = "mrb2_persia_stage_effects"
+						}
+						textcontext = "[GetModifier('mrb2_restoration_of_persia_modifier').GetDesc]"
+					}
+
+					hbox = {
+						layoutpolicy_horizontal = expanding
+						spacing = 8
+						visible = "[EqualTo_float( FixedPointToFloat(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb2_persia_phase').GetValue), '(float)1.0')]"
+
+						icon = {
+							size = { 24 24 }
+							texture = "gfx/interface/icons/diplomatic_status/war.dds"
+						}
+
+						text_multi = {
+							layoutpolicy_horizontal = expanding
+							autoresize = yes
+							multiline = yes
+							max_width = 440
+							text = "mrb2_persia_stage_1_cb_effect"
+						}
+					}
+
+					button_regular = {
+						layoutpolicy_horizontal = expanding
+						size = { -1 36 }
+						visible = "[EqualTo_float( FixedPointToFloat(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb2_persia_phase').GetValue), '(float)1.0')]"
+						text = "mrb2_persia_fast_unification"
+						action_tooltip = {
+							title = "mrb2_persia_fast_unification"
+							on_action = "[GetScriptedGui('mrb2_fast_unify_persia').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]"
+						}
+						tooltipwidget = { BasicFunctionalTooltip = {} }
+					}
+				}
+	}
+}
+	}
+}

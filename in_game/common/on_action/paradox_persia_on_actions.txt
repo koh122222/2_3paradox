@@ -1,0 +1,23 @@
+on_game_start = {
+	on_actions = { mrb2_paradox_game_start }
+}
+
+mrb2_paradox_game_start = {
+	effect = {
+		if = {
+			limit = { country_exists = c:ORM }
+			if = {
+				limit = {
+					situation:mrb2_persian_restoration = {
+						situation_is_active = no
+						situation_has_ended = no
+					}
+				}
+				activate_situation = situation:mrb2_persian_restoration
+			}
+			c:ORM = {
+				trigger_event_non_silently = { id = mrb2_persia.1 days = 1 }
+			}
+		}
+	}
+}

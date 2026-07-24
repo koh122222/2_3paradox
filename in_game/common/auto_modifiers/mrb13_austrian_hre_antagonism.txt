@@ -1,0 +1,8 @@
+mrb13_austrian_hre_antagonism_reduction = {
+	potential_trigger = {
+		tag = HAB
+		is_member_of_international_organization = international_organization:hre
+	}
+
+	antagonism_received_modifier = -0.25
+}

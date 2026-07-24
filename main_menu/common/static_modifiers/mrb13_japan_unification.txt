@@ -1,0 +1,4 @@
+mrb13_japan_unified_after_sengoku = {
+	monthly_legitimacy = 1
+	crown_power_from_population = 0.5
+}

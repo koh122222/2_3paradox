@@ -1,0 +1,72 @@
+namespace = mrb2_persia
+
+mrb2_persia.1 = {
+	type = country_event
+	fire_only_once = yes
+	title = mrb2_persia.1.title
+	desc = mrb2_persia.1.desc
+	outcome = positive
+
+	illustration_tags = {
+		10 = regular
+		10 = exterior
+	}
+
+	trigger = {
+		tag = ORM
+	}
+
+	option = {
+		name = mrb2_persia.1.a
+		custom_tooltip = {
+			text = mrb2_ormuz_absorb_persian_neighbors_tt
+			mrb2_ormuz_release_jarwanids_effect = yes
+			mrb2_ormuz_absorb_persian_neighbors_effect = yes
+		}
+	}
+}
+
+mrb2_persia.2 = {
+	type = country_event
+	fire_only_once = yes
+	title = mrb2_persia.2.title
+	desc = mrb2_persia.2.desc
+	outcome = positive
+
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	trigger = {
+		tag = IRA
+		has_or_had_tag = ORM
+	}
+
+	immediate = {
+		create_character = {
+			age = { 30 50 }
+			adm = { 50 80 }
+			dip = { 50 80 }
+			mil = { 50 80 }
+			estate = estate_type:clergy_estate
+			culture = root.culture
+			religion = root.religion
+		}
+	}
+
+	option = {
+		name = mrb2_persia.2.a
+		change_religion = religion:shia
+		change_religion_for_ruler_and_family = { country = root religion = religion:shia }
+		add_country_modifier = {
+			modifier = mrb2_persia_shia_transition
+			years = 20
+			mode = replace
+		}
+	}
+
+	option = {
+		name = mrb2_persia.2.b
+	}
+}

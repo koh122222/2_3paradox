@@ -1,0 +1,3 @@
+mrb2_qanat_gardens_price = {
+	gold = 50
+}

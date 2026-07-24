@@ -1,0 +1,48 @@
+on_game_start = {
+	on_actions = { }
+}
+
+monthly_country_pulse = {
+	on_actions = { }
+}
+
+mrb13_vijayanagar_institution_research_start = {
+	effect = {
+		if = {
+			limit = {
+				country_exists = c:VIJ
+			}
+			if = {
+				limit = {
+					situation:mrb13_vijayanagar_institution_research = {
+						situation_is_active = no
+						situation_has_ended = no
+					}
+				}
+				activate_situation = situation:mrb13_vijayanagar_institution_research
+			}
+			c:VIJ = {
+				trigger_event_non_silently = { id = mrb13_asia_institutions.1 days = 1 }
+			}
+		}
+	}
+}
+
+# Starts the test system in a save loaded after the mod was enabled as well.
+mrb13_vijayanagar_institution_research_recovery = {
+	trigger = {
+		has_or_had_tag = VIJ
+	}
+	effect = {
+		if = {
+			limit = {
+				situation:mrb13_vijayanagar_institution_research = {
+					situation_is_active = no
+					situation_has_ended = no
+				}
+			}
+			activate_situation = situation:mrb13_vijayanagar_institution_research
+			trigger_event_non_silently = { id = mrb13_asia_institutions.1 }
+		}
+	}
+}

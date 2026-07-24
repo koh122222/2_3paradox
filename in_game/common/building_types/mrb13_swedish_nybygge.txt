@@ -1,0 +1,49 @@
+mrb13_swedish_nybygge = {
+	is_foreign = no
+	max_levels = 1
+	pop_type = peasants
+
+	category = infrastructure_category
+	employment_size = 0.1
+
+	rural_settlement = yes
+	town = no
+	city = no
+
+	country_potential = {
+		has_or_had_tag = SWE
+	}
+
+	location_potential = {
+		location_population_percentage < 0.15
+		OR = {
+			climate = arctic
+			climate = continental
+		}
+		OR = {
+			vegetation = sparse
+			vegetation = woods
+			vegetation = forest
+		}
+	}
+
+	remove_if = {
+		location = {
+			location_population_percentage > 0.20
+		}
+	}
+
+	possible_production_methods = {
+		colony_maintenance
+	}
+	construction_demand = colony_construction
+	build_time = village_build_time
+
+	modifier = {
+		local_migration_speed = -0.5
+		local_food_decay_modifier = -0.25
+		local_population_growth = 0.01
+		local_population_capacity = 5.0
+		local_population_capacity_modifier = 0.2
+	}
+}

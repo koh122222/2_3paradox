@@ -1,0 +1,50 @@
+mrb13_russian_population_office = {
+	audio_tier = 2
+	is_foreign = no
+	pop_type = nobles
+	max_levels = 1
+
+	category = government_category
+	employment_size = 0.05
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	forbidden_for_estates = yes
+
+	country_potential = {
+		has_or_had_tag = MOS
+	}
+
+	location_potential = {
+		region = {
+			NOT = {
+				any_location_in_region = {
+					OR = {
+						has_building = building_type:mrb13_russian_population_office
+						any_buildings_in_location = {
+							building_type = building_type:mrb13_russian_population_office
+							building_levels_under_construction >= 1
+						}
+					}
+				}
+			}
+		}
+	}
+
+	build_time = 30
+	construction_demand = mrb13_russian_population_office_construction
+
+	modifier = {
+		local_migration_attraction = 3.0
+	}
+
+	unique_production_methods = {
+		mrb13_russian_population_office_maintenance = {
+			lumber = 0.5
+			category = building_maintenance
+		}
+	}
+}

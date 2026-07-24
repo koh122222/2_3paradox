@@ -1,0 +1,94 @@
+mrb2_persian_restoration = {
+	monthly_spawn_chance = 0
+	hint_tag = hint_mrb2_persian_restoration
+
+	can_start = {
+		country_exists = c:ORM
+	}
+
+	can_end = {
+		always = no
+	}
+
+	visible = {
+		has_or_had_tag = ORM
+	}
+
+	on_start = {
+		set_variable = {
+			name = mrb2_persia_country
+			value = c:ORM
+		}
+		set_variable = {
+			name = mrb2_persia_phase
+			value = 1
+		}
+		set_variable = {
+			name = mrb2_persia_progress
+			value = 50
+		}
+		every_country = {
+			limit = { has_or_had_tag = ORM }
+			add_country_modifier = {
+				modifier = mrb2_unification_of_persia_modifier
+				months = -1
+				mode = replace
+			}
+			unlock_law_effect = { type = mrb2_persian_administration_law }
+			unlock_policy_effect = { type = mrb2_persian_unification_policy }
+			add_policy = policy:mrb2_persian_unification_policy
+		}
+		if = {
+			limit = { country_exists = c:ORM }
+			every_country = {
+				limit = {
+					NOT = { this = c:ORM }
+					any_owned_location = {
+						region = region:persia_region
+					}
+				}
+				c:ORM = {
+					add_casus_belli = {
+						target = prev
+						type = casus_belli:cb_mrb2_unify_persia
+					}
+				}
+			}
+		}
+	}
+
+	on_monthly = {
+		if = {
+			limit = {
+				var:mrb2_persia_phase = 1
+				country_exists = c:IRA
+				c:IRA = { has_or_had_tag = ORM }
+			}
+			set_variable = {
+				name = mrb2_persia_phase
+				value = 2
+			}
+			set_variable = {
+				name = mrb2_persia_progress
+				value = 100
+			}
+			c:IRA = {
+				mrb2_annex_persian_region_effect = yes
+				if = {
+					limit = { has_country_modifier = mrb2_unification_of_persia_modifier }
+					remove_country_modifier = mrb2_unification_of_persia_modifier
+				}
+				add_country_modifier = {
+					modifier = mrb2_restoration_of_persia_modifier
+					months = -1
+					mode = replace
+				}
+				unlock_law_effect = { type = mrb2_persian_administration_law }
+				unlock_policy_effect = { type = mrb2_persian_restoration_policy }
+				add_policy = policy:mrb2_persian_restoration_policy
+				lock_policy_effect = { type = mrb2_persian_unification_policy }
+				trigger_event_non_silently = mrb2_persia.2
+			}
+		}
+	}
+}

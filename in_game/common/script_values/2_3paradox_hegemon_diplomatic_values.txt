@@ -1,0 +1,16 @@
+TRY_REPLACE:hegemon_demand_base_acceptance = {
+	subtract = {
+		desc = "DIPLOREASON_BAD_FOR_US"
+		value = 100
+	}
+	add = {
+		desc = "DIPLOREASON_THREATENED_BY_ACTOR"
+		value = "scope:actor.threat_level_to(scope:recipient)"
+		multiply = 2
+	}
+	add = {
+		desc = "DIPLOREASON_DIPLOMATIC_REPUTATION"
+		value = "scope:actor.modifier:diplomatic_reputation"
+		multiply = 3
+	}
+}

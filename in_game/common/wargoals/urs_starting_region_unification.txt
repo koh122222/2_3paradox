@@ -1,0 +1,30 @@
+urs_starting_region_unification_wargoal = {
+	type = superiority
+	war_name = "URS_STARTING_REGION_UNIFICATION_WAR_NAME"
+
+	attacker = {
+		conquer_cost = 0.7
+		subjugate_cost = 0.75
+		antagonism = 0.75
+		allowed_locations = {
+			custom_tooltip = {
+				text = urs_starting_region_unification_valid_locations_tt
+				region = scope:winner.original_capital.region
+			}
+		}
+	}
+
+	defender = {
+		conquer_cost = 0.75
+		subjugate_cost = 1.0
+		antagonism = 1.0
+		allowed_locations = {
+			custom_tooltip = {
+				text = urs_starting_region_unification_valid_locations_tt
+				region = scope:winner.original_capital.region
+			}
+		}
+	}
+
+	ticking_war_score = 0.25
+}

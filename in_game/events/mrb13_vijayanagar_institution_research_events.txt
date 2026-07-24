@@ -1,0 +1,50 @@
+namespace = mrb13_asia_institutions
+
+mrb13_asia_institutions.1 = {
+	type = country_event
+	fire_only_once = yes
+	title = mrb13_asia_institutions.1.title
+	desc = mrb13_asia_institutions.1.desc
+	outcome = neutral
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	trigger = { has_or_had_tag = VIJ }
+
+	immediate = {
+		event_illustration_estate_effect = {
+			foreground = estate_type:nobles_estate
+			background = estate_type:burghers_estate
+		}
+	}
+
+	option = {
+		name = mrb13_asia_institutions.1.a
+	}
+}
+
+mrb13_asia_institutions.2 = {
+	type = country_event
+	title = mrb13_asia_institutions.2.title
+	desc = mrb13_asia_institutions.2.desc
+	outcome = positive
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	trigger = { has_or_had_tag = VIJ }
+
+	immediate = {
+		event_illustration_estate_effect = {
+			foreground = estate_type:nobles_estate
+			background = estate_type:burghers_estate
+		}
+	}
+
+	option = {
+		name = mrb13_asia_institutions.2.a
+	}
+}

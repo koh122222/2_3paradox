@@ -1,0 +1,23 @@
+mrb13_asia_research_population_sacrifice_tooltip = {
+	global_population_growth = -0.005
+	pop_join_rebel_threshold = 0.1
+}
+
+mrb13_asia_research_science_sacrifice_tooltip = {
+	research_speed_modifier = -2.0
+}
+
+mrb13_asia_research_diplomacy_sacrifice_tooltip = {
+	global_integration_speed_modifier = -0.5
+	subject_loyalty = -20
+	diplomatic_reputation = -5
+}
+
+mrb13_asia_research_integration_sacrifice_tooltip = {
+	global_integration_speed_modifier = -0.8
+}
+
+mrb13_asia_research_culture_sacrifice_tooltip = {
+	global_pop_assimilation_speed = -0.5
+	global_pop_conversion_speed = -0.5
+}

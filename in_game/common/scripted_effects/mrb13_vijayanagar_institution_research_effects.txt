@@ -1,0 +1,84 @@
+mrb13_asia_research_advance_stage_effect = {
+	situation:mrb13_vijayanagar_institution_research = {
+		if = {
+			limit = { var:mrb13_asia_research_phase = 1 }
+			c:VIJ = {
+				every_owned_location = {
+					change_institution_progress = { type = institution:renaissance value = 100 }
+					change_institution_progress = { type = institution:banking value = 100 }
+					change_institution_progress = { type = institution:professional_armies value = 100 }
+					change_institution_progress = { type = institution:meritocracy value = 100 }
+				}
+				trigger_event_non_silently = { id = mrb13_asia_institutions.2 }
+			}
+			set_variable = { name = mrb13_asia_research_phase value = 2 }
+			set_variable = { name = mrb13_asia_research_progress value = 0 }
+			set_variable = { name = mrb13_asia_research_required value = 1920 }
+			set_variable = { name = mrb13_asia_research_overall_progress value = 20 }
+		}
+		else_if = {
+			limit = { var:mrb13_asia_research_phase = 2 }
+			c:VIJ = {
+				every_owned_location = {
+					change_institution_progress = { type = institution:new_world value = 100 }
+					change_institution_progress = { type = institution:printing_press value = 100 }
+					change_institution_progress = { type = institution:pike_and_shot value = 100 }
+				}
+				trigger_event_non_silently = { id = mrb13_asia_institutions.2 }
+			}
+			set_variable = { name = mrb13_asia_research_phase value = 3 }
+			set_variable = { name = mrb13_asia_research_progress value = 0 }
+			set_variable = { name = mrb13_asia_research_required value = 1536 }
+			set_variable = { name = mrb13_asia_research_overall_progress value = 40 }
+		}
+		else_if = {
+			limit = { var:mrb13_asia_research_phase = 3 }
+			c:VIJ = {
+				every_owned_location = {
+					change_institution_progress = { type = institution:confessionalism value = 100 }
+					change_institution_progress = { type = institution:global_trade value = 100 }
+					change_institution_progress = { type = institution:artillery_institution value = 100 }
+				}
+				trigger_event_non_silently = { id = mrb13_asia_institutions.2 }
+			}
+			set_variable = { name = mrb13_asia_research_phase value = 4 }
+			set_variable = { name = mrb13_asia_research_progress value = 0 }
+			set_variable = { name = mrb13_asia_research_required value = 1229 }
+			set_variable = { name = mrb13_asia_research_overall_progress value = 60 }
+		}
+		else_if = {
+			limit = { var:mrb13_asia_research_phase = 4 }
+			c:VIJ = {
+				every_owned_location = {
+					change_institution_progress = { type = institution:manufactories value = 100 }
+					change_institution_progress = { type = institution:scientific_revolution value = 100 }
+					change_institution_progress = { type = institution:military_revolution value = 100 }
+				}
+				trigger_event_non_silently = { id = mrb13_asia_institutions.2 }
+			}
+			set_variable = { name = mrb13_asia_research_phase value = 5 }
+			set_variable = { name = mrb13_asia_research_progress value = 0 }
+			set_variable = { name = mrb13_asia_research_required value = 983 }
+			set_variable = { name = mrb13_asia_research_overall_progress value = 80 }
+		}
+		else_if = {
+			limit = { var:mrb13_asia_research_phase = 5 }
+			c:VIJ = {
+				every_owned_location = {
+					change_institution_progress = { type = institution:enlightenment value = 100 }
+					change_institution_progress = { type = institution:industrialization value = 100 }
+					change_institution_progress = { type = institution:levee_en_masse value = 100 }
+				}
+				remove_variable = mrb13_asia_research_population_sacrifice
+				remove_variable = mrb13_asia_research_science_sacrifice
+				remove_variable = mrb13_asia_research_diplomacy_sacrifice
+				remove_variable = mrb13_asia_research_integration_sacrifice
+				remove_variable = mrb13_asia_research_culture_sacrifice
+				trigger_event_non_silently = { id = mrb13_asia_institutions.2 }
+			}
+			set_variable = { name = mrb13_asia_research_phase value = 6 }
+			set_variable = { name = mrb13_asia_research_progress value = 983 }
+			set_variable = { name = mrb13_asia_research_overall_progress value = 100 }
+		}
+	}
+}

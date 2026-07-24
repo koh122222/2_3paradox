@@ -1,0 +1,105 @@
+namespace = mrb13_military
+
+mrb13_military.1 = {
+	hidden = yes
+	type = country_event
+
+	trigger = {
+		is_human = yes
+		NOT = { has_variable = mrb13_military_diminishing_returns_cooldown }
+	}
+
+	immediate = {
+		set_variable = { name = mrb13_military_diminishing_returns_cooldown value = yes months = 3 }
+
+		if = {
+			limit = { NOT = { has_variable = mrb13_discipline_penalty } }
+			set_variable = { name = mrb13_discipline_penalty value = 0 }
+		}
+		set_variable = {
+			name = mrb13_discipline_penalty
+			value = {
+				value = modifier:discipline
+				subtract = var:mrb13_discipline_penalty
+				subtract = 0.10
+				multiply = -0.5
+				max = 0
+			}
+		}
+
+		if = {
+			limit = { NOT = { has_variable = mrb13_light_infantry_power_penalty } }
+			set_variable = { name = mrb13_light_infantry_power_penalty value = 0 }
+		}
+		set_variable = {
+			name = mrb13_light_infantry_power_penalty
+			value = {
+				value = modifier:army_light_infantry_power
+				subtract = var:mrb13_light_infantry_power_penalty
+				subtract = 0.10
+				multiply = -0.5
+				max = 0
+			}
+		}
+
+		if = {
+			limit = { NOT = { has_variable = mrb13_heavy_infantry_power_penalty } }
+			set_variable = { name = mrb13_heavy_infantry_power_penalty value = 0 }
+		}
+		set_variable = {
+			name = mrb13_heavy_infantry_power_penalty
+			value = {
+				value = modifier:army_heavy_infantry_power
+				subtract = var:mrb13_heavy_infantry_power_penalty
+				subtract = 0.10
+				multiply = -0.5
+				max = 0
+			}
+		}
+
+		if = {
+			limit = { NOT = { has_variable = mrb13_light_cavalry_power_penalty } }
+			set_variable = { name = mrb13_light_cavalry_power_penalty value = 0 }
+		}
+		set_variable = {
+			name = mrb13_light_cavalry_power_penalty
+			value = {
+				value = modifier:army_light_cavalry_power
+				subtract = var:mrb13_light_cavalry_power_penalty
+				subtract = 0.10
+				multiply = -0.5
+				max = 0
+			}
+		}
+
+		if = {
+			limit = { NOT = { has_variable = mrb13_heavy_cavalry_power_penalty } }
+			set_variable = { name = mrb13_heavy_cavalry_power_penalty value = 0 }
+		}
+		set_variable = {
+			name = mrb13_heavy_cavalry_power_penalty
+			value = {
+				value = modifier:army_heavy_cavalry_power
+				subtract = var:mrb13_heavy_cavalry_power_penalty
+				subtract = 0.10
+				multiply = -0.5
+				max = 0
+			}
+		}
+
+		if = {
+			limit = { NOT = { has_variable = mrb13_artillery_power_penalty } }
+			set_variable = { name = mrb13_artillery_power_penalty value = 0 }
+		}
+		set_variable = {
+			name = mrb13_artillery_power_penalty
+			value = {
+				value = modifier:army_artillery_power
+				subtract = var:mrb13_artillery_power_penalty
+				subtract = 0.10
+				multiply = -0.5
+				max = 0
+			}
+		}
+	}
+}

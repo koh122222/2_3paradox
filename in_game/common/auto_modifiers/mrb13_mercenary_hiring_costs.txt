@@ -1,0 +1,5 @@
+mrb13_global_mercenary_hiring_costs = {
+	hire_mercenary_premium_cost_modifier = 1.0
+	hire_mercenary_leader_cost_modifier = 1.0
+	bribe_units_cost_modifier = 1.0
+}

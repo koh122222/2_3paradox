@@ -1,0 +1,13 @@
+mrb13_asia_institution_penalty = {
+	potential_trigger = {
+		NOT = { is_subject_type = colonial_nation }
+		original_capital ?= {
+			continent = continent:asia
+			NOT = { region = region:persia_region }
+			NOT = { region = region:anatolia_region }
+		}
+	}
+
+	global_institution_growth_modifier = -1.2
+	embrace_institution_cost_modifier = 2.0
+}

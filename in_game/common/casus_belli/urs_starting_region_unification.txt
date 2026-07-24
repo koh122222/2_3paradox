@@ -1,0 +1,37 @@
+cb_urs_unify_starting_region = {
+	speed = 8
+
+	create_visible = {
+		NOT = { this = scope:target }
+		scope:target = {
+			any_owned_location = {
+				region = root.original_capital.region
+			}
+		}
+	}
+
+	declare_enabled = {
+		NOT = { has_truce_with = scope:target }
+		OR = {
+			is_ai = yes
+			custom_tooltip = {
+				text = urs_starting_region_unification_population_limit_tt
+				urs_total_population_with_subjects < 3000
+			}
+		}
+		scope:target = {
+			any_owned_location = {
+				region = root.original_capital.region
+			}
+		}
+	}
+
+	war_goal_type = urs_starting_region_unification_wargoal
+
+	ai_will_do = {
+		add = {
+			desc = "BASE"
+			value = 5
+		}
+	}
+}

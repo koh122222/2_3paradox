@@ -1,0 +1,5 @@
+mrb2_qanat_gardens_construction = {
+	sand = 2
+	tools = 1
+	category = building_construction
+}

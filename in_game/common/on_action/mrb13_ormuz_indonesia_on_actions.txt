@@ -1,0 +1,19 @@
+on_game_start = {
+	on_actions = { mrb13_ormuz_indonesia_start }
+}
+
+mrb13_ormuz_indonesia_start = {
+	effect = {
+		if = {
+			limit = { country_exists = c:ORM }
+			c:ORM = {
+				save_scope_as = mrb13_ormuz_country
+				region:indonesia_region = {
+					every_location_in_region = {
+						discover_location = scope:mrb13_ormuz_country
+					}
+				}
+			}
+		}
+	}
+}

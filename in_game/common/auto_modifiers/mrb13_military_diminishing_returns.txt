@@ -1,0 +1,71 @@
+mrb13_discipline_diminishing_returns = {
+	potential_trigger = {
+		is_ai = no
+		has_variable = mrb13_discipline_penalty
+	}
+	scales_with = {
+		value = var:mrb13_discipline_penalty
+	}
+
+	discipline = 1
+}
+
+mrb13_light_infantry_power_diminishing_returns = {
+	potential_trigger = {
+		is_ai = no
+		has_variable = mrb13_light_infantry_power_penalty
+	}
+	scales_with = {
+		value = var:mrb13_light_infantry_power_penalty
+	}
+
+	army_light_infantry_power = 1
+}
+
+mrb13_heavy_infantry_power_diminishing_returns = {
+	potential_trigger = {
+		is_ai = no
+		has_variable = mrb13_heavy_infantry_power_penalty
+	}
+	scales_with = {
+		value = var:mrb13_heavy_infantry_power_penalty
+	}
+
+	army_heavy_infantry_power = 1
+}
+
+mrb13_light_cavalry_power_diminishing_returns = {
+	potential_trigger = {
+		is_ai = no
+		has_variable = mrb13_light_cavalry_power_penalty
+	}
+	scales_with = {
+		value = var:mrb13_light_cavalry_power_penalty
+	}
+
+	army_light_cavalry_power = 1
+}
+
+mrb13_heavy_cavalry_power_diminishing_returns = {
+	potential_trigger = {
+		is_ai = no
+		has_variable = mrb13_heavy_cavalry_power_penalty
+	}
+	scales_with = {
+		value = var:mrb13_heavy_cavalry_power_penalty
+	}
+
+	army_heavy_cavalry_power = 1
+}
+
+mrb13_artillery_power_diminishing_returns = {
+	potential_trigger = {
+		is_ai = no
+		has_variable = mrb13_artillery_power_penalty
+	}
+	scales_with = {
+		value = var:mrb13_artillery_power_penalty
+	}
+
+	army_artillery_power = 1
+}

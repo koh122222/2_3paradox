@@ -1,0 +1,116 @@
+mrb2_qanat_gardens = {
+	audio_tier = 3
+	is_special = yes
+	is_foreign = no
+	pop_type = peasants
+	max_levels = 4
+	employment_size = 0.1
+	category = infrastructure_category
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	price = mrb2_qanat_gardens_price
+	increase_per_level_cost = 1
+	build_time = large_capital_build_time
+	always_add_demands = yes
+
+	country_potential = {
+		has_country_modifier = mrb2_restoration_of_persia_modifier
+	}
+
+	location_potential = {
+		region = region:persia_region
+	}
+
+	allow = {
+		owner = scope:actor
+	}
+
+	remove_if = {
+		owner = {
+			NOT = { has_country_modifier = mrb2_restoration_of_persia_modifier }
+		}
+	}
+
+	modifier = {
+		local_population_capacity = 25.0
+		local_population_capacity_modifier = 0.10
+		local_population_growth = 0.0005
+		local_monthly_development_modifier = 0.20
+		local_monthly_prosperity = 0.10
+		free_building_levels = 3
+	}
+
+	unique_production_methods = {
+		mrb2_qanat_gardens_maintenance = {
+			sand = 0.1
+			category = building_maintenance
+		}
+	}
+
+	construction_demand = mrb2_qanat_gardens_construction
+}
+
+mrb2_zagros_citadel = {
+	audio_tier = 3
+	is_special = yes
+	is_foreign = no
+	pop_type = soldiers
+	max_levels = 1
+	employment_size = castle_employment
+	category = defense_category
+	forbidden_for_estates = yes
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	build_time = medium_fort_building
+	expensive = yes
+
+	country_potential = {
+		has_country_modifier = mrb2_restoration_of_persia_modifier
+	}
+
+	location_potential = {
+		region = region:persia_region
+	}
+
+	allow = {
+		owner = scope:actor
+		custom_tooltip = {
+			text = mrb2_zagros_citadel_limit_tt
+			scope:actor = {
+				total_building_levels_including_construction:mrb2_zagros_citadel < 6
+			}
+		}
+	}
+
+	remove_if = {
+		owner = {
+			NOT = { has_country_modifier = mrb2_restoration_of_persia_modifier }
+		}
+	}
+
+	modifier = {
+		local_garrison_size = 2.0
+		local_defensive = 0.50
+		max_siege_memory = -2
+	}
+
+	unique_production_methods = {
+		mrb2_zagros_citadel_maintenance = {
+			stone = 0.1
+			tools = 0.05
+			weaponry = 0.1
+			tar = 0.025
+			category = building_maintenance
+		}
+	}
+
+	construction_demand = castle_construction
+}

@@ -1,0 +1,6 @@
+mrb13_global_raw_material_output_penalty = {
+	category = location
+	type = location
+
+	local_raw_material_output = -0.10
+}

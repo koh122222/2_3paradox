@@ -1,0 +1,16 @@
+on_game_start = {
+	on_actions = {
+		mrb13_japan_sengoku_test_start
+	}
+}
+
+mrb13_japan_sengoku_test_start = {
+	effect = {
+		if = {
+			limit = { country_exists = c:JAP }
+			c:JAP = {
+				trigger_event_non_silently = { id = mrb13_japan_sengoku_test.1 days = 30 }
+			}
+		}
+	}
+}

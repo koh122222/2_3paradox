@@ -1,0 +1,22 @@
+TRY_REPLACE:JAP_f = {
+	level = 4
+	rule = historical
+
+	potential = {
+		always = no
+	}
+
+	allow = {
+	}
+
+	tag = JAP
+	name = JAP
+	adjective = JAP_ADJ
+	flag = JAP
+	color = map_JAP
+
+	regions = {
+	}
+	form_effect = {
+	}
+}

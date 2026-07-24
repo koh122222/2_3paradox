@@ -1,0 +1,5 @@
+mrb13_remote_settlement_construction = {
+	lumber = 10
+	masonry = 5
+	category = building_construction
+}

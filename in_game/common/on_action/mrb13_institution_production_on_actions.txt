@@ -1,0 +1,31 @@
+on_institution_embraced = {
+	on_actions = {
+		mrb13_apply_institution_production_bonus
+	}
+}
+
+mrb13_apply_institution_production_bonus = {
+	effect = {
+		root = {
+			if = {
+				limit = { NOT = { has_variable = mrb13_institution_production_bonus_value } }
+				set_variable = { name = mrb13_institution_production_bonus_value value = 0 }
+			}
+			if = { limit = { scope:target = institution:renaissance } change_variable = { name = mrb13_institution_production_bonus_value add = 0.04 } }
+			if = { limit = { scope:target = institution:banking } change_variable = { name = mrb13_institution_production_bonus_value add = 0.04 } }
+			if = { limit = { scope:target = institution:professional_armies } change_variable = { name = mrb13_institution_production_bonus_value add = 0.02 } }
+			if = { limit = { scope:target = institution:new_world } change_variable = { name = mrb13_institution_production_bonus_value add = 0.04 } }
+			if = { limit = { scope:target = institution:printing_press } change_variable = { name = mrb13_institution_production_bonus_value add = 0.04 } }
+			if = { limit = { scope:target = institution:pike_and_shot } change_variable = { name = mrb13_institution_production_bonus_value add = 0.02 } }
+			if = { limit = { scope:target = institution:confessionalism } change_variable = { name = mrb13_institution_production_bonus_value add = 0.04 } }
+			if = { limit = { scope:target = institution:global_trade } change_variable = { name = mrb13_institution_production_bonus_value add = 0.04 } }
+			if = { limit = { scope:target = institution:artillery_institution } change_variable = { name = mrb13_institution_production_bonus_value add = 0.02 } }
+			if = { limit = { scope:target = institution:manufactories } change_variable = { name = mrb13_institution_production_bonus_value add = 0.04 } }
+			if = { limit = { scope:target = institution:scientific_revolution } change_variable = { name = mrb13_institution_production_bonus_value add = 0.04 } }
+			if = { limit = { scope:target = institution:military_revolution } change_variable = { name = mrb13_institution_production_bonus_value add = 0.02 } }
+			if = { limit = { scope:target = institution:enlightenment } change_variable = { name = mrb13_institution_production_bonus_value add = 0.04 } }
+			if = { limit = { scope:target = institution:industrialization } change_variable = { name = mrb13_institution_production_bonus_value add = 0.04 } }
+			if = { limit = { scope:target = institution:levee_en_masse } change_variable = { name = mrb13_institution_production_bonus_value add = 0.02 } }
+		}
+	}
+}

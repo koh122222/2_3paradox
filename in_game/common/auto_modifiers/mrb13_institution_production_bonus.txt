@@ -1,0 +1,9 @@
+mrb13_institution_production_bonus = {
+	potential_trigger = {
+		has_variable = mrb13_institution_production_bonus_value
+	}
+	scales_with = {
+		value = var:mrb13_institution_production_bonus_value
+	}
+	global_production_efficiency = 1
+}

@@ -1,0 +1,69 @@
+mrb2_ormuz_annex_country_with_cores_effect = {
+	if = {
+		limit = { country_exists = c:$tag$ }
+		c:$tag$ = {
+			every_owned_location = {
+				add_core = c:ORM
+			}
+		}
+		annex_country = {
+			country = c:$tag$
+			reason = MilitaryConquest
+			transfer = yes
+		}
+	}
+}
+
+mrb2_ormuz_release_jarwanids_effect = {
+	if = {
+		limit = {
+			country_exists = c:JRW
+			c:JRW = { is_subject_of = root }
+		}
+		cancel_subject = c:JRW
+	}
+	if = {
+		limit = { country_exists = c:JRW }
+		every_owned_location = {
+			limit = {
+				region = region:arabia_region
+			}
+			add_core = c:JRW
+			change_location_owner = c:JRW
+		}
+	}
+}
+
+mrb2_ormuz_absorb_persian_neighbors_effect = {
+	mrb2_ormuz_annex_country_with_cores_effect = { tag = MKR }
+	mrb2_ormuz_annex_country_with_cores_effect = { tag = LST }
+	mrb2_ormuz_annex_country_with_cores_effect = { tag = FAL }
+	mrb2_ormuz_annex_country_with_cores_effect = { tag = JSK }
+	mrb2_ormuz_annex_country_with_cores_effect = { tag = KHU }
+	mrb2_ormuz_annex_country_with_cores_effect = { tag = JUR }
+	mrb2_ormuz_annex_country_with_cores_effect = { tag = UGH }
+	mrb2_ormuz_annex_country_with_cores_effect = { tag = SHB }
+	mrb2_ormuz_annex_country_with_cores_effect = { tag = KRM }
+	mrb2_ormuz_annex_country_with_cores_effect = { tag = BMP }
+	mrb2_ormuz_annex_country_with_cores_effect = { tag = BLA }
+	mrb2_ormuz_annex_country_with_cores_effect = { tag = KLW }
+}
+
+mrb2_annex_persian_region_effect = {
+	every_country = {
+		limit = {
+			NOT = { this = root }
+			any_owned_location = {
+				region = region:persia_region
+			}
+		}
+		every_owned_location = {
+			limit = {
+				region = region:persia_region
+			}
+			add_core = root
+			change_location_owner = root
+			change_integration_level = core
+		}
+	}
+}

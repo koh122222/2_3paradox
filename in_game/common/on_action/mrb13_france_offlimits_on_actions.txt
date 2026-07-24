@@ -1,0 +1,42 @@
+on_game_start = {
+	on_actions = {
+		mrb13_france_offlimits_setup
+	}
+}
+
+monthly_country_pulse = {
+	on_actions = {
+		mrb13_france_offlimits_war_check
+	}
+}
+
+mrb13_france_offlimits_setup = {
+	effect = {
+		if = {
+			limit = {
+				country_exists = c:FRA
+				c:FRA = {
+					NOT = { has_country_modifier = mrb13_france_offlimits }
+				}
+			}
+			c:FRA = {
+				add_country_modifier = {
+					modifier = mrb13_france_offlimits
+					months = -1
+				}
+			}
+		}
+	}
+}
+
+mrb13_france_offlimits_war_check = {
+	trigger = {
+		tag = FRA
+		has_country_modifier = mrb13_france_offlimits
+		at_war = yes
+	}
+
+	events = {
+		mrb13_france_offlimits.1
+	}
+}

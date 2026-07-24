@@ -1,0 +1,40 @@
+cb_mrb2_unify_persia = {
+	speed = 8
+
+	create_visible = {
+		has_or_had_tag = ORM
+		NOT = { tag = IRA }
+		situation:mrb2_persian_restoration = {
+			var:mrb2_persia_phase = 1
+		}
+		NOT = { this = scope:target }
+		scope:target = {
+			any_owned_location = {
+				region = region:persia_region
+			}
+		}
+	}
+
+	declare_enabled = {
+		has_or_had_tag = ORM
+		NOT = { tag = IRA }
+		situation:mrb2_persian_restoration = {
+			var:mrb2_persia_phase = 1
+		}
+		NOT = { has_truce_with = scope:target }
+		scope:target = {
+			any_owned_location = {
+				region = region:persia_region
+			}
+		}
+	}
+
+	war_goal_type = mrb2_unify_persia_wargoal
+
+	ai_will_do = {
+		add = {
+			desc = "BASE"
+			value = 25
+		}
+	}
+}

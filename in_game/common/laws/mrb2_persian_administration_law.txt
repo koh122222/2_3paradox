@@ -1,0 +1,36 @@
+mrb2_persian_administration_law = {
+	unique = yes
+	law_category = administrative
+
+	potential = {
+		has_unlocked_law_trigger = { type = mrb2_persian_administration_law }
+	}
+
+	mrb2_persian_unification_policy = {
+		years = 2
+
+		location_modifier = {
+			potential_trigger = {
+				custom_tooltip = {
+					text = mrb2_locations_in_persia_gain_tt
+					region = region:persia_region
+				}
+			}
+			local_max_control = 0.50
+		}
+	}
+
+	mrb2_persian_restoration_policy = {
+		years = 2
+
+		location_modifier = {
+			potential_trigger = {
+				custom_tooltip = {
+					text = mrb2_locations_in_persia_gain_tt
+					region = region:persia_region
+				}
+			}
+			local_max_control = 0.20
+		}
+	}
+}

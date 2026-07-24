@@ -1,0 +1,14 @@
+mrb2_unification_of_persia_modifier = {
+	global_separatism = -0.50
+}
+
+mrb2_restoration_of_persia_modifier = {
+	game_data = {
+		category = country
+	}
+}
+
+mrb2_persia_shia_transition = {
+	tolerance_heretic = 3
+	global_pop_conversion_speed = 0.01
+}

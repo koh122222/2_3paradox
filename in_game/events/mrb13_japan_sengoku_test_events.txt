@@ -1,0 +1,107 @@
+namespace = mrb13_japan_sengoku_test
+
+# Day 30: start Sengoku, then hand the player and shogunate leadership to Shimazu.
+mrb13_japan_sengoku_test.1 = {
+	type = country_event
+	category = situation_event
+	title = mrb13_japan_sengoku_test.1.title
+	desc = mrb13_japan_sengoku_test.1.desc
+	outcome = neutral
+	image = "gfx/interface/illustrations/situation/sengoku.dds"
+
+	immediate = {
+		if = {
+			limit = {
+				situation:sengoku = {
+					situation_is_active = no
+					situation_has_ended = no
+				}
+			}
+			activate_situation = situation:sengoku
+		}
+		# Force every clan, including Shimazu, to become a territorial daimyo.
+		international_organization:japanese_shogunate = {
+			every_international_organization_member = {
+				limit = {
+					country_type = building
+					is_japanese_emperor_or_shogun = no
+				}
+				mrb13_force_japanese_clan_to_daimyo = yes
+			}
+		}
+	}
+
+	option = {
+		name = mrb13_japan_sengoku_test.1.a
+		international_organization:japanese_shogunate = {
+			set_leader_country = c:SMZ
+		}
+		c:SMZ = {
+			trigger_event_silently = { id = mrb13_japan_sengoku_test.2 days = 30 }
+		}
+		change_player = c:SMZ
+	}
+}
+
+# Day 60: Shimazu quietly annexes the shogunate. Japan is formed a month later.
+mrb13_japan_sengoku_test.2 = {
+	type = country_event
+
+	immediate = {
+		save_scope_as = mrb13_japan_annexing_country
+		international_organization:japanese_shogunate = {
+			every_international_organization_member = {
+				limit = { this != scope:mrb13_japan_annexing_country }
+				every_owned_location = { add_core = scope:mrb13_japan_annexing_country }
+				scope:mrb13_japan_annexing_country = {
+					annex_country_diplomatically = { country = prev }
+				}
+			}
+		}
+		every_owned_location = {
+			destroy_building = "building(building_type:stockade|owner)"
+			destroy_building = "building(building_type:castle|owner)"
+			destroy_building = "building(building_type:bastion|owner)"
+			destroy_building = "building(building_type:star_fort|owner)"
+			destroy_building = "building(building_type:fortress|owner)"
+		}
+		trigger_event_non_silently = { id = mrb13_japan_sengoku_test.3 days = 30 }
+		end_situation = situation:sengoku
+	}
+
+	option = { name = mrb13_japan_sengoku_test.2.a }
+}
+
+# Day 90: separate formation step after the situation has fully finished.
+mrb13_japan_sengoku_test.3 = {
+	type = country_event
+	category = situation_event
+	title = mrb13_japan_sengoku_test.3.title
+	desc = mrb13_japan_sengoku_test.3.desc
+	outcome = positive
+	image = "gfx/interface/illustrations/situation/sengoku.dds"
+
+	option = {
+		name = mrb13_japan_sengoku_test.3.a
+		if = {
+			limit = { NOT = { tag = JAP } }
+			form_country = formable_country:JAP_f
+		}
+		change_country_name = JAP
+		change_country_adjective = JAP_ADJ
+		set_country_rank = country_rank:rank_empire
+		if = {
+			limit = { NOT = { capital = location:kyoto } }
+			set_capital = location:kyoto
+		}
+		if = {
+			limit = { has_country_modifier = jap_nanbokuchou }
+			remove_country_modifier = jap_nanbokuchou
+		}
+		add_country_modifier = {
+			modifier = mrb13_japan_unified_after_sengoku
+			years = 30
+			mode = add_and_extend
+		}
+	}
+}

@@ -1,0 +1,20 @@
+namespace = mrb13_france_offlimits
+
+mrb13_france_offlimits.1 = {
+	hidden = yes
+	type = country_event
+
+	trigger = {
+		has_country_modifier = mrb13_france_offlimits
+		at_war = yes
+	}
+
+	immediate = {
+		every_war = {
+			limit = {
+				any_war_participant = { this = root }
+			}
+			white_peace = this
+		}
+	}
+}

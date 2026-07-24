@@ -1,0 +1,7 @@
+mrb13_france_offlimits = {
+	game_data = {
+		category = country
+	}
+
+	subject_loyalty = 50
+}

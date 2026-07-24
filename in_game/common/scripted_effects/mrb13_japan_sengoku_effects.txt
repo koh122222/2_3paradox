@@ -1,0 +1,51 @@
+# Forced Sengoku conversion. Unlike the vanilla effect, this does not depend on
+# a clan first meeting the normal landability trigger.
+mrb13_force_japanese_clan_to_daimyo = {
+	if = {
+		limit = { has_reform = government_reform:japanese_clan }
+		remove_reform = government_reform:japanese_clan
+		add_reform = government_reform:daimyo
+	}
+	change_country_type = location
+	save_temporary_scope_as = mrb13_target_clan
+	every_owned_foreign_building_location = {
+		every_foreign_buildings_in_location = {
+			limit = { owner = scope:mrb13_target_clan }
+			if = {
+				limit = {
+					building_type = building_type:yamashiro
+					location = {
+						NOR = {
+							has_building = building_type:stockade
+							has_building = building_type:castle
+						}
+					}
+				}
+				location = { set_variable = mrb13_build_stockade }
+			}
+			if = {
+				limit = { building_type = building_type:shoen }
+				location = { set_variable = mrb13_build_market_village }
+			}
+		}
+		change_location_owner = prev
+		add_core = prev
+		change_integration_level = core
+		if = {
+			limit = { has_variable = mrb13_build_stockade }
+			remove_variable = mrb13_build_stockade
+			change_building_level_in_location = {
+				building = building_type:stockade
+				value = 1
+			}
+		}
+		if = {
+			limit = { has_variable = mrb13_build_market_village }
+			remove_variable = mrb13_build_market_village
+			change_building_level_in_location = {
+				building = building_type:market_village
+				value = 1
+			}
+		}
+	}
+}

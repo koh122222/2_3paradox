@@ -1,0 +1,31 @@
+namespace = mrb13_poland
+
+mrb13_poland.1 = {
+	type = country_event
+	title = mrb13_poland.1.title
+	desc = mrb13_poland.1.desc
+	outcome = neutral
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = POL
+		any_subject = { always = yes }
+	}
+
+	option = {
+		name = mrb13_poland.1.a
+		custom_tooltip = mrb13_poland.1.a.tt
+		hidden_effect = {
+			every_subject = {
+				overlord = {
+					annex_country = {
+						country = PREV
+						reason = Diplomatic
+						transfer = yes
+					}
+				}
+			}
+		}
+	}
+}

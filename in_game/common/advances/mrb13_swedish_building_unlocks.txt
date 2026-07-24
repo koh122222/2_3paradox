@@ -1,0 +1,11 @@
+TRY_REPLACE:scandinavian_bergslag_privileges_advance = {
+	age = age_1_traditions
+	potential = {
+		culture = { has_culture_group = culture_group:scandinavian_group }
+	}
+
+	unlock_town_rights = scandinavian_bergslag_privileges
+	unlock_building = mrb13_swedish_nybygge
+
+	requires = distribution_of_power_advance
+}

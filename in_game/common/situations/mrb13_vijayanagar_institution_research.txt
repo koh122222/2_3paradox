@@ -1,0 +1,79 @@
+mrb13_vijayanagar_institution_research = {
+	monthly_spawn_chance = 0
+
+	can_start = {
+		country_exists = c:VIJ
+	}
+
+	can_end = { always = no }
+
+	visible = {
+		has_or_had_tag = VIJ
+	}
+
+	on_start = {
+		set_variable = { name = mrb13_asia_research_phase value = 1 }
+		set_variable = { name = mrb13_asia_research_progress value = 0 }
+		set_variable = { name = mrb13_asia_research_required value = 2400 }
+		set_variable = { name = mrb13_asia_research_overall_progress value = 0 }
+	}
+
+	on_monthly = {
+		# Normalize flags from saves created before the UI state used explicit numbers.
+		if = { limit = { c:VIJ = { has_variable = mrb13_asia_research_population_sacrifice } } c:VIJ = { set_variable = { name = mrb13_asia_research_population_sacrifice value = 1 } } }
+		if = { limit = { c:VIJ = { has_variable = mrb13_asia_research_science_sacrifice } } c:VIJ = { set_variable = { name = mrb13_asia_research_science_sacrifice value = 1 } } }
+		if = { limit = { c:VIJ = { has_variable = mrb13_asia_research_diplomacy_sacrifice } } c:VIJ = { set_variable = { name = mrb13_asia_research_diplomacy_sacrifice value = 1 } } }
+		if = { limit = { c:VIJ = { has_variable = mrb13_asia_research_integration_sacrifice } } c:VIJ = { set_variable = { name = mrb13_asia_research_integration_sacrifice value = 1 } } }
+		if = { limit = { c:VIJ = { has_variable = mrb13_asia_research_culture_sacrifice } } c:VIJ = { set_variable = { name = mrb13_asia_research_culture_sacrifice value = 1 } } }
+		if = {
+			limit = { var:mrb13_asia_research_phase < 6 }
+			change_variable = { name = mrb13_asia_research_progress add = 1 }
+			if = { limit = { c:VIJ = { has_variable = mrb13_asia_research_population_sacrifice } } change_variable = { name = mrb13_asia_research_progress add = 0.6 } }
+			if = { limit = { c:VIJ = { has_variable = mrb13_asia_research_science_sacrifice } } change_variable = { name = mrb13_asia_research_progress add = 0.2 } }
+			if = { limit = { c:VIJ = { has_variable = mrb13_asia_research_diplomacy_sacrifice } } change_variable = { name = mrb13_asia_research_progress add = 0.2 } }
+			if = { limit = { c:VIJ = { has_variable = mrb13_asia_research_integration_sacrifice } } change_variable = { name = mrb13_asia_research_progress add = 0.2 } }
+			if = { limit = { c:VIJ = { has_variable = mrb13_asia_research_culture_sacrifice } } change_variable = { name = mrb13_asia_research_progress add = 0.2 } }
+
+			if = {
+				limit = { var:mrb13_asia_research_phase = 1 }
+				set_variable = {
+					name = mrb13_asia_research_overall_progress
+					value = { value = var:mrb13_asia_research_progress divide = var:mrb13_asia_research_required multiply = 20 }
+				}
+			}
+			else_if = {
+				limit = { var:mrb13_asia_research_phase = 2 }
+				set_variable = {
+					name = mrb13_asia_research_overall_progress
+					value = { value = var:mrb13_asia_research_progress divide = var:mrb13_asia_research_required multiply = 20 add = 20 }
+				}
+			}
+			else_if = {
+				limit = { var:mrb13_asia_research_phase = 3 }
+				set_variable = {
+					name = mrb13_asia_research_overall_progress
+					value = { value = var:mrb13_asia_research_progress divide = var:mrb13_asia_research_required multiply = 20 add = 40 }
+				}
+			}
+			else_if = {
+				limit = { var:mrb13_asia_research_phase = 4 }
+				set_variable = {
+					name = mrb13_asia_research_overall_progress
+					value = { value = var:mrb13_asia_research_progress divide = var:mrb13_asia_research_required multiply = 20 add = 60 }
+				}
+			}
+			else_if = {
+				limit = { var:mrb13_asia_research_phase = 5 }
+				set_variable = {
+					name = mrb13_asia_research_overall_progress
+					value = { value = var:mrb13_asia_research_progress divide = var:mrb13_asia_research_required multiply = 20 add = 80 }
+				}
+			}
+
+			if = {
+				limit = { var:mrb13_asia_research_progress >= var:mrb13_asia_research_required }
+				mrb13_asia_research_advance_stage_effect = yes
+			}
+		}
+	}
+}

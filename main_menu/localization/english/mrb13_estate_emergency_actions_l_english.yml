@@ -1,0 +1,4 @@
+l_english:
+ ask_clergy_for_legitimacy_desc: "Ask the $clergy_estate$ to perform ceremonies and offer public endorsements bolstering your ruler's divine mandate. Grants #Y 7.5#! [legitimacy|e] at the cost of clerical [estate_satisfaction|e]. Available every 10 years."
+ ask_burghers_for_loan_desc: "Ask the $burghers_estate$ to pay an emergency grant from their own treasury, expecting favors in return. Transfers up to #Y 25%#! of the burgher gold pool to the crown and reduces burgher [estate_satisfaction|e] by #R 25%#!. Available every 10 years. Unlike a loan, this does not consume our [Concept('loan', 'loan capacity')]."
+ ask_commoners_for_stability_desc: "Ask the common people to organize civic activities that calm unrest and reassure the population. Grants #Y 5#! [stability|e] at the cost of commoner or Dhimmi [estate_satisfaction|e]."
