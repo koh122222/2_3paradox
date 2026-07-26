@@ -13,6 +13,8 @@
  AUTO_MODIFIER_DESC_mrb13_global_raw_material_output_penalty: "All countries receive -10% raw material output."
  STATIC_MODIFIER_NAME_mrb13_france_offlimits: "Off-Limits"
  STATIC_MODIFIER_DESC_mrb13_france_offlimits: "France is kept out of military conflicts. Its subjects receive +50 loyalty; any war involving France ends in a white peace on the next monthly check."
+ STATIC_MODIFIER_NAME_mrb13_timurid_collapse: "Timurid Collapse"
+ STATIC_MODIFIER_DESC_mrb13_timurid_collapse: "The Timurids should not retain military effectiveness in this version of the mod."
  AUTO_MODIFIER_NAME_mrb13_discipline_diminishing_returns: "Discipline Diminishing Returns"
  AUTO_MODIFIER_DESC_mrb13_discipline_diminishing_returns: "For players, half of discipline above 110% is offset by a penalty."
  AUTO_MODIFIER_NAME_mrb13_light_infantry_power_diminishing_returns: "Light Infantry Diminishing Returns"

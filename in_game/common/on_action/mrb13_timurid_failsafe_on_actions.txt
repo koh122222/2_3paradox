@@ -1,0 +1,33 @@
+monthly_country_pulse = {
+	on_actions = {
+		mrb13_timurid_failsafe_monthly
+	}
+}
+
+mrb13_timurid_failsafe_monthly = {
+	trigger = {
+		tag = TIM
+	}
+
+	effect = {
+		add_country_modifier = {
+			modifier = mrb13_timurid_collapse
+			months = 2
+			mode = replace
+		}
+
+		ruler_or_regent ?= {
+			save_scope_as = mrb13_timurid_ruler
+		}
+
+		if = {
+			limit = {
+				exists = scope:mrb13_timurid_ruler
+				scope:mrb13_timurid_ruler = { is_alive = yes }
+			}
+			hidden_effect = {
+				kill_character_silently = scope:mrb13_timurid_ruler
+			}
+		}
+	}
+}

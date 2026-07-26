@@ -1,0 +1,22 @@
+REPLACE:rise_of_timur = {
+	monthly_spawn_chance = { value = 0 }
+	hint_tag = hint_rise_of_timur
+
+	can_start = {
+		always = no
+	}
+
+	can_end = {
+		always = yes
+	}
+
+	visible = {
+		always = no
+	}
+
+	on_start = {
+	}
+
+	on_monthly = {
+	}
+}

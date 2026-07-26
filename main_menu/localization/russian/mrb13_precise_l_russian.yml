@@ -13,6 +13,8 @@
  AUTO_MODIFIER_DESC_mrb13_global_raw_material_output_penalty: "Все страны получают -10% к добыче сырьевых ресурсов."
  STATIC_MODIFIER_NAME_mrb13_france_offlimits: "Оффлимит"
  STATIC_MODIFIER_DESC_mrb13_france_offlimits: "Франция находится вне военных конфликтов. Её субъекты получают +50 к лояльности; любая война с участием Франции завершается белым миром при следующей ежемесячной проверке."
+ STATIC_MODIFIER_NAME_mrb13_timurid_collapse: "Крушение Тимуридов"
+ STATIC_MODIFIER_DESC_mrb13_timurid_collapse: "Тимуриды не должны сохранять военную эффективность в этой версии мода."
  AUTO_MODIFIER_NAME_mrb13_discipline_diminishing_returns: "Снижение отдачи дисциплины"
  AUTO_MODIFIER_DESC_mrb13_discipline_diminishing_returns: "У игроков половина дисциплины сверх 110% компенсируется штрафом."
  AUTO_MODIFIER_NAME_mrb13_light_infantry_power_diminishing_returns: "Снижение отдачи лёгкой пехоты"

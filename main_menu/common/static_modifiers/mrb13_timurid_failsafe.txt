@@ -1,0 +1,5 @@
+mrb13_timurid_collapse = {
+	game_data = { category = country }
+
+	discipline = -0.50
+}
