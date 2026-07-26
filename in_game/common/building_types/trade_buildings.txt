@@ -1,4 +1,4 @@
-﻿marketplace = {
+marketplace = {
 	audio_tier = 1
 	is_foreign = no
 	max_levels = marketplace_max_level
@@ -37,7 +37,6 @@
 		local_merchant_power = 1
 		local_trades_per_burgher = 1
 		local_merchant_capacity = 1
-		local_monthly_food_modifier = -0.01
 	}
 }
 
@@ -81,7 +80,6 @@ merchants_quarters = {
 		local_merchant_power = 1.5
 		local_trades_per_burgher = 1.5
 		local_merchant_capacity = 1.5
-		local_monthly_food_modifier = -0.01
 	}
 	
 	obsolete = marketplace
@@ -126,7 +124,6 @@ grand_marketplace = {
 		local_merchant_power = 2.0
 		local_trades_per_burgher = 2.0
 		local_merchant_capacity = 2.0
-		local_monthly_food_modifier = -0.01
 	}
 	
 	obsolete = merchants_quarters
@@ -175,7 +172,6 @@ commerce_center = {
 		local_merchant_power = 4.0
 		local_trades_per_burgher = 4.0
 		local_merchant_capacity = 4.0
-		local_monthly_food_modifier = -0.01
 	}
 	
 	obsolete = grand_marketplace
@@ -219,6 +215,5 @@ port_authority = {
 		local_trades_per_burgher = 0.25
 		
 		local_market_access = 0.005
-		local_monthly_food_modifier = -0.01
 	}
 }

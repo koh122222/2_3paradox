@@ -1,4 +1,4 @@
-﻿early_council_hall = {
+early_council_hall = {
 	audio_tier = 1
 	is_foreign = no
 	max_levels = 1
@@ -32,7 +32,6 @@
 	modifier = {
 		local_max_control = 0.025
 		local_crown_estate_power = 0.10
-		local_monthly_food_modifier = -0.01
 	}
 
 }
@@ -74,7 +73,6 @@ council_hall = {
 	modifier = {
 		local_max_control = 0.05
 		local_crown_estate_power = 0.2
-		local_monthly_food_modifier = -0.01
 	}
 }
 
@@ -114,7 +112,6 @@ modern_council_hall = {
 	modifier = {
 		local_max_control = 0.10
 		local_crown_estate_power = 0.5
-		local_monthly_food_modifier = -0.01
 	}
 
 }

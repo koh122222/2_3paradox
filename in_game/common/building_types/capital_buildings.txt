@@ -1,4 +1,4 @@
-﻿royal_court = {
+royal_court = {
 	audio_tier = 4
 	is_foreign = no
 	pop_type = nobles
@@ -228,7 +228,6 @@ admiralty = {
 
 	construction_demand = admiralty_construction
 	modifier = {
-		local_monthly_food_modifier = -0.01
 	}
 }
 
@@ -281,7 +280,6 @@ war_college = {
 
 	construction_demand = important_building_construction
 	modifier = {
-		local_monthly_food_modifier = -0.01
 	}
 }
 
@@ -332,7 +330,6 @@ tax_assessor = {
 
 	construction_demand = important_building_construction
 	modifier = {
-		local_monthly_food_modifier = -0.01
 	}
 }
 
@@ -448,7 +445,6 @@ chancery = {
 	
 	construction_demand = early_capital_building_construction
 	modifier = {
-		local_monthly_food_modifier = -0.01
 	}
 }
 
@@ -913,6 +909,5 @@ central_bank = {
 
 	construction_demand = important_building_construction
 	modifier = {
-		local_monthly_food_modifier = -0.01
 	}
 }

@@ -1,0 +1,19 @@
+yearly_country_pulse = {
+	on_actions = {
+		mrb13_influential_art_centers_yearly_pulse
+	}
+}
+
+mrb13_influential_art_centers_yearly_pulse = {
+	trigger = {
+		OR = {
+			tag = GEN
+			tag = MLO
+			tag = VEN
+			tag = FLO
+			tag = NAP
+			tag = HAB
+		}
+	}
+	events = { mrb13_influential_art_centers.1 }
+}

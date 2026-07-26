@@ -1,0 +1,13 @@
+mrb13_influential_art_centers = {
+	game_data = {
+		category = country
+		decaying = yes
+	}
+	cultural_influence = 5
+	global_monthly_control = 0.02
+	antagonism_received_modifier = -1.0
+	levy_recovery_modifier = 1.0
+	global_levy_size_modifier = 0.25
+	revoke_town_rights_cost_modifier = -1.2
+	global_integration_speed_modifier = 0.25
+}

@@ -1,0 +1,34 @@
+namespace = mrb13_influential_art_centers
+
+mrb13_influential_art_centers.1 = {
+	type = country_event
+	title = mrb13_influential_art_centers.1.title
+	desc = mrb13_influential_art_centers.1.desc
+	outcome = positive
+	image = "gfx/interface/illustrations/institutions/renaissance.dds"
+
+	trigger = {
+		is_ai = no
+		OR = {
+			tag = GEN
+			tag = MLO
+			tag = VEN
+			tag = FLO
+			tag = NAP
+			tag = HAB
+		}
+		NOT = { has_variable = mrb13_influential_art_centers_fired }
+	}
+
+	immediate = {
+		set_variable = { name = mrb13_influential_art_centers_fired value = 1 }
+	}
+
+	option = {
+		name = mrb13_influential_art_centers.1.a
+		culture = {
+			add_cultural_influence = 100
+		}
+		add_country_modifier = { modifier = mrb13_influential_art_centers years = 50 mode = add }
+	}
+}

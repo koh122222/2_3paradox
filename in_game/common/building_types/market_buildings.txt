@@ -1,4 +1,4 @@
-﻿entrepot = {
+entrepot = {
 	audio_tier = 2
 	is_foreign = no
 	pop_type = burghers
@@ -24,7 +24,6 @@
 	}
 	modifier = {
 		local_merchant_capacity = 5
-		local_monthly_food_modifier = -0.01
 	}
 	
 	market_center_modifier = {
@@ -65,7 +64,6 @@ trading_hub = {
 	}
 	modifier = {
 		local_merchant_capacity = 5
-		local_monthly_food_modifier = -0.01
 	}
 	
 	market_center_modifier = {
@@ -107,7 +105,6 @@ customs_house = {
 	}
 	modifier = {
 		local_merchant_capacity = 5
-		local_monthly_food_modifier = -0.01
 	}
 	
 	market_center_modifier = {
@@ -149,7 +146,6 @@ stock_exchange = {
 	}
 	modifier = {
 		local_merchant_capacity = 5
-		local_monthly_food_modifier = -0.01
 	}
 	
 	market_center_modifier = {
@@ -191,7 +187,6 @@ clearing_house = {
 	}
 	modifier = {
 		local_merchant_capacity = 5
-		local_monthly_food_modifier = -0.01
 	}
 	
 	market_center_modifier = {
@@ -236,7 +231,6 @@ market_warehouse = {
 		local_merchant_capacity = 0.1
 		local_merchant_power = 0.1
 		local_trades_per_burgher = 0.1
-		local_monthly_food_modifier = -0.01
 	}
 
 	market_center_modifier = {
@@ -291,7 +285,6 @@ funduq = { #https://es.wikipedia.org/wiki/Funduq
 		local_merchant_power = 0.5
 		local_merchant_capacity = 1
 		local_trades_per_burgher = 0.1
-		local_monthly_food_modifier = -0.01
 	}
 
 	market_center_modifier = {

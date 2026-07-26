@@ -1,4 +1,4 @@
-﻿trade_office = {
+trade_office = {
 	audio_tier = 2
 	is_foreign = yes
 	stronger_power_projection = no
@@ -46,7 +46,6 @@
 		merchant_capacity_from_building = 0.3
 		building_owner_maritime_presence = 0.05
 		merchant_power_from_building = 0.2
-		local_monthly_food_modifier = -0.01
 	}
 }
 
@@ -228,7 +227,6 @@ slave_center = {
 	modifier = {
 		building_enslavement_power = 0.20
 		local_slave_pop_satisfaction = -0.05
-		local_monthly_food_modifier = -0.01
 	}
 }
 
@@ -285,7 +283,6 @@ overseas_trading_post = {
 	modifier = {
 		merchant_capacity_from_building = 0.1
 		merchant_power_from_building = 0.2
-		local_monthly_food_modifier = -0.01
 	}
 	
 }
@@ -359,7 +356,6 @@ colonial_administration = {
 	modifier = {
 		merchant_capacity_from_building = 0.2
 		merchant_power_from_building = 0.2
-		local_monthly_food_modifier = -0.01
 	}
 	
 }

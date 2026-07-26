@@ -1,4 +1,4 @@
-﻿cantonments = {
+cantonments = {
 	audio_tier = 2
 	is_special = yes
 	is_foreign = no
@@ -349,7 +349,6 @@ corporation_of_london = {  # ESTATE BUILDING
 	
 	modifier = {
 		local_burghers_estate_power = 1.0
-		local_monthly_food_modifier = -0.01
 	}
 	
 	possible_production_methods =  {
@@ -691,7 +690,6 @@ llotja_seda = {
 		local_burghers_estate_power = 1.0
 		local_silk_output_modifier = 0.25
 		local_merchant_power = 0.1
-		local_monthly_food_modifier = -0.01
 	}
 	
 	unique_production_methods = {
@@ -754,7 +752,6 @@ camara_comptos = {
 	construction_demand = early_capital_building_construction
 
 	modifier = {
-		local_monthly_food_modifier = -0.01
 	}
 }
 
@@ -848,7 +845,6 @@ globe_theatre = {
 	modifier = {
 		local_cultural_tradition = 0.25
 		local_monthly_literacy = 0.25
-		local_monthly_food_modifier = -0.01
 	}
 
 	capital_country_modifier = {
@@ -971,7 +967,6 @@ urban_parliament_seat = {
 	modifier = {
 		local_burghers_estate_power = 0.25
 		has_parliament_seat = yes
-		local_monthly_food_modifier = -0.01
 	}
 
 	
@@ -1018,7 +1013,6 @@ ribeira_das_naus = {
 		local_sailors = 0.02
 		can_build_ships_in_this_location = yes
 		local_repair_speed = 0.02
-		local_monthly_food_modifier = -0.01
 	}
 	
 	
@@ -1206,7 +1200,6 @@ wisselbank = {
 
 	construction_demand = bank_construction
 	modifier = {
-		local_monthly_food_modifier = -0.01
 	}
 }
 
@@ -1257,7 +1250,6 @@ riksbank = {
 
 	construction_demand = bank_construction
 	modifier = {
-		local_monthly_food_modifier = -0.01
 	}
 }
 
@@ -1298,7 +1290,6 @@ bolshoi_theater = {
 	modifier = {
 		local_cultural_tradition = 0.25
 		local_monthly_literacy = 0.25
-		local_monthly_food_modifier = -0.01
 	}
 
 	capital_country_modifier = {
@@ -1360,8 +1351,6 @@ archive_of_the_indies = {
 		local_merchant_power = 0.1
 		local_trades_per_burgher = 0.10
 		local_merchant_capacity = 1
-
-		local_monthly_food_modifier = -0.01
 	}
 	
 	possible_production_methods = {
@@ -1503,7 +1492,6 @@ chi_macau_port = {
 		building_owner_maritime_presence = 0.025
 		local_merchant_capacity = 1
 		# gold_to_location_owner = 20 CAESAR-25168
-		local_monthly_food_modifier = -0.01
 	}
 }
 
@@ -1592,7 +1580,6 @@ college_of_poets = {
 	modifier = {
 		local_cultural_tradition = 0.25
 		local_monthly_literacy = 0.25
-		local_monthly_food_modifier = -0.01
 	}
 
 	capital_country_modifier = {
@@ -1737,7 +1724,6 @@ ablaq_palace = {
 	
 	modifier = {
 		local_cloth_output_modifier = 0.05
-		local_monthly_food_modifier = -0.01
 	}
 	custom_tags = { unique_palace }
 }
@@ -1831,7 +1817,6 @@ dutch_trade_outpost = {
 	modifier = {
 		merchant_capacity_from_building = 1.0
 		building_owner_maritime_presence = 0.025
-		local_monthly_food_modifier = -0.01
 	}
 	
 	unique_production_methods = {
@@ -2118,7 +2103,6 @@ teatro_san_cassiano = {
 	modifier = {
 		local_cultural_tradition = 0.2
 		local_monthly_literacy = 0.2
-		local_monthly_food_modifier = -0.01
 	}
 
 	capital_country_modifier = {
@@ -2159,7 +2143,6 @@ doges_palace = {
 	modifier = {
 		local_monthly_prosperity = 0.001
 		local_crown_estate_power = 0.25
-		local_monthly_food_modifier = -0.01
 	}
 
 	capital_country_modifier = { 
@@ -2354,7 +2337,6 @@ piazza_san_marco = {
 	modifier = {
 		local_cultural_tradition = 0.2
 		local_monthly_development = 0.01
-		local_monthly_food_modifier = -0.01
 	}
 	
 	possible_production_methods = {
@@ -2597,7 +2579,6 @@ husuni_kubwa = {
 	
 	construction_demand = capital_building_construction
 	modifier = {
-		local_monthly_food_modifier = -0.01
 	}
 }
 
@@ -2745,7 +2726,6 @@ constantinople_observatory = {
 	}
 	construction_demand = library_construction
 	modifier = {
-		local_monthly_food_modifier = -0.01
 	}
 }
 
@@ -3087,7 +3067,6 @@ ori_portuguese_quarters = {
 		local_max_rgo_size = 3
 		local_rgo_build_time = -0.25
 		local_build_buildings_efficiency = 0.3
-		local_monthly_food_modifier = -0.01
 	}
 	possible_production_methods = {
 		ori_portuguese_quarters_maintenance
@@ -3160,7 +3139,6 @@ ambras_castle = {
 		local_cultural_tradition = 0.2
 		local_defensive = 0.2
 		local_crown_estate_power = 1.0
-		local_monthly_food_modifier = -0.01
 	}
 	
 	possible_production_methods = {
@@ -3264,7 +3242,6 @@ fra_louvre_museum  = {
 	}
 	modifier = {
 		local_cultural_tradition = 0.33
-		local_monthly_food_modifier = -0.01
 	}
 	capital_country_modifier = {
 		monthly_prestige = 0.25		
@@ -3788,7 +3765,6 @@ usa_academy_of_arts_and_sciences = {
 	modifier = {
 		local_cultural_tradition = 1.0
 		local_max_literacy = 10
-		local_monthly_food_modifier = -0.01
 	}
 
 	capital_country_modifier = {
@@ -3842,7 +3818,6 @@ usa_philosophical_society = {
 		local_cultural_tradition = 0.5
 		local_cultural_influence = 0.5
 		local_max_literacy = 5
-		local_monthly_food_modifier = -0.01
 	}
 
 	capital_country_modifier = {
@@ -3906,7 +3881,6 @@ usa_national_bank = {
 
 	construction_demand = bank_construction
 	modifier = {
-		local_monthly_food_modifier = -0.01
 	}
 }
 
@@ -3954,7 +3928,6 @@ usa_national_mint = {
 
 	construction_demand = bank_construction
 	modifier = {
-		local_monthly_food_modifier = -0.01
 	}
 }
 
@@ -3991,7 +3964,6 @@ the_cipher_secretary = {
 	}
 	construction_demand = library_construction
 	modifier = {
-		local_monthly_food_modifier = -0.01
 	}
 }
 
@@ -4020,7 +3992,6 @@ phanariot_district = {
 		local_burghers_estate_power = 0.2
 		local_merchant_capacity = 5
 		local_trades_per_burgher = 2
-		local_monthly_food_modifier = -0.01
 	}
 
 	unique_production_methods = {
@@ -4152,7 +4123,6 @@ jewish_district = {
 	modifier = {
 		local_production_efficiency = 0.1
 		local_pop_conversion_speed_modifier = -0.1
-		local_monthly_food_modifier = -0.01
 	}
 
 	unique_production_methods = {
@@ -4277,7 +4247,6 @@ sevilla_bullfighting_school = {
 	modifier = {
 		local_cultural_tradition = 0.25
 		local_cultural_influence = 0.25
-		local_monthly_food_modifier = -0.01
 	}
 
 	possible_production_methods = {
@@ -4312,7 +4281,6 @@ royal_audience_and_chancery = {
 		local_institution_growth_modifier = 0.10
 		local_max_literacy = 5
 		local_unrest = -0.10
-		local_monthly_food_modifier = -0.01
 	}
 
 	possible_production_methods = {
@@ -4440,7 +4408,6 @@ lucca_silk_production_guild = { #Placeholder building. Should be removed once CA
 		}
 	}
 	modifier = {
-		local_monthly_food_modifier = -0.01
 	}
 }
 
@@ -4477,6 +4444,5 @@ sie_sienese_port = {
 	modifier = {
 		local_maritime_presence = 0.15
 		local_merchant_capacity_modifier = 0.2
-		local_monthly_food_modifier = -0.01
 	}
 }

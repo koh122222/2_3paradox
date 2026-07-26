@@ -187,7 +187,7 @@ NCountry = {
 	MAX_MANPOWER_YEARS = 5
 	MAX_SAILORS_YEARS = 5
 
-	BASE_RESEARCH_COST = 25				# is set when advance db is loaded.
+	BASE_RESEARCH_COST = 26				# is set when advance db is loaded.
 	BASE_UNIQUE_RESEARCH_COST = 5		# is set when advance db is loaded.
 	AGE_RESEARCH_MODIFIER = 0.15		#multiplied per age..
 	PREVIOUS_AGE_REDUCTION = -8
@@ -431,7 +431,7 @@ NCombat = {
 	INITIATIVE_BASE_CHANCE = 0.1	# base chance each tick
 	INITIATIVE_CHANCE_EACH = 0.02 # Chance to engage per point of initiative
 	INITIATIVE_CHANCE_HOURS = 0.01 # Chance to engage per hour passed (adds with INITIATIVE_CHANCE_EACH)
-	INITIATIVE_CHANCE_MAX = 0.1 # Cap on the initiative-derived part of engage chance, before base/hours add. Prevents stacked initiative + army_initiative bonuses from snowballing engagement.
+	INITIATIVE_CHANCE_MAX = 0.15 # Cap on the initiative-derived part of engage chance, before base/hours add. Prevents stacked initiative + army_initiative bonuses from snowballing engagement.
 	
 	COMBAT_SPEED_SCALE = 0.05
 

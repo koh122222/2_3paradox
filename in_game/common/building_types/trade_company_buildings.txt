@@ -1,4 +1,4 @@
-﻿trade_company_headquarters = {
+trade_company_headquarters = {
 	audio_tier = 4
 	is_foreign = yes
 	max_levels = trade_company_headquarters_max_level
@@ -53,7 +53,6 @@
 		building_owner_overlord_maritime_presence = 0.05
 		scaled_gold_to_building_owner_overlord = 0.5
 		local_crown_estate_power = -0.2
-		local_monthly_food_modifier = -0.01
 	}
 	capital_to_overlord_modifier = {
 		number_of_satellite_trade_buildings = 3
@@ -197,7 +196,6 @@ trade_company_garrison = {
 	modifier = {
 		local_defensive = 0.25
 		local_garrison_size = 0.5
-		local_monthly_food_modifier = -0.01
 	}
 	on_built = {
 		owner = {
@@ -276,7 +274,6 @@ trade_company_harbor = {
 		merchant_power_from_building = 0.5
 		building_owner_maritime_presence = 0.01
 		building_owner_overlord_maritime_presence = 0.02
-		local_monthly_food_modifier = -0.01
 	}
 	on_built = {
 		owner = {
@@ -352,7 +349,6 @@ trade_company_local_venture = {
 	custom_tags = { trade_company_building satellite_trade_building }
 	modifier = {
 		local_raw_material_output = 0.33
-		local_monthly_food_modifier = -0.01
 	}
 	on_built = {
 		owner = {
@@ -429,7 +425,6 @@ trade_company_foreign_influence = {
 	modifier = {
 		local_monthly_development = 0.005
 		local_max_control = 0.05
-		local_monthly_food_modifier = -0.01
 	}
 	on_built = {
 		owner = {
@@ -507,7 +502,6 @@ trade_company_governance = {
 		manpower_to_building_owner = 0.005
 		sailors_to_building_owner = 0.005
 		can_recruit_regiment_in_this_location = yes
-		local_monthly_food_modifier = -0.01
 	}
 	on_built = {
 		owner = {
