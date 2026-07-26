@@ -73,6 +73,8 @@ age_2_renaissance = {
 
 		estate_enrichment = 0.25
 		monthly_legitimacy = -0.1
+		monthly_republican_tradition = -0.1
+		monthly_devotion = -0.1
 		court_spending_efficiency = -0.1
 		global_production_efficiency = -0.1
 	}
@@ -137,6 +139,8 @@ age_3_discovery = {
 
 		estate_enrichment = 0.30
 		monthly_legitimacy = -0.2
+		monthly_republican_tradition = -0.2
+		monthly_devotion = -0.2
 		court_spending_efficiency = -0.2
 		global_production_efficiency = -0.2
 	}
@@ -203,6 +207,8 @@ age_4_reformation = {
 
 		estate_enrichment = 0.35
 		monthly_legitimacy = -0.3
+		monthly_republican_tradition = -0.3
+		monthly_devotion = -0.3
 		court_spending_efficiency = -0.3
 		global_production_efficiency = -0.3
 	}
@@ -283,6 +289,8 @@ age_5_absolutism = {
 
 		estate_enrichment = 0.40
 		monthly_legitimacy = -0.4
+		monthly_republican_tradition = -0.4
+		monthly_devotion = -0.4
 		court_spending_efficiency = -0.4
 		global_production_efficiency = -0.4
 	}
@@ -357,6 +365,8 @@ age_6_revolutions = {
 
 		estate_enrichment = 0.45
 		monthly_legitimacy = -0.5
+		monthly_republican_tradition = -0.5
+		monthly_devotion = -0.5
 		court_spending_efficiency = -0.5
 		global_production_efficiency = -0.5
 	}
