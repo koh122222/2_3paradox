@@ -318,7 +318,7 @@ ask_clergy_for_legitimacy = {
 
 	effect = {
 		scope:actor = {
-			add_legitimacy = 7.5
+			add_legitimacy = 10
 			add_estate_satisfaction = {
 				type = scope:target.estate_type
 				value = -0.15
@@ -557,10 +557,10 @@ ask_commoners_for_stability = {
 
 	effect = {
 		scope:actor = {
-			add_stability = 5
+			add_stability = 10
 			add_estate_satisfaction = {
 				type = scope:target.estate_type
-				value = -0.2
+				value = -0.25
 			}
 		}
 	}

@@ -142,7 +142,7 @@ farming_settlement = {
 	construction_demand = workshop_construction
 
 	modifier = {
-		local_food_capacity = 100
+		local_food_capacity = 300
 		local_raw_material_output = 0.025
 		local_monthly_food_modifier = 0.025
 		local_peasants_estate_power = 0.25		#25% higher here.

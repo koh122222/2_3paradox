@@ -5,7 +5,7 @@ mrb13_influential_art_centers = {
 	}
 	cultural_influence = 5
 	global_monthly_control = 0.02
-	antagonism_received_modifier = -1.0
+	antagonism_received_modifier = -0.75
 	levy_recovery_modifier = 1.0
 	global_levy_size_modifier = 0.25
 	revoke_town_rights_cost_modifier = -1.2
