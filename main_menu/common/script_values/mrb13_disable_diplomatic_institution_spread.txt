@@ -1,4 +1,4 @@
-TRY_REPLACE:monthly_institution_spread_weak = 0
-TRY_REPLACE:monthly_institution_spread_mild = 0
-TRY_REPLACE:monthly_institution_spread_moderate = 0
-TRY_REPLACE:monthly_institution_spread_severe = 0
+monthly_institution_spread_weak = 0
+monthly_institution_spread_mild = 0
+monthly_institution_spread_moderate = 0
+monthly_institution_spread_severe = 0
