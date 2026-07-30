@@ -10,16 +10,34 @@ monthly_country_pulse = {
 	}
 }
 
+yearly_country_pulse = {
+	on_actions = {
+		mrb13_france_offlimits_remove_france
+		mrb13_france_offlimits_setup_ottoman
+	}
+}
+
 mrb13_france_offlimits_setup = {
 	effect = {
 		if = {
 			limit = {
 				country_exists = c:FRA
 				c:FRA = {
-					NOT = { has_country_modifier = mrb13_france_offlimits }
+					has_country_modifier = mrb13_france_offlimits
 				}
 			}
 			c:FRA = {
+				remove_country_modifier = mrb13_france_offlimits
+			}
+		}
+		if = {
+			limit = {
+				country_exists = c:TUR
+				c:TUR = {
+					NOT = { has_country_modifier = mrb13_france_offlimits }
+				}
+			}
+			c:TUR = {
 				add_country_modifier = {
 					modifier = mrb13_france_offlimits
 					months = -1
@@ -29,9 +47,34 @@ mrb13_france_offlimits_setup = {
 	}
 }
 
-mrb13_france_offlimits_war_check = {
+mrb13_france_offlimits_remove_france = {
 	trigger = {
 		tag = FRA
+		has_country_modifier = mrb13_france_offlimits
+	}
+
+	effect = {
+		remove_country_modifier = mrb13_france_offlimits
+	}
+}
+
+mrb13_france_offlimits_setup_ottoman = {
+	trigger = {
+		tag = TUR
+		NOT = { has_country_modifier = mrb13_france_offlimits }
+	}
+
+	effect = {
+		add_country_modifier = {
+			modifier = mrb13_france_offlimits
+			months = -1
+		}
+	}
+}
+
+mrb13_france_offlimits_war_check = {
+	trigger = {
+		tag = TUR
 		has_country_modifier = mrb13_france_offlimits
 		at_war = yes
 	}

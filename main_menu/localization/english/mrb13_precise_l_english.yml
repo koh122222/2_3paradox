@@ -12,7 +12,7 @@
  AUTO_MODIFIER_NAME_mrb13_global_raw_material_output_penalty: "Reduced Resource Extraction"
  AUTO_MODIFIER_DESC_mrb13_global_raw_material_output_penalty: "All countries receive -10% raw material output."
  STATIC_MODIFIER_NAME_mrb13_france_offlimits: "Off-Limits"
- STATIC_MODIFIER_DESC_mrb13_france_offlimits: "France is kept out of military conflicts. Its subjects receive +50 loyalty; any war involving France ends in a white peace on the next monthly check."
+ STATIC_MODIFIER_DESC_mrb13_france_offlimits: "This country is temporarily kept out of military conflicts. Its subjects receive +50 loyalty, tax efficiency is increased by 20%, and the AI is strongly discouraged from starting new wars; any war involving it ends in a white peace on the next monthly check."
  STATIC_MODIFIER_NAME_mrb13_timurid_collapse: "Timurid Collapse"
  STATIC_MODIFIER_DESC_mrb13_timurid_collapse: "The Timurids should not retain military effectiveness in this version of the mod."
  AUTO_MODIFIER_NAME_mrb13_discipline_diminishing_returns: "Discipline Diminishing Returns"

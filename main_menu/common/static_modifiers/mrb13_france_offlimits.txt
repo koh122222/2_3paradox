@@ -4,4 +4,9 @@ mrb13_france_offlimits = {
 	}
 
 	subject_loyalty = 50
+	tax_income_efficiency = 0.2
+	ai_require_cb_for_war = yes
+	ai_months_between_wars = 240
+	carefulness_modifier = 2.0
+	aggressiveness_modifier = -1.0
 }
