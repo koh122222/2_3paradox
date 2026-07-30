@@ -1,0 +1,79 @@
+namespace = dynastic
+
+# Mod override: make the trained-medicus choice in dynastic.7 nearly safe.
+dynastic.7 = {
+	type = country_event
+	title = dynastic.7.title
+	desc = dynastic.7.desc
+	outcome = neutral
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+	trigger = {
+		has_ruler_in_country = yes
+		has_heir = yes
+		has_regent = no
+		ruler ?= {
+			any_child = {
+				is_alive = yes
+				age_in_years < 15
+				owner = root
+			}
+		}
+		government_type = government_type:monarchy
+	}
+	immediate = {
+		ruler ?= {
+			random_child = {
+				limit = {
+					is_alive = yes
+					age_in_years < 15
+					owner = root
+				}
+				save_scope_as = target_child
+			}
+		}
+		capital = { save_scope_as = target_location }
+		if = {
+			limit = { has_variable = talisman_giver_variable }
+			var:talisman_giver_variable = { save_scope_as = target_character }
+		}
+	}
+	option = {
+		name = dynastic.7.a
+		change_gold_effect = { scale = -2.40 }
+		random_list = {
+			1 = { kill_character = { target = scope:target_child reason = fever } }
+			99 = { add_legitimacy = legitimacy_weak_bonus }
+		}
+	}
+	option = {
+		name = dynastic.7.b
+		trigger = {
+			owns = location:salerno
+			location:salerno = { has_building_with_at_least_one_level = medical_school }
+		}
+		change_gold_effect = { scale = -3.00 }
+		random_list = {
+			25 = { kill_character = { target = scope:target_child reason = fever } }
+			75 = { add_legitimacy = legitimacy_weak_bonus }
+		}
+	}
+	option = {
+		name = dynastic.7.c
+		random_list = {
+			75 = { kill_character = { target = scope:target_child reason = fever } }
+			25 = { add_legitimacy = legitimacy_extreme_bonus }
+		}
+	}
+	option = {
+		name = dynastic.7.d
+		ai_will_select = { value = 1000 }
+		trigger = { scope:target_child = { has_character_modifier = blessed_talisman_modifier } }
+		random_list = {
+			25 = { kill_character = { target = scope:target_child reason = fever } }
+			75 = { add_religious_influence = religious_influence_mild_bonus }
+		}
+	}
+}
