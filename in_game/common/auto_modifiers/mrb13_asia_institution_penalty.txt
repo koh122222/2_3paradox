@@ -3,6 +3,8 @@ mrb13_asia_institution_penalty = {
 		NOT = { is_subject_type = colonial_nation }
 		original_capital ?= {
 			continent = continent:asia
+			NOT = { region = region:caucasus_region }
+			NOT = { region = region:crescent_region }
 			NOT = { region = region:persia_region }
 			NOT = { region = region:anatolia_region }
 		}
