@@ -6,6 +6,8 @@ on_game_start = {
 
 monthly_country_pulse = {
 	on_actions = {
+		mrb13_france_offlimits_remove_france
+		mrb13_france_offlimits_setup_ottoman
 		mrb13_france_offlimits_war_check
 	}
 }
