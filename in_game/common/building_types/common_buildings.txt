@@ -6,23 +6,23 @@
 
 	category = infrastructure_category
 	employment_size = generic_peasant_building_employment
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	forbidden_for_estates = yes
-	
+
 	location_potential = {
 		OR = {
 			has_river = yes
 			is_adjacent_to_lake = yes
 		}
 	}
-	
+
 	build_time = infrastructure_build_time
-	
+
 	unique_production_methods = {
 		irrigation_maintenance = {
 			tools = 0.1
@@ -44,33 +44,33 @@ bridge_infrastructure = {
 	pop_type = laborers
 	max_levels = 1
 	forbidden_for_estates = yes
-	
+
 	employment_size = generic_peasant_building_employment
-	
+
 	category = infrastructure_category
 
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	build_time = infrastructure_build_time
-	
+
 	location_potential = {
 		has_river = yes
 		num_roads > 0
 	}
-	allow = { }	
-	
+	allow = { }
+
 	modifier = {
 		local_distance_from_capital_speed_propagation = 0.1
 		movement_cost = -0.1
 	}
-	
+
 	possible_production_methods = {
 		bridge_maintenance
 	}
-	
+
 	construction_demand = bridge_construction
 }
 
@@ -80,16 +80,16 @@ pound_lock_canal_infrastructure = {
 	pop_type = laborers
 	max_levels = 1
 	forbidden_for_estates = yes
-	
+
 	employment_size = generic_peasant_building_employment
-	
+
 	category = infrastructure_category
 
 	city = yes
 	megalopolis = yes
-	
+
 	build_time = infrastructure_build_time
-	
+
 	location_potential = {
 		OR = {
 			is_coastal = yes
@@ -98,17 +98,17 @@ pound_lock_canal_infrastructure = {
 		}
 		development >= 20
 	}
-	allow = { }	
-	
+	allow = { }
+
 	modifier = {
 		local_distance_from_capital_speed_propagation = 0.1
 		local_monthly_food_modifier = 0.05
 	}
-	
+
 	possible_production_methods = {
 		pound_lock_canal_infrastructure_maintenance
 	}
-	
+
 	construction_demand = pound_lock_canal_infrastructure_construction
 }
 
@@ -122,14 +122,14 @@ mason = {
 
 	category = basic_industry_category
 	employment_size = advanced_peasant_building_employment
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
 
 	build_time = guild_build_time
-	
+
 	unique_production_methods = {
 		stone_bricks = {
 			stone = 0.417
@@ -148,6 +148,9 @@ mason = {
 
 	}
 
+	allow = {
+		NOT = { has_building = building_type:academy_of_engineering }
+	}
 	construction_demand = basic_construction_needs
 }
 
@@ -159,21 +162,21 @@ mercury_patio = {
 
 	category = rgo_building_category
 	employment_size = advanced_peasant_building_employment
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	location_potential = {
 		OR = {
 			raw_material = goods:silver
 			raw_material = goods:goods_gold
 		}
 	}
-	
+
 	build_time = guild_build_time
-	
+
 	unique_production_methods = {
 		mercury_patio_maintenance = {
 			mercury = 1.0
@@ -197,24 +200,24 @@ tar_kiln = {
 	startup_ramp_target = rural_startup_ramp_target
 
 	employment_size = tiny_rural_peasant_produce_employment
-	
+
 	category = basic_industry_category
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	location_potential = {
 		OR = {
 			vegetation = woods
 			vegetation = forest
 			vegetation = jungle
 			raw_material = goods:lumber
-		}		
+		}
 	}
 
-	unique_production_methods = {	
+	unique_production_methods = {
 		tar_kiln_maintenance = {
 			produced = tar
 			output = 1.0
@@ -238,9 +241,9 @@ horse_breeders = {
 	startup_ramp_target = rural_startup_ramp_target
 
 	employment_size = rural_peasant_produce_employment
-	
+
 	category = rgo_building_category
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
@@ -251,7 +254,7 @@ horse_breeders = {
 			is_produced_in_market = goods:horses
 		}
 	}
-	
+
 	allow = {
 		OR = {
 			climate = mediterranean
@@ -259,9 +262,9 @@ horse_breeders = {
 			climate = oceanic
 		}
 	}
-	
+
 	unique_production_methods = {
-		
+
 		horse_breeders_maintenance = {
 			produced = horses
 			output = 1
@@ -283,14 +286,14 @@ stone_quarry = {
 	max_levels = rural_building_cap
 	startup_ramp_target = rural_startup_ramp_target
 	pop_type = laborers
-	
+
 	employment_size = rural_peasant_produce_employment
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	location_potential = {
 		OR = {
 			topography = mountains
@@ -303,9 +306,9 @@ stone_quarry = {
 	}
 
 	category = rgo_building_category
-	
+
 	unique_production_methods = {
-	
+
 		stone_quarry_maintenance = {
 			tools = 0.107
 			lumber = 0.127
@@ -340,15 +343,15 @@ lumber_mill = {
 	max_levels = rural_building_cap
 	startup_ramp_target = rural_startup_ramp_target
 	pop_type = laborers
-	
+
 	employment_size = rural_peasant_produce_employment
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
 
-	
+
 	location_potential = {
 		OR = {
 			vegetation = woods
@@ -362,9 +365,9 @@ lumber_mill = {
 	}
 
 	category = rgo_building_category
-	
+
 	build_time = rural_build_time
-	
+
 	unique_production_methods = {
 		lumber_mill_maintenance = {
 			produced = lumber
@@ -386,9 +389,9 @@ fiber_crops_farm = {
 	max_levels = rural_building_cap
 	startup_ramp_target = rural_startup_ramp_target
 	pop_type = laborers
-	
+
 	employment_size = rural_peasant_produce_employment
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
@@ -402,9 +405,9 @@ fiber_crops_farm = {
 	}
 
 	category = rgo_building_category
-	
+
 	build_time = rural_build_time
-	
+
 	unique_production_methods = {
 		fiber_crops_farm_maintenance = {
 			livestock = 0.494
@@ -428,9 +431,9 @@ sand_pit = {
 	max_levels = rural_building_cap
 	startup_ramp_target = rural_startup_ramp_target
 	pop_type = laborers
-	
+
 	employment_size = rural_peasant_produce_employment
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
@@ -443,9 +446,9 @@ sand_pit = {
 	}
 
 	category = rgo_building_category
-	
+
 	build_time = rural_build_time
-	
+
 	unique_production_methods = {
 		sand_pit_maintenance = {
 			tools = 0.058
@@ -459,6 +462,9 @@ sand_pit = {
 		}
 	}
 
+	allow = {
+		NOT = { has_building = building_type:academy_of_engineering }
+	}
 	construction_demand = basic_construction_needs
 }
 
@@ -468,15 +474,15 @@ bog_iron_smelter = {
 	max_levels = rural_building_cap
 	startup_ramp_target = rural_startup_ramp_target
 	pop_type = laborers
-	
+
 	employment_size = rural_peasant_produce_employment
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
 
-	
+
 	location_potential = {
 		OR = {
 			is_adjacent_to_lake = yes
@@ -488,7 +494,7 @@ bog_iron_smelter = {
 	}
 
 	category = rgo_building_category
-	
+
 	unique_production_methods = {
 		bog_iron_maintenance = {
 			produced = iron
@@ -498,7 +504,7 @@ bog_iron_smelter = {
 			category = building_maintenance
 		}
 	}
-	
+
 	build_time = rural_build_time
 	construction_demand = basic_construction_needs
 }
@@ -509,14 +515,14 @@ clay_pit = {
 	max_levels = rural_building_cap
 	startup_ramp_target = rural_startup_ramp_target
 	pop_type = laborers
-	
+
 	employment_size = rural_peasant_produce_employment
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	location_potential = {
 		OR = {
 			is_coastal = yes
@@ -529,18 +535,23 @@ clay_pit = {
 	}
 
 	category = rgo_building_category
-	
+
 	unique_production_methods = {
 		clay_pit_maintenance = {
 			produced = clay
-			output = 1
-			lumber = 0.2778
+			output = 6
+			tools = 0.5
+			lumber = 1
+			liquor = 1
 			category = building_maintenance
 			debug_max_profit = rural_profit_margin
 		}
 	}
-	
+
 	build_time = rural_build_time
+	allow = {
+		NOT = { has_building = building_type:academy_of_engineering }
+	}
 	construction_demand = basic_construction_needs
 
 }
@@ -551,11 +562,11 @@ salt_collector = {
 	pop_type = laborers
 	max_levels = rural_building_cap
 	startup_ramp_target = rural_startup_ramp_target
-	
+
 	employment_size = rural_peasant_produce_employment
-	
+
 	category = rgo_building_category
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
@@ -569,7 +580,7 @@ salt_collector = {
 	}
 
 	unique_production_methods = {
-		
+
 		salt_collector_maintenance = {
 			produced = salt
 			output = 0.3
@@ -594,11 +605,11 @@ fruit_orchard = {
 	pop_type = laborers
 	max_levels = rural_building_cap
 	startup_ramp_target = rural_startup_ramp_target
-	
+
 	employment_size = rural_peasant_produce_employment
-	
+
 	category = rgo_building_category
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
@@ -614,7 +625,7 @@ fruit_orchard = {
 	}
 
 	unique_production_methods = {
-		
+
 		fruit_orchard_maintenance = {
 			produced = fruit
 			output = 0.3

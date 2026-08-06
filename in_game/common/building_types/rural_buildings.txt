@@ -3,20 +3,20 @@
 	is_foreign = no
 	max_levels = 1
 	pop_type = soldiers
-	
+
 	employment_size = bailiff_employment
 	category = government_category
-	
+
 	rural_settlement = yes
 	expensive = yes
 	build_time = rural_build_time
-	
+
 	forbidden_for_estates = yes
-	
+
 	location_potential = {
 		is_overseas_for_owner = no
 	}
-	
+
 	allow = {
 		trigger_if = {
 			limit = {
@@ -39,8 +39,8 @@
 		}
 		owner = scope:actor #not in subjects
 	}
-	
-	
+
+
 	unique_production_methods = {
 		bailiff_input = {
 			paper = 0.1
@@ -56,8 +56,8 @@
 		local_nobles_estate_power = 1.0
 		local_peasant_enfranchisment = -0.1
 	}
-	
-	
+
+
 }
 
 fishing_village = {
@@ -66,21 +66,21 @@ fishing_village = {
 	max_levels = rural_building_cap
 	startup_ramp_target = rural_startup_ramp_target
 	pop_type = peasants
-	
+
 	is_village = yes
 
 	category = village_category
 	employment_size = village_employment_size
-	
+
 	rural_settlement = yes
-	
+
 	AI_optimization_flag_coastal = yes
 	location_potential = {
 		is_coastal = yes
 	}
-	
-		
-	
+
+
+
 	build_time = village_build_time
 
 	possible_production_methods = {
@@ -119,14 +119,14 @@ farming_village = {
 	max_levels = rural_building_cap
 	startup_ramp_target = rural_startup_ramp_target
 	pop_type = peasants
-	
+
 	is_village = yes
-	
+
 	category = village_category
 	employment_size = village_employment_size
-	
+
 	rural_settlement = yes
-	
+
 	location_potential = {
 		OR = {
 			raw_material = goods:wheat
@@ -141,22 +141,22 @@ farming_village = {
 			raw_material = goods:wool
 		}
 	}
-	
-		
-	
+
+
+
 	build_time = village_build_time
-	
+
 	unique_production_methods = {
 		farming_village_maintenance = {
 			tools = 0.0267
 			clay = 1.0896
-			
+
 			output = 0.5
-			
+
 			produced = livestock
-			
+
 			debug_max_profit = rural_profit_margin
-	
+
 			category = building_maintenance
 		}
 	}
@@ -176,6 +176,69 @@ farming_village = {
 	}
 }
 
+# Age III upgrade for farming_village. It is deliberately defined after its base building.
+farming_settlement = {
+	is_foreign = no
+	max_levels = rural_II_building_cap
+	pop_type = peasants
+	category = village_category
+	employment_size = village_employment_size
+	rural_settlement = yes
+	location_potential = {
+		OR = {
+			raw_material = goods:wheat
+			raw_material = goods:maize
+			raw_material = goods:rice
+			raw_material = goods:millet
+			raw_material = goods:legumes
+			raw_material = goods:potato
+			raw_material = goods:livestock
+			raw_material = goods:olives
+			raw_material = goods:fruit
+			raw_material = goods:wool
+		}
+	}
+	build_time = workshop_build_time
+	unique_production_methods = {
+		farming_settlement_maintenance_livestock = { tools = 0.05 clay = 0.8 output = 0.65 produced = livestock debug_max_profit = 0.4 category = building_maintenance }
+		farming_settlement_maintenance_legumes = { tools = 0.1 lumber = 0.2 output = 0.9 produced = legumes debug_max_profit = 0.4 category = building_maintenance }
+		farming_settlement_maintenance_millet = { tools = 0.05 clay = 0.4 output = 0.9 produced = millet debug_max_profit = 0.4 category = building_maintenance }
+		farming_settlement_maintenance_dyes = { tools = 0.15 lumber = 0.1 glass = 0.05 output = 0.225 produced = dyes debug_max_profit = 0.3 category = building_maintenance }
+		farming_settlement_maintenance_fiber_crops = { tools = 0.1 lumber = 0.2 output = 0.45 produced = fiber_crops debug_max_profit = 0.4 category = building_maintenance }
+		farming_settlement_maintenance_wool = { tools = 0.2 lumber = 0.2 output = 0.44 produced = wool debug_max_profit = 0.4 category = building_maintenance }
+		farming_settlement_maintenance_beeswax = { tools = 0.1 lumber = 0.4 clay = 0.2 output = 0.325 produced = beeswax debug_max_profit = 0.3 category = building_maintenance }
+	}
+	remove_if = {
+		location = {
+			NOR = {
+				raw_material = goods:wheat
+				raw_material = goods:maize
+				raw_material = goods:rice
+				raw_material = goods:millet
+				raw_material = goods:legumes
+				raw_material = goods:potato
+				raw_material = goods:livestock
+				raw_material = goods:olives
+				raw_material = goods:fruit
+				raw_material = goods:wool
+			}
+		}
+	}
+	construction_demand = workshop_construction
+	modifier = {
+		local_food_capacity = 300
+		local_raw_material_output = 0.025
+		local_monthly_food_modifier = 0.025
+		local_peasants_estate_power = 0.25
+		local_laborers_desired_pop = 0.05
+		local_soldiers_desired_pop = 0.05
+		local_burghers_desired_pop = 0.025
+	}
+	important_for_AI = yes
+	ai_forbid_shutdown = yes
+	obsolete = farming_village
+}
+
 forest_village = {
 	audio_tier = 1
 	is_foreign = no
@@ -183,13 +246,13 @@ forest_village = {
 	max_levels = rural_building_cap
 	startup_ramp_target = rural_startup_ramp_target
 	pop_type = peasants
-	
+
 	category = village_category
 	employment_size = village_employment_size
-	
+
 
 	rural_settlement = yes
-	
+
 	location_potential = {
 		OR = {
 			raw_material = goods:wild_game
@@ -198,9 +261,9 @@ forest_village = {
 			vegetation = jungle
 		}
 	}
-	
-		
-	
+
+
+
 	build_time = village_build_time
 
 
@@ -232,17 +295,17 @@ market_village = {
 	max_levels = rural_building_cap
 	startup_ramp_target = rural_startup_ramp_target
 	pop_type = peasants
-	
+
 	is_village = yes
-	
+
 	employment_size = village_employment_size
-	
+
 	rural_settlement = yes
-	
+
 	category = village_category
-	
-		
-	
+
+
+
 	build_time = village_build_time
 
 	construction_demand = village_construction
@@ -323,26 +386,26 @@ rural_clothmaker = {
 	startup_ramp_target = rural_startup_ramp_target
 
 	forbidden_for_estates = yes
-	
+
 	category = consumer_goods_category
-	
+
 	employment_size = rural_peasant_produce_employment
-	
+
 	rural_settlement = yes
-	
-	
+
+
 	town =  no
 	city =  no
 
-	
+
 
 
 	build_time = rural_build_time
-	
+
 	unique_production_methods = {
-	
-	
-			
+
+
+
 		rural_wool_clothmaker = {
 			wool = 0.5
 
@@ -373,11 +436,11 @@ rural_clothmaker = {
 			category = guild_input
 		}
 
-		
+
 	}
 
 	construction_demand = village_construction
-	
+
 	modifier = {
 	}
 }
@@ -388,25 +451,25 @@ charcoal_maker = {
 	pop_type = laborers
 	max_levels = rural_building_cap
 	startup_ramp_target = rural_startup_ramp_target
-	
+
 	employment_size = rural_peasant_produce_employment
-	
-	
+
+
 	category = rgo_building_category
-	
+
 	rural_settlement = yes
-	
-	
+
+
 
 	build_time = rural_build_time
-	
+
 	unique_production_methods = {
 		char_coal_maintenance = {
 			produced = coal
 			output = 0.8
 
 			debug_max_profit = rural_profit_margin
-		
+
 			lumber = 0.8889
 			category = guild_input
 		}
@@ -422,28 +485,28 @@ improved_charcoal_maker = {
 	pop_type = laborers
 	max_levels = rural_building_cap
 	startup_ramp_target = rural_startup_ramp_target
-	
+
 	employment_size = rural_peasant_produce_employment
 	obsolete = charcoal_maker
-	
+
 	category = rgo_building_category
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
-	
+
+
 
 	build_time = rural_build_time
-	
+
 	unique_production_methods = {
 		improved_char_coal_maintenance = {
 			produced = coal
 			output = 1.2
 
 			debug_max_profit = rural_profit_margin
-		
+
 			lumber = 1.3333
 			category = guild_input
 		}
@@ -472,24 +535,24 @@ elephant_hunting_grounds = {
 	}
 	startup_ramp_target = rural_startup_ramp_target
 	pop_type = peasants
-	
+
 	category = rgo_building_category
 	employment_size = elephant_hunting_grounds_employment
-	
+
 	rural_settlement = yes
-	
+
 	country_potential = {
 		produced_in_country:elephants > 0
 	}
-	
+
 	location_potential = {
 		raw_material = goods:elephants
 	}
-	
-		
-	
+
+
+
 	build_time = rural_build_time
-	
+
 
 	unique_production_methods = {
 		elephant_hunting_grounds_maintenance = {
@@ -522,12 +585,12 @@ windmill = {
 	is_foreign = no
 	pop_type = laborers
 	max_levels = 1
-	
+
 	employment_size = rural_peasant_enhance_employment
-	
-	
+
+
 	category = rgo_building_category
-	
+
 	rural_settlement = yes
 
 	location_potential = {
@@ -540,7 +603,7 @@ windmill = {
 	}
 
 	unique_production_methods = {
-		
+
 		windmill_maintenance = {
 			tools  = 0.025
 			lumber = 0.05
@@ -555,7 +618,7 @@ windmill = {
 		local_millet_output_modifier = 0.1
 	}
 
-	
+
 
 	build_time = rural_build_time
 
@@ -568,12 +631,12 @@ local_smelters = {
 	is_foreign = no
 	pop_type = laborers
 	max_levels = 1
-	
+
 	employment_size = rural_peasant_enhance_employment
-	
-	
+
+
 	category = rgo_building_category
-	
+
 	rural_settlement = yes
 
 	location_potential = {
@@ -587,7 +650,7 @@ local_smelters = {
 	}
 
 	unique_production_methods = {
-		
+
 		local_smelters_maintenance = {
 			tools  = 0.025
 			lumber = 0.05
@@ -603,7 +666,7 @@ local_smelters = {
 		local_lead_output_modifier = 0.1
 	}
 
-	
+
 
 	build_time = rural_build_time
 
@@ -616,13 +679,13 @@ sawmill = {
 	is_foreign = no
 	pop_type = laborers
 	max_levels = 1
-	
+
 	employment_size = rural_peasant_enhance_employment
-	
+
 	forbidden_for_estates = yes
-	
+
 	category = rgo_building_category
-	
+
 	rural_settlement = yes
 
 	location_potential = {
@@ -636,7 +699,7 @@ sawmill = {
 	}
 
 	unique_production_methods = {
-		
+
 		sawmill_maintenance = {
 			tools  = 0.05
 			category = building_maintenance
@@ -647,7 +710,7 @@ sawmill = {
 		local_lumber_output_modifier = 0.2
 	}
 
-	
+
 
 	build_time = rural_build_time
 
@@ -661,12 +724,12 @@ sheep_farms = {
 	pop_type = laborers
 	max_levels = rural_building_cap
 	startup_ramp_target = rural_startup_ramp_target
-	
+
 	employment_size = rural_peasant_produce_employment
-	
-	
+
+
 	category = rgo_building_category
-	
+
 	rural_settlement = yes
 
 	location_potential = {
@@ -678,7 +741,7 @@ sheep_farms = {
 	}
 
 	unique_production_methods = {
-		
+
 		sheep_farm_maintenance = {
 			produced = wool
 			output = 0.5
@@ -693,7 +756,7 @@ sheep_farms = {
 	modifier = {
 	}
 
-	
+
 
 	build_time = rural_build_time
 
@@ -707,12 +770,12 @@ settlement_building = {
 	max_levels = 1
 	pop_type = peasants
 
-	
+
 	category = infrastructure_category
 
 	employment_size = tiny_rural_peasant_produce_employment
-	
-	
+
+
 	rural_settlement = yes
 	town = no
 	city = no
@@ -720,27 +783,27 @@ settlement_building = {
 
 	location_potential = {
 		location_population_percentage < 0.05
-	}	
+	}
 	remove_if = {
 		location = {
 			location_population_percentage > 0.1
 		}
 	}
-	
+
 
 	possible_production_methods = {
 		colony_maintenance
 	}
 	construction_demand = colony_construction
 
-	
+
 	build_time = village_build_time
-	
+
 	modifier = {
 		local_migration_attraction = 1.0
 		local_population_growth = 0.01
 	}
-	
+
 }
 
 kilwan_shipwrights = {
@@ -749,28 +812,28 @@ kilwan_shipwrights = {
 	is_foreign = no
 	max_levels = 1
 	pop_type = soldiers
-	
+
 	category = naval_category
 	employment_size = dock_employment
-	
+
 	rural_settlement = yes
 	town = no
 	city = no
-	
+
 	location_potential = {
 		is_port = yes
 	}
-	
+
 	build_time = medium_port_building_time
 
-	
-	
+
+
 	possible_production_methods = {
 		kilwan_shipwrights_maintenance
 	}
 
 	construction_demand = port_building_construction
-	
+
 
 	modifier = {
 		local_sailors = 0.01

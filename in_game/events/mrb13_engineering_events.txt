@@ -1,0 +1,12 @@
+namespace = mrb13_engineering
+
+mrb13_engineering.1 = {
+	type = country_event
+	title = mrb13_engineering.1.title
+	desc = mrb13_engineering.1.desc
+	outcome = positive
+
+	option = {
+		name = mrb13_engineering.1.a
+	}
+}
