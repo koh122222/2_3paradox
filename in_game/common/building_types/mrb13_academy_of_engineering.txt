@@ -1,0 +1,50 @@
+academy_of_engineering = {
+	audio_tier = 3
+	is_foreign = no
+	max_levels = 1
+	pop_type = burghers
+	category = cultural_category
+	employment_size = 0.5
+	megalopolis = yes
+	price = mrb13_metropolitan_masonry_works_price
+	AI_ignore_available_worker_flag = yes
+	expensive = yes
+	build_time = large_cultural_building_time
+	modifier = {
+		local_masonry_output_modifier = 1.0
+		local_sand_output_modifier = 1.0
+		local_stone_output_modifier = 1.0
+		local_clay_output_modifier = 1.0
+		local_nobles_desired_pop = 0.1
+	}
+	unique_production_methods = {
+		academy_of_engineering_maintenance = {
+			instruments = 5
+			wine = 1
+			fine_cloth = 1
+			paper = 3
+			category = building_maintenance
+		}
+	}
+	construction_demand = university_construction
+	on_built = {
+		location = {
+			every_buildings_in_location = {
+				limit = {
+					OR = {
+						building_type = building_type:mason
+						building_type = building_type:sand_pit
+						building_type = building_type:clay_pit
+					}
+				}
+				save_temporary_scope_as = obsolete_engineering_building
+				PREV = {
+					destroy_building = scope:obsolete_engineering_building
+				}
+			}
+			owner = {
+				trigger_event_non_silently = mrb13_engineering.1
+			}
+		}
+	}
+}

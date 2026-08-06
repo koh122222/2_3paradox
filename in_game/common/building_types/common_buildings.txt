@@ -148,6 +148,9 @@ mason = {
 
 	}
 
+	allow = {
+		NOT = { has_building = building_type:academy_of_engineering }
+	}
 	construction_demand = basic_construction_needs
 }
 
@@ -459,6 +462,9 @@ sand_pit = {
 		}
 	}
 
+	allow = {
+		NOT = { has_building = building_type:academy_of_engineering }
+	}
 	construction_demand = basic_construction_needs
 }
 
@@ -533,14 +539,19 @@ clay_pit = {
 	unique_production_methods = {
 		clay_pit_maintenance = {
 			produced = clay
-			output = 1
-			lumber = 0.2778
+			output = 6
+			tools = 0.5
+			lumber = 1
+			liquor = 1
 			category = building_maintenance
 			debug_max_profit = rural_profit_margin
 		}
 	}
 	
 	build_time = rural_build_time
+	allow = {
+		NOT = { has_building = building_type:academy_of_engineering }
+	}
 	construction_demand = basic_construction_needs
 
 }

@@ -1,0 +1,8 @@
+metropolitan_masonry_works_advance = {
+	age = age_3_discovery
+	unlock_building = metropolitan_masonry_works
+	unlock_building = sand_district
+	unlock_building = clay_district
+	unlock_building = academy_of_engineering
+	requires = print_culture
+}

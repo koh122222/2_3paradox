@@ -176,6 +176,69 @@ farming_village = {
 	}
 }
 
+# Age III upgrade for farming_village. It is deliberately defined after its base building.
+farming_settlement = {
+	is_foreign = no
+	max_levels = rural_II_building_cap
+	pop_type = peasants
+	category = village_category
+	employment_size = village_employment_size
+	rural_settlement = yes
+	location_potential = {
+		OR = {
+			raw_material = goods:wheat
+			raw_material = goods:maize
+			raw_material = goods:rice
+			raw_material = goods:millet
+			raw_material = goods:legumes
+			raw_material = goods:potato
+			raw_material = goods:livestock
+			raw_material = goods:olives
+			raw_material = goods:fruit
+			raw_material = goods:wool
+		}
+	}
+	build_time = workshop_build_time
+	unique_production_methods = {
+		farming_settlement_maintenance_livestock = { tools = 0.05 clay = 0.8 output = 0.65 produced = livestock debug_max_profit = 0.4 category = building_maintenance }
+		farming_settlement_maintenance_legumes = { tools = 0.1 lumber = 0.2 output = 0.9 produced = legumes debug_max_profit = 0.4 category = building_maintenance }
+		farming_settlement_maintenance_millet = { tools = 0.05 clay = 0.4 output = 0.9 produced = millet debug_max_profit = 0.4 category = building_maintenance }
+		farming_settlement_maintenance_dyes = { tools = 0.15 lumber = 0.1 glass = 0.05 output = 0.225 produced = dyes debug_max_profit = 0.3 category = building_maintenance }
+		farming_settlement_maintenance_fiber_crops = { tools = 0.1 lumber = 0.2 output = 0.45 produced = fiber_crops debug_max_profit = 0.4 category = building_maintenance }
+		farming_settlement_maintenance_wool = { tools = 0.2 lumber = 0.2 output = 0.44 produced = wool debug_max_profit = 0.4 category = building_maintenance }
+		farming_settlement_maintenance_beeswax = { tools = 0.1 lumber = 0.4 clay = 0.2 output = 0.325 produced = beeswax debug_max_profit = 0.3 category = building_maintenance }
+	}
+	remove_if = {
+		location = {
+			NOR = {
+				raw_material = goods:wheat
+				raw_material = goods:maize
+				raw_material = goods:rice
+				raw_material = goods:millet
+				raw_material = goods:legumes
+				raw_material = goods:potato
+				raw_material = goods:livestock
+				raw_material = goods:olives
+				raw_material = goods:fruit
+				raw_material = goods:wool
+			}
+		}
+	}
+	construction_demand = workshop_construction
+	modifier = {
+		local_food_capacity = 300
+		local_raw_material_output = 0.025
+		local_monthly_food_modifier = 0.025
+		local_peasants_estate_power = 0.25
+		local_laborers_desired_pop = 0.05
+		local_soldiers_desired_pop = 0.05
+		local_burghers_desired_pop = 0.025
+	}
+	important_for_AI = yes
+	ai_forbid_shutdown = yes
+	obsolete = farming_village
+}
+
 forest_village = {
 	audio_tier = 1
 	is_foreign = no

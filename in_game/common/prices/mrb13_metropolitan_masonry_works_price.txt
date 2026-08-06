@@ -1,0 +1,3 @@
+mrb13_metropolitan_masonry_works_price = {
+	gold = 1600
+}

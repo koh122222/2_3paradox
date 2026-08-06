@@ -1,0 +1,30 @@
+metropolitan_masonry_works = {
+	audio_tier = 3
+	is_foreign = no
+	max_levels = mrb13_metropolitan_masonry_works_cap
+	pop_type = laborers
+	category = basic_industry_category
+	employment_size = 10
+	megalopolis = yes
+	price = mrb13_metropolitan_masonry_works_price
+	build_time = workshop_build_time
+	allow = {
+		has_building = building_type:academy_of_engineering
+	}
+	modifier = {
+		local_burghers_desired_pop = 0.1
+	}
+	unique_production_methods = {
+		metropolitan_masonry_production = {
+			clay = 4
+			tools = 0.5
+			liquor = 1
+			produced = masonry
+			output = 4.5
+			debug_max_profit = 0.5
+			category = building_maintenance
+		}
+	}
+	construction_demand = workshop_construction
+	custom_tags = { specialized_district }
+}
