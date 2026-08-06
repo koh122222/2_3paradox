@@ -1,0 +1,53 @@
+mrb13_maritime_governor_administration = {
+	age = age_1_traditions
+
+	potential = {
+		num_of_ports > 0
+		NOT = { government_type = government_type:steppe_horde }
+		NOT = { government_type = government_type:tribe }
+	}
+
+	allow = {
+		navy_size >= 50
+	}
+
+	societal_values = {
+		naval_focus
+	}
+
+	country_modifier = {
+		government_reform_slots = 1
+		num_local_governors = -1
+		num_naval_governors = 1
+		monthly_towards_naval = 0.2
+	}
+
+	years = 2
+}
+
+mrb13_maritime_governor_administration_2 = {
+	age = age_1_traditions
+
+	potential = {
+		num_of_ports > 0
+		NOT = { government_type = government_type:steppe_horde }
+		NOT = { government_type = government_type:tribe }
+	}
+
+	allow = {
+		navy_size >= 50
+	}
+
+	societal_values = {
+		naval_focus
+	}
+
+	country_modifier = {
+		government_reform_slots = 1
+		num_local_governors = -1
+		num_naval_governors = 1
+		monthly_towards_naval = 0.2
+	}
+
+	years = 2
+}

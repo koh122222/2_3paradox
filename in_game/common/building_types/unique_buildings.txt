@@ -6,11 +6,11 @@ pounamou_carver = {
 	startup_ramp_target = rural_startup_ramp_target
 
 	employment_size = guild_employment
-	
-	
-	
+
+
+
 	build_time = rural_build_time
-	
+
 	category = consumer_goods_category
 
 	rural_settlement = yes
@@ -24,7 +24,7 @@ pounamou_carver = {
 	country_potential = {
 		culture ?= culture:maori_culture
 	}
-	
+
 	allow = {		
 		market = { is_produced_in_market = goods:gems }
 	}
@@ -39,7 +39,7 @@ pounamou_carver = {
 			category = guild_input
 		}
 	}
-	
+
 	construction_demand = guild_construction
 	modifier = {
 	}
@@ -51,11 +51,11 @@ bardic_school = {
 	is_foreign = no
 	pop_type = burghers
 	max_levels = 1
-	
+
 	employment_size = cultural_employment
-	
+
 	category = cultural_category
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
@@ -69,15 +69,15 @@ bardic_school = {
 
 
 
-	
+
 
 	build_time = guild_build_time
-	
+
 	modifier = {
 		local_cultural_tradition = 0.1
 		local_max_literacy = 1
 	}
-	
+
 	possible_production_methods = {
 		library_maintenance
 	}
@@ -90,9 +90,9 @@ hanseatic_kontor = {
 	is_foreign = yes
 	need_good_relation = yes
 	pop_type = burghers
-	
+
 	category = trade_category
-	
+
 	max_levels = hanseatic_kontor_max_level
 	employment_size = large_foreign_trade_employment
 	pop_size_created = large_foreign_trade_employment
@@ -101,22 +101,22 @@ hanseatic_kontor = {
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	increase_per_level_cost = 0.5
-	
+
 	country_potential = {
 		modifier:allows_hanseatic_federation_buildings = yes
 	}
-	
+
 
 	build_time = trade_post_build_time
-	
+
 	modifier = {
 		merchant_power_from_building = 1.0
 		building_owner_maritime_presence = 0.1
 		merchant_capacity_from_building = 0.25
 	}
-	
+
 	possible_production_methods = {
 		kontor_maintenance
 	}
@@ -128,7 +128,7 @@ hanseatic_shipwright_guild = {
 	is_special = yes
 	is_foreign = yes
 	need_good_relation = yes
-	
+
 	pop_type = laborers
 	max_levels = hanseatic_shipwright_guild_max_level
 	category = military_category
@@ -164,11 +164,11 @@ hanseatic_town_hall = {
 	is_special = yes
 	is_foreign = yes
 	need_good_relation = yes
-	
+
 	pop_type = nobles
-	
+
 	category = trade_category
-	
+
 	max_levels = 2
 	employment_size = normal_noble_employment
 	pop_size_created = normal_noble_employment
@@ -177,12 +177,12 @@ hanseatic_town_hall = {
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	increase_per_level_cost = 0.5
-	
-	
+
+
 	expensive = yes
-	
+
 	location_potential = {
 		this = c:HSA.capital
 	}
@@ -190,9 +190,9 @@ hanseatic_town_hall = {
 	country_potential = {
 		modifier:allows_hanseatic_federation_buildings = yes
 	}
-	
+
 	build_time = large_capital_build_time
-	
+
 	capital_country_modifier = {
 		country_cabinet_efficiency = 0.1
 		monthly_republican_tradition = 0.05
@@ -203,7 +203,7 @@ hanseatic_town_hall = {
 			NOT = { country_type = building }
 		}
 	}
-	
+
 	possible_production_methods = {
 		hanseatic_town_hall_maintenance
 	}
@@ -216,21 +216,21 @@ fondaco = {
 	is_foreign = yes
 	need_good_relation = yes
 	pop_type = burghers
-	
+
 	category = trade_category
-	
+
 	max_levels = guild_max_level
 	employment_size = foreign_trade_employment
 	pop_size_created = foreign_trade_employment
-	
+
 	rural_settlement = no
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	increase_per_level_cost = 0.5
-	
-	
+
+
 	country_potential = {
 		is_merchant_republic = yes
 		culture = { has_culture_group = culture_group:italian_group }
@@ -244,10 +244,10 @@ fondaco = {
 			}
 		}
 	}
-	
+
 
 	build_time = trade_post_build_time
-	
+
 	modifier = {
 		merchant_power_from_building = 1.0
 		building_owner_maritime_presence = 0.025
@@ -255,7 +255,7 @@ fondaco = {
 		#Italian merchants settle in the new location
 		local_migration_attraction = 0.025
 	}
-	
+
 	possible_production_methods = {
 		fondaco_maintenance
 	}
@@ -291,12 +291,12 @@ venetian_arsenal = {
 		harbor_suitability = 0.2
 		local_repair_speed = 0.05
 	}
-	
+
 	capital_country_modifier = {
 		navy_maintenance_efficiency = 0.10
 	}
 
-	
+
 	unique_production_methods = {
 		venetian_arsenal_maintenance = {
 			tar = 0.5
@@ -315,26 +315,26 @@ kurultai = {
 	is_special = yes
 	is_foreign = no
 	pop_type = soldiers
-	
+
 	max_levels = kurultai_max_level
 	employment_size = kurultai_employment
-	
+
 	category = military_category
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	allow_wrong_startup = yes
-	
+
 	expensive = yes
-	
+
 	country_potential = {
 		has_advance = kurultai_advance		# just to hide from those who do not get the tech.
 		government_type ?= government_type:steppe_horde
 	}
-	
+
 	location_potential = {
 		custom_tooltip = {
 			text = dominant_culture_is_of_steppe_group
@@ -343,22 +343,22 @@ kurultai = {
 			}
 		}
 	}
-	
+
 	remove_if = {
 		OR = {
 			NOT = { owner = { has_advance = kurultai_advance } }
 			owner = { government_type != government_type:steppe_horde }
 		}
 	}
-	
-	
+
+
 	build_time = soldier_building
-	
+
 	modifier = {
 		local_manpower = 0.05
 		can_recruit_regiment_in_this_location = yes
 	}
-	
+
 	unique_production_methods = {
 		kurultai_maintenance = {
 			horses = 0.2
@@ -375,16 +375,16 @@ gallowglass_sept = {  # ESTATE BUILDING
 	is_special = yes
 	is_foreign = no
 	pop_type = soldiers
-	
+
 	max_levels = guild_max_level
 	employment_size = tiny_soldier_employment
-	
+
 	category = military_category
-	
+
 	rural_settlement = yes
-	
+
 	estate = tribes_estate
-	
+
 	location_potential = {
 		OR = {
 			any_pop = { 
@@ -399,12 +399,12 @@ gallowglass_sept = {  # ESTATE BUILDING
 	}
 	country_potential = {
 	}
-	
+
 	can_destroy = {
 	}
-	
+
 	build_time = soldier_building
-	
+
 	modifier = {
 		local_tribes_estate_power = 0.5
 		local_defensive = 0.1
@@ -413,7 +413,7 @@ gallowglass_sept = {  # ESTATE BUILDING
 	raw_modifier = {
 		local_nobles_desired_pop = 0.005
 	}
-	
+
 	possible_production_methods = {
 		estate_building_input
 	}
@@ -426,39 +426,39 @@ order_stronghold = {
 	is_special = yes
 	is_foreign = no
 	pop_type = soldiers
-	
+
 	category = religious_category
-	
+
 	max_levels = 1
 	employment_size = order_religious_building_employment
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
-	
-	
-	
+
+
+
+
 	country_potential = {
 		has_reform = government_reform:military_order_reform
 	}
-	
+
 	build_time = soldier_building
-	
+
 	modifier = {
 		local_clergy_estate_power = 1.0
 		local_defensive = 0.25
-		
+
 		local_manpower = 0.005
 
 
 		can_recruit_regiment_in_this_location = yes
 
 	}
-	
-	
-	
+
+
+
 	possible_production_methods = {
 		order_commandery_maintenance
 	}
@@ -483,10 +483,10 @@ order_commandery = {
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	allow_wrong_startup = yes
-	
-	
+
+
 	location_potential = {
 		custom_tooltip = {
 			text = order_commandery_tt
@@ -498,15 +498,15 @@ order_commandery = {
 			}
 		}
 	}
-	
-	
+
+
 	country_potential = {
 		modifier:target_of_military_sponsorships = yes
 		religion ?= religion:catholic
 	}
-	
+
 	build_time = soldier_building
-	
+
 	allow = {
 		owner = { within_diplomatic_range = scope:actor }
 		dominant_religion ?= religion:catholic
@@ -566,21 +566,21 @@ banking_office = {
 	town = yes
 	city = yes
 	megalopolis = yes
-	
-	
-	
-	
+
+
+
+
 	country_potential = {
 		has_reform = government_reform:banking_country
 	}
-	
+
 	build_time = bank_office_build_time
-	
+
 	modifier = {
 		merchant_power_from_building = 0.1
 		scaled_gold_to_building_owner = 0.025
 	}
-	
+
 	unique_production_methods = {
 		bank_maintenance = {
 			paper = 0.1
@@ -599,31 +599,31 @@ tribes_of_galway = {
 	is_foreign = no
 	pop_type = burghers
 	max_levels = 1
-	
+
 	employment_size = trade_employment
-	
+
 	category = trade_category
-	
+
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	expensive = yes
 	build_time = small_capital_build_time
-	
+
 	country_potential = {
 		always = no
 	}
 	allow = {
 		always = no
 	}
-	
-	
+
+
 	modifier = {
 		local_burghers_estate_power = 5.0
 		local_merchant_power = 5
 	}
-	
+
 	unique_production_methods = {
 		tribes_of_galway_maintenance = {
 			leather = 0.01
@@ -641,26 +641,26 @@ copenhagen_dockyard = {
 	is_special = yes
 	is_foreign = no
 	pop_type = soldiers
-	
+
 	max_levels = 1
 	employment_size = dock_employment
-	
+
 	category = military_category
-	
+
 	rural_settlement = no
 	town = yes
 	city = yes
 	megalopolis = yes
-	
-	
+
+
 	expensive = yes
-	
+
 	location_potential = {
 		is_capital = yes
 	}
-	
+
 	build_time = large_port_building_time
-	
+
 	modifier = {
 		max_ships_built_at_same_time = 2
 		local_sailors = 0.03
@@ -669,7 +669,7 @@ copenhagen_dockyard = {
 		harbor_suitability = 0.2
 		local_repair_speed = 0.025
 	}
-	
+
 	unique_production_methods = {
 		copenhagen_dockyard_maintenance = {
 			tar = 0.4
@@ -679,7 +679,7 @@ copenhagen_dockyard = {
 			category = building_maintenance
 		}
 	}
-	
+
 
 	construction_demand = port_building_construction
 }
@@ -689,23 +689,23 @@ caravanserai = {
 	is_special = yes
 	is_foreign = no
 	pop_type = laborers
-	
+
 	max_levels = 1
 	employment_size = trade_employment
-	
+
 	category = trade_category
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
-	
-	
+
+
+
 	country_potential = {
 		has_advance = caravanserai_advance		# just to hide from those who do not get the tech.
 	}
-	
+
 	allow = {
 		OR = {
 			region = region:khorasan_region
@@ -714,18 +714,18 @@ caravanserai = {
 			region = region:steppes_region
 		}
 	}
-	
+
 	can_destroy = {
 		NOT = { owner = { has_advance = caravanserai_advance } }
 	}
-	
+
 	build_time = trade_post_build_time
-	
+
 	modifier = {
 		local_merchant_power = 0.5
 		local_merchant_capacity = 1
 	}
-	
+
 	construction_demand = caravanserai_building_construction
 	unique_production_methods = {
 		caravanserai_maintenance = {
@@ -742,23 +742,23 @@ caravan_stop = {
 	is_special = yes
 	is_foreign = no
 	pop_type = laborers
-	
+
 	max_levels = 1
 	employment_size = trade_employment
-	
+
 	category = trade_category
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
-	
-	
+
+
+
 	country_potential = {
 		has_advance = west_african_caravan_stop_advance
 	}
-	
+
 	allow = {
 		OR = {
 			region = region:persia_region
@@ -768,18 +768,18 @@ caravan_stop = {
 			region = region:sahel_region
 		}
 	}
-	
+
 	can_destroy = {
 		NOT = { owner = { has_advance = west_african_caravan_stop_advance } }
 	}
-	
+
 	build_time = trade_post_build_time
-	
+
 	modifier = {
 		local_merchant_power = 0.5
 		local_merchant_capacity = 1
 	}
-	
+
 	construction_demand = caravan_stop_building_construction
 	unique_production_methods = {
 		caravan_stop_maintenance = {
@@ -796,38 +796,38 @@ cinque_port = {  # ESTATE BUILDING
 	is_foreign = no
 	max_levels = 1
 	pop_type = burghers
-	
+
 	category = military_category
-	
+
 	employment_size = military_support_employment
-	
+
 	estate = burghers_estate
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	country_potential = {
 		tag = ENG
 	}
 	location_potential = {
 		is_port = yes
 	}
-	
+
 	allow = {
 		always = no
 	}
-	
+
 	build_time = medium_port_building_time
 
-	
-	
+
+
 	possible_production_methods = {
 		estate_building_input
 	}
 	construction_demand = port_building_construction
-	
+
 
 	modifier = {
 		local_navy_levy_size_modifier = 1.0
@@ -844,13 +844,13 @@ eng_royal_forest = {
 	startup_ramp_target = rural_startup_ramp_target
 	pop_type = peasants
 	forbidden_for_estates = yes
-	
+
 	category = government_category
-	
+
 	employment_size = rural_peasant_produce_employment
-	
+
 	rural_settlement = yes
-	
+
 	country_potential = {
 		has_or_had_tag = ENG
 	}
@@ -861,17 +861,17 @@ eng_royal_forest = {
 			vegetation = farmland
 		}
 	}
-	
+
 	allow = {
 	}
-	
+
 	build_time = rural_build_time
 
 	expensive = yes
-	
+
 	allow_wrong_startup = yes
-	
-	
+
+
 	unique_production_methods = {
 		eng_royal_forest_maintenance = {
 			produced = wild_game
@@ -883,7 +883,7 @@ eng_royal_forest = {
 			category = building_maintenance
 		}
 	}
-	
+
 	construction_demand = village_construction
 
 	modifier = {
@@ -900,7 +900,7 @@ seat_of_cardinal = {
 	is_foreign = no
 	max_levels = 1
 	pop_type = clergy
-	
+
 	employment_size = religious_building_employment
 
 	rural_settlement = yes
@@ -909,7 +909,7 @@ seat_of_cardinal = {
 	megalopolis = yes
 
 	category = religious_category
-	
+
 	allow = {
 		always = no #requested with request_cardinal_seat
 	}
@@ -920,16 +920,16 @@ seat_of_cardinal = {
 			always = no #build with catholic_flavor.1000
 		}
 	}
-	
+
 	build_time = religious_building_time
-	
+
 	possible_production_methods = {
 		cardinal_maintenance
 	}
-	
+
 	construction_demand = cardinal_construction
 
-	
+
 	modifier = {
 		local_max_literacy = 2.5
 		local_clergy_food_consumption = 0.2
@@ -958,21 +958,21 @@ north_sea_shipyards = {
 	is_special = yes
 	is_foreign = no
 	pop_type = soldiers
-	
+
 	max_levels = 1
 	employment_size = shipyard_employment
-	
+
 	category = military_category
-	
+
 	rural_settlement = no
 	town = no
 	city = yes
 	megalopolis = yes
-	
-	
+
+
 	build_time = large_port_building_time
 
-	
+
 	location_potential = {
 		is_port = yes
 		region = region:north_german_region
@@ -981,14 +981,14 @@ north_sea_shipyards = {
 	country_potential = {
 		has_advance = netherlandish_ship_building
 	}
-		
+
 	modifier = {
 		max_ships_built_at_same_time = 1
 		local_sailors = 0.08
 		can_build_ships_in_this_location = yes
 		local_repair_speed = 0.01
 	}
-	
+
 	unique_production_methods = {
 		north_sea_shipyards_maintenance = {
 			tar = 0.4
@@ -1006,33 +1006,33 @@ galley_barracks = {
 	is_special = yes
 	is_foreign = no
 	pop_type = slaves
-	
+
 	max_levels = 5
 	employment_size = galley_barracks
-	
+
 	category = military_category
-	
+
 	rural_settlement = no
 	town = no
 	city = yes
 	megalopolis = yes
 
-	
+
 	location_potential = {
 		is_port = yes
 	}
 
-	
+
 	build_time = medium_port_building_time
-	
+
 	always_add_demands = yes
-	
+
 	modifier = {
 		local_sailors = 0.02
 		can_build_ships_in_this_location = yes
 		local_repair_speed = 0.01
 	}
-	
+
 	possible_production_methods = {
 		galley_barracks_maintenance
 	}
@@ -1044,28 +1044,28 @@ janissary_barracks = {
 	is_special = yes
 	is_foreign = no
 	pop_type = slaves
-	
+
 	max_levels = janissary_barracks_size
 	employment_size = slave_soldier_barracks
-	
+
 	category = military_category
-	
+
 	rural_settlement = no
 	town = yes
 	city = yes
 	megalopolis = yes
 
 	expensive = yes
-	
+
 	build_time = soldier_building
-	
+
 	always_add_demands = yes
-	
+
 	modifier = {
 		local_manpower = 0.025
 		can_recruit_regiment_in_this_location = yes
 	}
-	
+
 	possible_production_methods = {
 		janissary_barracks_maintenance
 	}
@@ -1084,7 +1084,7 @@ safaviyya_order_hall = {
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	build_time = soldier_building
 	always_add_demands = yes
 	modifier = {
@@ -1170,16 +1170,16 @@ stannary_court = {
 	is_foreign = no
 	pop_type = laborers
 	max_levels = 1
-	
+
 	employment_size = small_peasant_employment
-	
+
 	category = government_category
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	can_close = no
 
 	country_potential = {
@@ -1212,7 +1212,7 @@ stannary_court = {
 
 	location_potential = {
 	}
-	
+
 	possible_production_methods = {
 		estate_building_input
 	}
@@ -1264,11 +1264,13 @@ lieutenancy = {
 
 	allow = {
 		custom_tooltip = {
-			text = lieutenancy_tt
+			text = mrb13_land_governor_tt
 			scope:actor = {
-				total_building_levels_including_construction:local_governor < {
+				total_building_levels_including_construction:lieutenancy < {
 					value = modifier:num_local_governors
-					subtract = total_building_levels_including_construction:lieutenancy
+					subtract = total_building_levels_including_construction:local_governor
+					subtract = total_building_levels_including_construction:mrb13_town_governor
+					subtract = total_building_levels_including_construction:mrb13_minor_governor
 				}
 			}
 		}
@@ -1308,22 +1310,22 @@ barcelona_royal_shipyard = {
 	is_special = yes
 	is_foreign = no
 	pop_type = soldiers
-	
+
 	max_levels = 1
 	employment_size = dry_dock_employment
-	
+
 	category = military_category
-	
+
 	rural_settlement = no
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	build_time = large_port_building_time
-	
-	
+
+
 	expensive = yes
-	
+
 	country_potential = {
 		always = no
 	}
@@ -1339,7 +1341,7 @@ barcelona_royal_shipyard = {
 		harbor_suitability = 0.2
 		local_repair_speed = 0.025
 	}
-	
+
 	unique_production_methods = {
 		barcelona_royal_shipyard = {
 			tar = 0.4
@@ -1359,29 +1361,29 @@ uffizi = {
 	is_foreign = no
 	pop_type = nobles
 	max_levels = 1
-	
+
 	category = government_category
-	
+
 	employment_size = huge_noble_employment
-	
+
 	city = yes
 	megalopolis = yes
-	
+
 	expensive = yes
 	build_time = small_capital_build_time
-	
+
 	location_potential = {
 		is_capital = yes
 	}
-	
+
 	capital_modifier = {
 	}
-	
+
 	capital_country_modifier = {
 		global_crown_estate_power = 0.05
 		cultural_influence_modifier = 0.1
 	}
-	
+
 	possible_production_methods = {
 		early_capital_building_maintenance
 		early_capital_building_silver_maintenance
@@ -1395,21 +1397,21 @@ ostrog = {
 	is_foreign = no
 	pop_type = soldiers
 	max_levels = 1
-	
+
 	employment_size = castle_employment
 	category = defense_category
-	
+
 	rural_settlement = yes
 	build_time = government_build_time
 
 	country_potential = {
 		culture = { has_culture_group = culture_group:russian_group }
 	}
-	
+
 	location_potential = {
 		is_capital = no
 		has_river = yes
-		
+
 		OR = {
 			region = region:russian_region
 			region = region:ural_region
@@ -1437,7 +1439,7 @@ ostrog = {
 		local_garrison_size = 0.10
 		local_distance_from_capital_speed_propagation = 0.1
 	}
-	
+
 }
 
 pomor_outpost = {
@@ -1446,17 +1448,17 @@ pomor_outpost = {
 	is_foreign = no
 	pop_type = laborers
 	max_levels = rural_building_cap
-	
+
 	employment_size = tiny_rural_peasant_enhance_employment
 	category = consumer_goods_category
-	
+
 	rural_settlement = yes
 	build_time = rural_build_time
 
 	country_potential = {
 		culture = { has_culture_group = culture_group:russian_group }
 	}
-	
+
 	location_potential = {
 		OR = {
 			raw_material = goods:fur
@@ -1476,7 +1478,7 @@ pomor_outpost = {
 		pomor_outpost_maintenance = {
 			lumber = 0.1
 			tools = 0.025
-			
+
 
 			category = building_maintenance
 		}
@@ -1501,12 +1503,12 @@ brethren_marsh = {
 	employment_size = dock_employment
 
 	category = naval_category
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 
 	allow = {	
 		owner = {
@@ -1524,7 +1526,7 @@ brethren_marsh = {
 			province_definition = province_definition:montana_province
 		}
 	}
-	
+
 	country_potential = {	
 		culture ?= culture:basque		#else always shown for all .
 	}
@@ -1537,8 +1539,8 @@ brethren_marsh = {
 		can_build_ships_in_this_location = yes
 		local_repair_speed = 0.01
 	}
-	
-	
+
+
 	unique_production_methods = {
 		brethren_marsh_maintenance = {
 			tar = 0.1
@@ -1559,22 +1561,22 @@ sofa_barracks = {
 	is_foreign = no
 	pop_type = soldiers
 	max_levels = 1
-	
+
 	category = military_category
-	
+
 	employment_size = slave_soldier_barracks
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	build_time = soldier_building
 
 	country_potential = {
 		has_advance = sofa_levies_advance
 	}
-	
+
 	modifier = {
 		local_manpower = 0.005
 		can_recruit_regiment_in_this_location = yes
@@ -1592,27 +1594,27 @@ cawa_barracks = {
 	is_special = yes
 	is_foreign = no
 	pop_type = soldiers
-	
+
 	max_levels = janissary_barracks_size
 	employment_size = manpower_employment
-	
+
 	category = military_category
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
 
-	
+
 	build_time = soldier_building
-	
+
 	always_add_demands = yes
-	
+
 	modifier = {
 		local_manpower = 0.01
 		can_recruit_regiment_in_this_location = yes
 	}
-	
+
 	possible_production_methods = {
 		cawa_barracks_maintenance
 	}
@@ -1625,11 +1627,11 @@ kings_manor = {
 	is_foreign = no
 	pop_type = nobles
 	max_levels = 1
-	
+
 	employment_size = large_noble_employment
-	
+
 	category = government_category
-	
+
 	rural_settlement = no
 	town = yes
 	city = yes
@@ -1687,12 +1689,12 @@ polders = {
 	is_foreign = no
 	pop_type = laborers
 	max_levels = polders_max_level
-	
+
 	employment_size = village_employment_size
-	
-	
+
+
 	build_time = infrastructure_build_time
-	
+
 	category = infrastructure_category
 
 	rural_settlement = yes
@@ -1707,14 +1709,14 @@ polders = {
 		}
 		topography = wetlands
 	}
-	
+
 	modifier = {
 		local_population_capacity_modifier = 0.025
 		local_road_building_time = -0.05
 		local_monthly_development_modifier = 0.025
 		local_monthly_food_modifier = 0.05
 	}
-	
+
 	unique_production_methods = {
 		polders_maintenance = {
 			clay = 0.5
@@ -1732,17 +1734,17 @@ telpochcalli = {
 	is_foreign = no
 	pop_type = soldiers
 	max_levels = 1
-	
+
 	category = military_category
-	
+
 	employment_size = telpochcalli_employment
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
-	
+
+
 	build_time = soldier_building
 
 	country_potential = {
@@ -1752,14 +1754,14 @@ telpochcalli = {
 	location_potential = {
 		is_capital = yes
 	}
-	
+
 	modifier = {
 		local_manpower = 0.03
 	}
 	capital_country_modifier = {
 		army_reinforce_efficiency = 0.10
 	}
-	
+
 	possible_production_methods = {
 		nahuatl_warrior_building_maintenance
 	}
@@ -1772,16 +1774,16 @@ calmecac = {
 	is_foreign = no
 	pop_type = clergy
 	max_levels = 1
-	
+
 	category = government_category
-	
+
 	employment_size = large_religious_building_employment
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	build_time = government_build_time
 
 	country_potential = {
@@ -1791,7 +1793,7 @@ calmecac = {
 	location_potential = {
 		is_capital = yes
 	}
-	
+
 	modifier = {
 		local_nobles_max_literacy = 20
 		local_pop_promotion_speed_modifier = 0.5
@@ -1800,7 +1802,7 @@ calmecac = {
 		country_cabinet_efficiency = 0.05
 		global_nobles_max_literacy = 10
 	}
-	
+
 	possible_production_methods = {
 		nahuatl_warrior_building_maintenance
 	}
@@ -1813,18 +1815,18 @@ panaqa_building = {
 	is_foreign = no
 	pop_type = peasants
 	max_levels = 1	
-	
+
 	employment_size = small_peasant_employment
 	category = government_category
-	
+
 	can_close = no
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
 	build_time = instant_build_time
-	
+
 	country_potential = { 
 		modifier:has_panaqas = yes
 	}
@@ -1838,7 +1840,7 @@ panaqa_building = {
 	}
 
 	destroy_price = remove_panaqa_early
-	
+
 	possible_production_methods = {
 		panaqa_building_input
 	}
@@ -1855,10 +1857,10 @@ pukara_building = {
 	is_foreign = no
 	pop_type = soldiers
 	max_levels = 1
-	
+
 	employment_size = small_peasant_employment
 	category = defense_category
-	
+
 	rural_settlement = yes
 	build_time = small_fort_building
 	expensive = yes
@@ -1866,7 +1868,7 @@ pukara_building = {
 	country_potential = {
 		culture = { has_culture_group = culture_group:andean_group }
 	}
-	
+
 	location_potential = {
 		OR = {
 			topography = mountains
@@ -1874,7 +1876,7 @@ pukara_building = {
 			topography = hills
 		}
 	}
-	
+
 	unique_production_methods = {
 		pukara_maintenance = {
 			weaponry = 0.05
@@ -1891,7 +1893,7 @@ pukara_building = {
 		local_garrison_size = 0.1
 		local_defensive = 0.25
 	}
-	
+
 }
 
 terraces = {
@@ -1903,12 +1905,12 @@ terraces = {
 
 	category = infrastructure_category
 	employment_size = granary_employment
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	location_potential = {
 		OR = {
 			topography = mountains
@@ -1916,9 +1918,9 @@ terraces = {
 			topography = hills
 		}
 	}
-	
-		
-	
+
+
+
 	build_time = infrastructure_build_time
 
 	unique_production_methods = {
@@ -1950,11 +1952,11 @@ tambo = {
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	location_potential = {
 		num_roads > 0
 	}
-	
+
 	build_time = infrastructure_build_time
 
 	unique_production_methods = {
@@ -1983,15 +1985,15 @@ incamisana = {
 
 	category = infrastructure_category
 	employment_size = tiny_rural_peasant_produce_employment
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	location_potential = {
 	}
-	
+
 	build_time = rural_build_time
 
 	possible_production_methods = {
@@ -2012,11 +2014,11 @@ royal_society = {
 	is_foreign = no
 	pop_type = nobles
 	max_levels = 1
-	
+
 	employment_size = normal_noble_employment
-	
+
 	category = government_category
-	
+
 	rural_settlement = no
 	town = yes
 	city = yes
@@ -2041,7 +2043,7 @@ royal_society = {
 		NOT = { owner = { has_variable = royal_society } }
 	}
 
-	
+
 
 	build_time = government_build_time
 
@@ -2077,11 +2079,11 @@ royal_academy_of_arts = {
 	is_foreign = no
 	pop_type = nobles
 	max_levels = 1
-	
+
 	employment_size = normal_noble_employment
-	
+
 	category = government_category
-	
+
 	rural_settlement = no
 	town = yes
 	city = yes
@@ -2106,7 +2108,7 @@ royal_academy_of_arts = {
 		NOT = { owner = { has_variable = royal_academy_of_arts } }
 	}
 
-	
+
 
 	build_time = cultural_building_time
 
@@ -2133,21 +2135,21 @@ peel_towers = {
 	is_special = yes
 	is_foreign = no
 	pop_type = soldiers
-	
+
 	max_levels = 1
 	employment_size = castle_employment
-	
+
 	category = defense_category
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
 
 	expensive = yes
-	
+
 	build_time = small_fort_building
-	
+
 	country_potential = {
 		has_advance = peel_towers_advance
 	}
@@ -2155,7 +2157,7 @@ peel_towers = {
 		region = region:great_britain_region
 		is_border = yes
 	}
-	
+
 	unique_production_methods = {
 		peel_towers_maintenance = {
 			stone = 0.2
@@ -2167,14 +2169,14 @@ peel_towers = {
 	}
 
 	construction_demand = peel_towers_construction
-	
+
 
 	modifier = {
 		local_garrison_size = 0.1
 		local_devastation_recovery = 0.005
 	}
 	graphical_tags = { small_military }
-	
+
 }
 
 dun_fort = {
@@ -2182,19 +2184,19 @@ dun_fort = {
 	is_special = yes
 	is_foreign = no
 	pop_type = tribesmen
-	
+
 	max_levels = 1 
 	employment_size = stockade_employment
-	
+
 	category = defense_category
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes	
-	
+
 	build_time = small_fort_building
-	
+
 	country_potential = {
 		modifier:allow_dun_fort = yes
 	}
@@ -2208,7 +2210,7 @@ dun_fort = {
 		dun_fort_maintenance
 	}
 	construction_demand = dun_fort_construction
-	
+
 
 	modifier = {
 		local_nobles_food_consumption = -0.2
@@ -2219,7 +2221,7 @@ dun_fort = {
 	raw_modifier = {
 		local_nobles_desired_pop = 0.01
 	}
-	
+
 	graphical_tags = { small_military }
 
 }
@@ -2242,9 +2244,9 @@ kokufu = {
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	ai_foreign_ignore_naval_range = yes
-	
+
 	location_potential = {
 		dominant_culture = { has_culture_group = culture_group:japanese_group }
 	}
@@ -2258,9 +2260,9 @@ kokufu = {
 			has_reform = government_reform:japanese_clan
 		}
 	}
-	
+
 	build_time = soldier_building
-	
+
 	allow = {
 		custom_tooltip = {
 			text = kokufu_why_tt
@@ -2301,9 +2303,9 @@ gosho = {
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	ai_foreign_ignore_naval_range = yes
-	
+
 	location_potential = {
 		dominant_culture = { has_culture_group = culture_group:japanese_group }
 	}
@@ -2311,9 +2313,9 @@ gosho = {
 	country_potential = {
 		has_reform = government_reform:japanese_imperial_family
 	}
-	
+
 	build_time = soldier_building
-	
+
 	allow = {
 		dominant_culture = { has_culture_group = culture_group:japanese_group }
 		OR = {
@@ -2356,9 +2358,9 @@ yamashiro = {
 	rural_settlement = yes
 	town = yes
 	city = no
-	
+
 	ai_foreign_ignore_naval_range = yes
-	
+
 	location_potential = {
 		dominant_culture = { has_culture_group = culture_group:japanese_group }
 	}
@@ -2372,9 +2374,9 @@ yamashiro = {
 			has_reform = government_reform:japanese_clan
 		}
 	}
-	
+
 	build_time = soldier_building
-	
+
 	allow = {
 		dominant_culture = { has_culture_group = culture_group:japanese_group }
 		trigger_if = {
@@ -2428,7 +2430,7 @@ yamashiro = {
 
 	raw_modifier = {
 	}
-	
+
 	construction_demand = early_soldier_building_construction
 }
 
@@ -2450,9 +2452,9 @@ yakata = {
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	ai_foreign_ignore_naval_range = yes
-	
+
 	location_potential = {
 		dominant_culture = { has_culture_group = culture_group:japanese_group }
 	}
@@ -2460,9 +2462,9 @@ yakata = {
 	country_potential = {
 		has_reform = government_reform:japanese_clan
 	}
-	
+
 	build_time = soldier_building
-	
+
 	allow = {
 		dominant_culture = { has_culture_group = culture_group:japanese_group }
 		any_foreign_building_countries_in_location = { this = scope:actor }
@@ -2497,9 +2499,9 @@ shoen = {
 	rural_settlement = yes
 	town = yes
 	city = no
-	
+
 	ai_foreign_ignore_naval_range = yes
-	
+
 	location_potential = {
 		dominant_culture = { has_culture_group = culture_group:japanese_group }
 	}
@@ -2513,9 +2515,9 @@ shoen = {
 			has_reform = government_reform:japanese_clan
 		}
 	}
-	
+
 	build_time = estate_build_time
-	
+
 	allow = {
 		dominant_culture = { has_culture_group = culture_group:japanese_group }
 		OR = {
@@ -2614,9 +2616,9 @@ tatara = {
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	ai_foreign_ignore_naval_range = yes
-	
+
 	location_potential = {
 		dominant_culture = { has_culture_group = culture_group:japanese_group }
 	}
@@ -2630,9 +2632,9 @@ tatara = {
 			has_reform = government_reform:japanese_clan
 		}
 	}
-	
+
 	build_time = estate_build_time
-	
+
 	allow = {
 		dominant_culture = { has_culture_group = culture_group:japanese_group }
 		any_foreign_building_countries_in_location = { this = scope:actor }
@@ -2675,9 +2677,9 @@ clan_shipyards = {
 	rural_settlement = yes
 	town = yes
 	city = no
-	
+
 	ai_foreign_ignore_naval_range = yes
-	
+
 	location_potential = {
 		dominant_culture = { has_culture_group = culture_group:japanese_group }
 		is_port = yes
@@ -2692,9 +2694,9 @@ clan_shipyards = {
 			has_reform = government_reform:japanese_clan
 		}
 	}
-	
+
 	build_time = estate_build_time
-	
+
 	allow = {
 		dominant_culture = { has_culture_group = culture_group:japanese_group }
 		any_foreign_building_countries_in_location = { this = scope:actor }
@@ -2703,7 +2705,7 @@ clan_shipyards = {
 	possible_production_methods = {
 		estate_building_input
 	}
-	
+
 	modifier = {
 		building_owner_maritime_presence = 0.5
 		max_ships_built_at_same_time = 1
@@ -2733,9 +2735,9 @@ clan_family_shrine = {
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	ai_foreign_ignore_naval_range = yes
-	
+
 	location_potential = {
 		dominant_culture = { has_culture_group = culture_group:japanese_group }
 	}
@@ -2749,9 +2751,9 @@ clan_family_shrine = {
 			has_reform = government_reform:japanese_clan
 		}
 	}
-	
+
 	build_time = estate_build_time
-	
+
 	allow = {
 		dominant_culture = { has_culture_group = culture_group:japanese_group }
 		any_foreign_building_countries_in_location = { this = scope:actor }
@@ -2828,18 +2830,18 @@ kremlin = {
 	is_special = yes
 	is_foreign = no
 	pop_type = soldiers
-	
+
 	max_levels = kremlin_max_level
 	employment_size = large_capital_employment
-	
+
 	category = defense_category
-	
+
 	rural_settlement = no
 	town = yes
 	city = yes
 	megalopolis = yes
-	
-	
+
+
 	expensive = yes
 
 	country_potential = {
@@ -2852,17 +2854,17 @@ kremlin = {
 			has_variable = kremlin
 		}
 	}
-	
+
 	location_potential = {
 		this = location:moscow
 	}
-		
+
 	can_destroy = {
 		always = yes
 	}
-	
+
 	build_time = huge_unique_build_time
-	
+
 	modifier = {
 		local_monthly_prosperity = 0.001
 		local_hostile_attrition = 0.10
@@ -2871,7 +2873,7 @@ kremlin = {
 
 	}
 
-	
+
 	possible_production_methods = {
 		early_soldier_building_maintenance
 	}
@@ -2884,11 +2886,11 @@ stroganov_school_of_iconic_art = {
 	is_foreign = no
 	pop_type = burghers
 	max_levels = 1
-	
+
 	employment_size = cultural_employment
 
 	category = cultural_category
-	
+
 	town = yes
 	city = yes
 	megalopolis = yes
@@ -2917,7 +2919,7 @@ stroganov_school_of_iconic_art = {
 		always = yes
 	}
 
-	
+
 
 	build_time = cultural_building_time
 
@@ -2960,13 +2962,13 @@ venetian_palaces = {
 	expensive = yes
 
 	build_time = cultural_building_time
-	
+
 	modifier = {
 		local_cultural_tradition = 0.25
 		local_cultural_influence = 0.1
 		local_crown_estate_power = 0.1
 	}
-	
+
 	unique_production_methods = {
 		venetian_palaces_maintenance = {
 			cloth = 0.2
@@ -2974,7 +2976,7 @@ venetian_palaces = {
 			paper = 0.25
 			marble = 0.1
 			fine_cloth = 0.1
-			
+
 			category = building_maintenance
 		}
 	}
@@ -3038,7 +3040,7 @@ galata = {
 		tag = GEN
 	}
 	location_potential = { this = location:constantinople }
-	
+
 	remove_if = {
 		owner = {
 			NOT = { tag = GEN }
@@ -3162,7 +3164,7 @@ moscow_artillery_yard = {
 			tools = 0.5
 			cannons = 2.0
 			horses = 1.0
-			
+
 			category = building_maintenance
 		}
 
@@ -3188,21 +3190,21 @@ bund = {
 
 	category = infrastructure_category
 	employment_size = small_peasant_employment
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	location_potential = {
 		OR = {
 			has_river = yes
 			is_adjacent_to_lake = yes
 		}
 	}
-	
+
 	build_time = infrastructure_build_time
-	
+
 	unique_production_methods = {
 		bund_maintenance = {
 			tools = 0.1
@@ -3265,7 +3267,7 @@ ibadat_khana = {
 		research_speed_modifier = 0.1
 		global_institution_growth_modifier = 0.1
 	}
-	
+
 	unique_production_methods = {
 		ibadat_khana_maintenance = {
 			paper = 0.5
@@ -3274,7 +3276,7 @@ ibadat_khana = {
 			category = building_maintenance
 		}
 	}
-	
+
 	construction_demand = ibadat_khana_construction
 }
 
@@ -3284,11 +3286,11 @@ academy_of_sciences = {
 	is_foreign = no
 	pop_type = nobles
 	max_levels = 1
-	
+
 	employment_size = normal_noble_employment
 
 	category = cultural_category
-	
+
 	town = yes
 	city = yes
 	megalopolis = yes
@@ -3312,7 +3314,7 @@ academy_of_sciences = {
 		always = yes
 	}
 
-	
+
 
 	build_time = cultural_building_time
 
@@ -3344,11 +3346,11 @@ greek_latin_academy = {
 	is_foreign = no
 	pop_type = clergy
 	max_levels = 1
-	
+
 	employment_size = huge_religious_building_employment
-	
+
 	category = cultural_category
-	
+
 	rural_settlement = no
 	town = yes
 	city = yes
@@ -3373,7 +3375,7 @@ greek_latin_academy = {
 		always = yes
 	}
 
-	
+
 
 	build_time = cultural_building_time
 
@@ -3404,10 +3406,10 @@ sukharev_tower = {
 	is_foreign = no
 	pop_type = burghers
 	max_levels = 1
-	
+
 	employment_size = manpower_employment
 	category = military_category
-	
+
 	town = yes
 	city = yes
 	megalopolis = yes
@@ -3461,18 +3463,18 @@ the_bock_fortifications = {
 	is_special = yes
 	is_foreign = no
 	pop_type = soldiers
-	
+
 	max_levels = bock_max_level
 	employment_size = bastion_employment
 	expensive = yes
 
 	category = military_category
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	country_potential = {
 		always = no
 	}
@@ -3480,17 +3482,17 @@ the_bock_fortifications = {
 	allow = {
 		always = no
 	}
-	
+
 	location_potential = {
 		this = location:luxembourg
 	}
-		
+
 	can_destroy = {
 		always = no
 	}
-	
+
 	build_time = medium_fort_building
-	
+
 	modifier = {
 		local_defensive = 0.10
 		local_fort_maintenance_efficiency = 0.20
@@ -3498,7 +3500,7 @@ the_bock_fortifications = {
 	}
 
 
-	
+
 	possible_production_methods = {
 		early_soldier_building_maintenance
 	}
@@ -3512,11 +3514,11 @@ ruined_great_wall_of_china = {
 	is_foreign = no
 	pop_type = soldiers
 	max_levels = 1
-	
+
 	employment_size = great_wall_of_china_employment
 	category = defense_category
-	
-	
+
+
 	rural_settlement = yes
 	town = yes
 	city = yes
@@ -3540,7 +3542,7 @@ ruined_great_wall_of_china = {
 	modifier = {
 		local_garrison_size = 0.1
 	}
-	
+
 	raw_modifier = {
 		fort_level = 1
 		pure_tooltip_entry = pte_no_propagating_zone_of_control            # propagating_zone_of_control = no
@@ -3553,12 +3555,12 @@ repaired_great_wall_of_china = {
 	is_foreign = no
 	pop_type = soldiers
 	max_levels = 1
-	
+
 	obsolete = ruined_great_wall_of_china
 	employment_size = great_wall_of_china_employment
 	category = defense_category
-	
-	
+
+
 	rural_settlement = yes
 	town = yes
 	city = yes
@@ -3585,7 +3587,7 @@ repaired_great_wall_of_china = {
 	modifier = {
 		local_garrison_size = 0.2
 	}
-	
+
 	raw_modifier = {
 		fort_level = 1
 		propagating_zone_of_control = yes
@@ -3598,11 +3600,11 @@ free_economic_society = {
 	is_foreign = no
 	pop_type = nobles
 	max_levels = 1
-	
+
 	employment_size = normal_noble_employment
-	
+
 	category = government_category
-	
+
 	rural_settlement = no
 	town = yes
 	city = yes
@@ -3627,7 +3629,7 @@ free_economic_society = {
 		NOT = { owner = { has_variable = free_economic_society } }
 	}
 
-	
+
 
 	build_time = government_build_time
 
@@ -3660,11 +3662,11 @@ imperial_academy_of_arts = {
 	is_foreign = no
 	pop_type = nobles
 	max_levels = 1
-	
+
 	employment_size = normal_noble_employment
 
 	category = cultural_category
-	
+
 	town = yes
 	city = yes
 	megalopolis = yes
@@ -3688,7 +3690,7 @@ imperial_academy_of_arts = {
 		always = yes
 	}
 
-	
+
 
 	build_time = cultural_building_time
 
@@ -3718,11 +3720,11 @@ moscow_orphanage = {
 	is_foreign = no
 	pop_type = laborers
 	max_levels = 1
-	
+
 	employment_size = advanced_peasant_building_employment
 
 	category = government_category
-	
+
 	town = yes
 	city = yes
 	megalopolis = yes
@@ -3778,11 +3780,11 @@ institute_of_noble_maidens = {
 	is_foreign = no
 	pop_type = nobles
 	max_levels = 1
-	
+
 	employment_size = normal_noble_employment
 
 	category = cultural_category
-	
+
 	town = yes
 	city = yes
 	megalopolis = yes
@@ -3841,19 +3843,19 @@ royal_atarazanas_seville = {
 	is_special = yes
 	is_foreign = no
 	pop_type = soldiers
-	
+
 	max_levels = 1
 	employment_size = dry_dock_employment
-	
+
 	category = military_category
-	
+
 	rural_settlement = no
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	expensive = yes
-	
+
 	country_potential = {
 		always = no
 	}
@@ -3867,7 +3869,7 @@ royal_atarazanas_seville = {
 		can_build_ships_in_this_location = yes
 		local_repair_speed = 0.02
 	}
-	
+
 	unique_production_methods = {
 		royal_atarazanas_seville_maintenance = {
 			tar = 0.5
@@ -3887,17 +3889,17 @@ alhambra = {
 	is_foreign = no
 	pop_type = nobles
 	max_levels = 1
-	
+
 	category = government_category
-	
+
 	employment_size = huge_noble_employment
-	
+
 	city = yes
 	megalopolis = yes
-	
+
 	expensive = yes
 	build_time = large_capital_build_time
-	
+
 	country_potential = {
 		OR = {
 			tag = GRA
@@ -3908,15 +3910,15 @@ alhambra = {
 	location_potential = {
 		is_capital = yes
 	}
-	
+
 	capital_modifier = {
 	}
-	
+
 	capital_country_modifier = {
 		global_crown_estate_power = 0.10
 		cultural_influence_modifier = 0.1
 	}
-	
+
 
 	possible_production_methods = {
 		early_capital_building_maintenance
@@ -3931,11 +3933,11 @@ theodosian_walls = {
 	is_foreign = no
 	pop_type = soldiers
 	max_levels = theodosian_walls_max_level
-	
+
 	employment_size = theodosian_walls
 	category = defense_category
-	
-	
+
+
 	rural_settlement = no
 	town = no
 	city = yes
@@ -3945,7 +3947,7 @@ theodosian_walls = {
 	location_potential = {
 		this = location:constantinople
 	}
-	
+
 	country_potential = {
 		owns = location:constantinople
 	}
@@ -3993,7 +3995,7 @@ theodosian_walls = {
 	market_center_modifier = {
 		local_trade_center_power = 0.1		
 	}
-	
+
 	raw_modifier = {
 		fort_level = 2
 		pure_tooltip_entry = pte_no_propagating_zone_of_control            # propagating_zone_of_control = no
@@ -4007,10 +4009,10 @@ bey_fortress = {
 	is_foreign = no
 	pop_type = soldiers
 	max_levels = 1
-	
+
 	employment_size = manpower_employment
 	category = defense_category
-	
+
 	city = yes
 	megalopolis = yes
 	build_time = small_fort_building
@@ -4042,7 +4044,7 @@ bey_fortress = {
 
 		can_recruit_regiment_in_this_location = yes
 	}
-	
+
 
 	on_built = {
 		if = {
@@ -4105,34 +4107,34 @@ mamluk_barracks = {
 	is_special = yes
 	is_foreign = no
 	pop_type = slaves
-	
+
 	max_levels = 3
 	employment_size = slave_soldier_barracks
-	
+
 	category = military_category
-	
+
 	rural_settlement = no
 	town = yes
 	city = yes
 	megalopolis = yes
-	
-	
+
+
 	build_time = soldier_building
 
 	expensive = yes
-	
+
 	country_potential = {
 		modifier:can_build_mamluk_barracks = yes
 	}
 
-	
+
 	always_add_demands = yes
-	
+
 	modifier = {
 		local_manpower = 0.01
 		can_recruit_regiment_in_this_location = yes
 	}
-	
+
 	unique_production_methods = {
 		mamluk_barracks_maintenance  = {
 			leather = 0.15
@@ -4152,16 +4154,16 @@ coastal_settlements = {
 	max_levels = 1
 	pop_type = peasants
 
-	
+
 	category = government_category
 
 	employment_size = village_employment_size
-	
-	
+
+
 	rural_settlement = yes
 	town = yes
 	city = no
-	
+
 	country_potential = {
 		has_unlocked_building_trigger = { type = coastal_settlements }
 	}
@@ -4185,9 +4187,9 @@ coastal_settlements = {
 	}
 	construction_demand = colony_construction
 
-	
+
 	build_time = colonise_build_time
-	
+
 	modifier = {
 		local_migration_attraction = 1.5
 		local_pop_promotion_speed_modifier = 0.1
@@ -4199,27 +4201,27 @@ kurmina_headquarter = {
 	is_special = yes
 	is_foreign = no
 	pop_type = soldiers
-	
+
 	max_levels = kurmina_headquarter_max_level
 	employment_size = manpower_employment
-	
+
 	category = military_category
-	
+
 	rural_settlement = no
 	town = no
 	city = yes
 	megalopolis = yes
-	
-	
+
+
 	build_time = medium_soldier_building
 
-	
+
 	country_potential = {
 		modifier:can_build_kurmina_headquarter = yes
 	}
-	
+
 	always_add_demands = yes
-	
+
 	modifier = {
 		local_manpower = 0.01
 		can_recruit_regiment_in_this_location = yes
@@ -4228,7 +4230,7 @@ kurmina_headquarter = {
 	remove_if = {
 		root.owner = { modifier:can_build_kurmina_headquarter = no }
 	}
-	
+
 	possible_production_methods = {
 		early_soldier_building_maintenance
 	}
@@ -4355,7 +4357,7 @@ trans_saharan_trade_outposts = {
 		merchant_capacity_from_building = 1.0
 		merchant_power_from_building = 2
 	}
-	
+
 	unique_production_methods = {
 		trans_saharan_trade_outposts_maintenance = {
 			lumber = 0.5
@@ -4407,17 +4409,17 @@ bajang_ratu = {
 	is_foreign = no
 	max_levels = 1
 	pop_type = clergy
-	
+
 	category = government_category
-	
+
 	employment_size = huge_religious_building_employment
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
-	
+
+
 	build_time = large_capital_build_time
 
 	expensive = yes
@@ -4425,9 +4427,9 @@ bajang_ratu = {
 	location_potential = {
 		is_capital = yes
 	}
-	
+
 	unique_production_methods = {
-		
+
 		bajang_ratu_maintenance = {
 			stone = 0.1
 			goods_gold = 0.05
@@ -4439,7 +4441,7 @@ bajang_ratu = {
 
 	}
 	construction_demand = fort_construction
-	
+
 	capital_country_modifier = {
 		tolerance_own = 1
 		monthly_prestige = 0.05
@@ -4455,16 +4457,16 @@ bubu_building = {
 
 	category = rgo_building_category
 	employment_size = tiny_rural_peasant_produce_employment
-	
+
 	rural_settlement = yes
-	
+
 	AI_optimization_flag_coastal = yes
 	location_potential = {
 		raw_material = goods:fish
 	}
-	
-		
-	
+
+
+
 	build_time = rural_build_time
 
 	unique_production_methods = {
@@ -4490,7 +4492,7 @@ fulani_cattle_rearing_pen = {
 
 	category = infrastructure_category
 	employment_size = rural_peasant_produce_employment
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
@@ -4509,9 +4511,9 @@ fulani_cattle_rearing_pen = {
 			culture ?= culture:fulbe
 		}
 	}
-	
-		
-	
+
+
+
 	build_time = rural_build_time
 
 	construction_demand = village_construction
@@ -4535,8 +4537,8 @@ walls_of_benin = {
 
 	employment_size = 2.0
 	category = defense_category
-	
-	
+
+
 	rural_settlement = no
 	town = no
 	city = yes
@@ -4546,7 +4548,7 @@ walls_of_benin = {
 	location_potential = {
 		this = location:benin
 	}
-	
+
 	country_potential = {
 		owns = location:benin
 	}
@@ -4564,7 +4566,7 @@ walls_of_benin = {
 		blocks_vision_from_land = yes
 		blocks_vision_from_sea = yes
 	}
-	
+
 }
 
 zazzau_walls = {
@@ -4576,14 +4578,14 @@ zazzau_walls = {
 
 	employment_size = 1
 	category = defense_category
-	
-	
+
+
 	rural_settlement = no
 	town = no
 	city = yes
 	megalopolis = yes
 	build_time = small_fort_building
-	
+
 	country_potential = {
 		always = no
 	}
@@ -4603,7 +4605,7 @@ zazzau_walls = {
 		local_defensive = 0.2
 		blocks_vision_from_land = yes
 	}
-	
+
 }
 
 eghabho_nore_mansion = {
@@ -4616,15 +4618,15 @@ eghabho_nore_mansion = {
 
 	employment_size = tiny_estate_noble_employment
 	category = defense_category
-	
-	
+
+
 	rural_settlement = no
 	town = yes
 	city = yes
 	megalopolis = yes
 
 	build_time = religious_building_time
-	
+
 	country_potential = {
 		has_unlocked_building_trigger = { type = eghabho_nore_mansion }
 	}
@@ -4650,26 +4652,26 @@ eghabho_nore_mansion = {
 ribat = {
 	audio_tier = 3
 	is_special = yes
-	
+
 	max_levels = 1
 	pop_type = clergy
-	
+
 	category = defense_category
-	
+
 	employment_size = stockade_employment
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
-	
+
+
 	build_time = small_fort_building
 
 	expensive = yes
-	
+
 	unique_production_methods = {
-	
+
 		ribat_maintenance = {
 			masonry = 0.1
 			weaponry = 0.02
@@ -4678,12 +4680,12 @@ ribat = {
 		}
 	}
 	construction_demand = stockade_construction
-	
+
 
 	modifier = {
 		local_unrest = -0.05
 	}
-	
+
 }
 
 por_feitoria = {
@@ -4759,21 +4761,21 @@ gurgaddi = {
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	country_potential = {
 		tag = SIKH
 	}
 
 	build_time = religious_building_time
 
-	
-	
+
+
 	possible_production_methods = {
 		monastery_maintenance
 	}
 
 	construction_demand = town_building_construction
-	
+
 
 	modifier = {
 		local_clergy_max_literacy = 10
@@ -4788,18 +4790,18 @@ sufi_mosque = {
 	is_special = yes
 	max_levels = 1
 	pop_type = clergy
-	
+
 	category = religious_category
 	conversion_religion = sunni
 	employment_size = religious_building_employment
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
 
 	can_close = no
-	
+
 	country_potential = {
 		always = no
 	}
@@ -4807,13 +4809,13 @@ sufi_mosque = {
 	build_time = religious_building_time
 
 	price = free_building
-	
+
 	possible_production_methods = {
 		monastery_maintenance
 	}
 
 	construction_demand = town_building_construction
-	
+
 
 	modifier = {
 		building_missionary_effort_scaled = 0.001
@@ -4825,18 +4827,18 @@ wali_songo_shrine = {
 	is_special = yes
 	max_levels = 1
 	pop_type = clergy
-	
+
 	category = religious_category
 	conversion_religion = sunni
 	employment_size = religious_building_employment
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
 
 	can_close = no
-	
+
 	country_potential = {
 		always = no
 	}
@@ -4847,13 +4849,13 @@ wali_songo_shrine = {
 	build_time = religious_building_time
 
 	price = free_building
-	
+
 	possible_production_methods = {
 		monastery_maintenance
 	}
 
 	construction_demand = town_building_construction
-	
+
 
 	modifier = {
 		building_missionary_effort_scaled = 0.002
@@ -4867,17 +4869,17 @@ zhixian = {
 	max_levels = 1
 	pop_type = nobles
 	forbidden_for_estates = yes
-	
+
 	employment_size = minor_noble_employment
 	category = government_category
-	
+
 	rural_settlement = no
 	town = yes
 	city = yes
 	megalopolis = yes
 
 	build_time = small_capital_build_time
-	
+
 	country_potential = {
 		exists = international_organization:middle_kingdom
 		is_leader_of_international_organization = international_organization:middle_kingdom
@@ -4917,18 +4919,18 @@ seljuk_mint = {
 	is_special = yes
 	is_foreign = no
 	pop_type = burghers
-	
+
 	max_levels = 4
 	employment_size = large_foreign_trade_employment
-	
+
 	category = government_category
-	
+
 	rural_settlement = no
 	town = yes
 	city = yes
 	megalopolis = yes
 	ai_forbid_shutdown = yes
-	
+
 	important_for_AI = yes
 	AI_ignore_available_worker_flag = yes
 	build_time = large_capital_build_time
@@ -4936,7 +4938,7 @@ seljuk_mint = {
 	ai_ignore_maintenance = yes
 
 	expensive = yes
-	
+
 	country_potential = {
 		culture ?= {
 			OR = {
@@ -4977,13 +4979,13 @@ seljuk_mint = {
 	increase_per_level_cost = 0.2
 
 	always_add_demands = yes
-	
+
 	modifier = {
 		local_proximity_source = 20
 		local_monthly_development_modifier = 0.025
 		local_crown_estate_power = 0.1
 	}
-	
+
 	unique_production_methods = {
 		seljuk_mint_maintenance  = {
 			paper = 0.1
@@ -5001,22 +5003,22 @@ tur_kodjabashi_office = {
 	is_special = yes
 	is_foreign = no
 	pop_type = nobles
-	
+
 	max_levels = 1
 	employment_size = minor_noble_employment
-	
+
 	category = government_category
-	
+
 	rural_settlement = no
 	town = yes
 	city = yes
 	megalopolis = yes
-	
-	
+
+
 	build_time = large_capital_build_time
 
 	expensive = yes
-	
+
 	country_potential = {
 		has_unlocked_building_trigger = {
 			type = tur_kodjabashi_office
@@ -5037,7 +5039,7 @@ tur_kodjabashi_office = {
 			is_capital = no
 		}
 	}
-	
+
 	modifier = {
 		local_max_control = 0.1
 		local_unrest = -0.2
@@ -5074,14 +5076,14 @@ qalat_al_mashwar = {
 	expensive = yes
 
 	build_time = cultural_building_time
-	
+
 	capital_country_modifier = {
 		monthly_prestige = 0.05
 		diplomatic_reputation = 1
 	}
 
 	modifier = { local_defensive = 0.1 }
-	
+
 	possible_production_methods = {
 		qalat_al_mashwar_maintenance
 	}
@@ -5094,11 +5096,11 @@ german_river_toll_castle = {
 	is_foreign = no
 	max_levels = 1
 	pop_type = burghers
-	
+
 	employment_size = small_burgher_employment
-	
+
 	category = trade_category
-	
+
 	location_potential = {
 		has_river = yes
 	}
@@ -5126,7 +5128,7 @@ german_river_toll_castle = {
 	raw_modifier = {
 		local_nobles_desired_pop = 0.01
 	}
-	
+
 	graphical_tags = { small_military }
 }
 
@@ -5136,11 +5138,11 @@ german_mountain_toll_castle = {
 	is_foreign = no
 	max_levels = 1
 	pop_type = burghers
-	
+
 	employment_size = small_burgher_employment
-	
+
 	category = trade_category
-	
+
 	location_potential = {
 		topography = mountains
 		num_roads > 0
@@ -5160,7 +5162,7 @@ german_mountain_toll_castle = {
 	possible_production_methods = {
 		basic_castle_maintenance
 	}
-	
+
 	construction_demand = town_building_construction
 
 	modifier = {
@@ -5241,7 +5243,7 @@ porto_pisano = {
 		local_merchant_capacity = 2
 		local_merchant_power = 2
 	}
-	
+
 	capital_country_modifier = {
 		selling_efficiency = tiny_trade_efficiency_bonus
 	}
@@ -5249,7 +5251,7 @@ porto_pisano = {
 	market_center_modifier = {
 		local_trade_center_power = 0.05
 	}
-	
+
 	unique_production_methods = {
 		porto_pisano_maintenance = {
 			paper = 0.5
@@ -5270,10 +5272,10 @@ gymnasium_building = {
 	is_foreign = no
 	pop_type = clergy
 	max_levels = 1
-	
+
 	category = cultural_category
 	employment_size = huge_religious_building_employment
-	
+
 	town = yes
 	city = yes
 	megalopolis = yes
@@ -5285,7 +5287,7 @@ gymnasium_building = {
 	}
 
 	build_time = large_cultural_building_time
-	
+
 	forbidden_for_estates = yes
 
 	location_potential = {
@@ -5299,7 +5301,7 @@ gymnasium_building = {
 			}
 		}
 	}
-	
+
 	modifier = {
 		local_cultural_tradition = 0.5
 		local_nobles_max_literacy = 10
@@ -5311,11 +5313,11 @@ gymnasium_building = {
 		research_speed_modifier = 0.05
 		global_max_literacy = 5
 	}
-	
+
 	possible_production_methods = {
 		university_maintenance
 	}
-	
+
 	construction_demand = university_construction
 }
 

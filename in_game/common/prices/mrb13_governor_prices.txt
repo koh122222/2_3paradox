@@ -1,0 +1,7 @@
+mrb13_town_governor_price = {
+	gold = 100
+}
+
+mrb13_minor_governor_price = {
+	gold = 50
+}

@@ -1,0 +1,17 @@
+mrb13_town_governor_construction = {
+	masonry = 1.667
+	tools = 1.667
+	glass = 1.667
+	fine_cloth = 0.667
+
+	category = building_construction
+}
+
+mrb13_minor_governor_construction = {
+	masonry = 0.833
+	tools = 0.833
+	glass = 0.833
+	fine_cloth = 0.333
+
+	category = building_construction
+}

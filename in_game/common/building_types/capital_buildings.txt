@@ -3,18 +3,18 @@ royal_court = {
 	is_foreign = no
 	pop_type = nobles
 	max_levels = 1
-	
+
 	category = government_category
-	
+
 	employment_size = large_noble_employment
-	
+
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	expensive = yes
 	build_time = large_capital_build_time
-	
+
 	location_potential = {
 		is_capital = yes
 	}
@@ -22,22 +22,22 @@ royal_court = {
 	country_potential = {
 		government_type ?= government_type:monarchy
 	}
-	
-	
-	
+
+
+
 	remove_if = {
 		OR = {
 			is_no_longer_capital = yes
 			location.owner ?= { government_type != government_type:monarchy }
 		}
 	}
-	
+
 	capital_country_modifier = {
 		country_cabinet_efficiency = 0.02
 		global_crown_estate_power = 0.10
 		monthly_towards_absolutism = societal_value_tiny_monthly_move
 	}
-	
+
 	unique_production_methods = {
 		royal_court_maintenance = {
 			furniture = 0.15
@@ -47,7 +47,7 @@ royal_court = {
 			books = 0.1
 			goods_gold = 0.1
 			marble = 0.1
-				
+
 			category = building_maintenance
 		}
 	}
@@ -62,19 +62,19 @@ house_of_parliament = {
 	is_foreign = no
 	pop_type = nobles
 	max_levels = 1
-	
+
 	category = government_category
-	
+
 	employment_size = huge_noble_employment
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	expensive = yes
 	build_time = large_capital_build_time
-	
+
 	location_potential = {
 		is_capital = yes
 	}
@@ -83,7 +83,7 @@ house_of_parliament = {
 	country_potential = {
 		modifier:has_a_parliamentary_system = yes
 	}
-	
+
 	remove_if = {
 		OR = {
 			is_no_longer_capital = yes
@@ -94,14 +94,14 @@ house_of_parliament = {
 			}
 		}
 	}
-	
-	
+
+
 	capital_country_modifier = {
 		permanent_parliament_location = yes
 		global_crown_estate_power = 0.2
 		monthly_towards_liberalism = societal_value_monthly_move
 	}
-	
+
 	unique_production_methods = {
 		house_of_parliament_requirements = {
 			fine_cloth = 0.1
@@ -121,19 +121,19 @@ order_headquarters = {
 	is_foreign = no
 	pop_type = clergy
 	max_levels = 1
-	
+
 	category = government_category
-	
+
 	employment_size = religious_building_employment
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	expensive = yes
 	build_time = large_capital_build_time
-	
+
 	location_potential = {
 		is_capital = yes
 	}
@@ -143,7 +143,7 @@ order_headquarters = {
 		has_reform = government_reform:military_order_reform
 		country_rank_level >= 2
 	}
-	
+
 	remove_if = {
 		OR = {
 			is_no_longer_capital = yes
@@ -154,14 +154,14 @@ order_headquarters = {
 			}
 		}
 	}
-	
+
 	capital_modifier = {
 		local_manpower = 0.02
 		local_defensive = 0.1
 		can_recruit_regiment_in_this_location = yes
 	}
-	
-	
+
+
 	unique_production_methods = {
 		order_headquarters_requirements = {
 			lumber = 0.1
@@ -185,18 +185,18 @@ admiralty = {
 	is_foreign = no
 	pop_type = burghers
 	max_levels = 1
-	
+
 	category = government_category
-	
+
 	employment_size = large_burgher_employment
-	
+
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	expensive = yes
 	build_time = large_capital_build_time
-	
+
 	location_potential = {
 		is_capital = yes
 	}
@@ -204,16 +204,16 @@ admiralty = {
 		is_no_longer_capital = yes
 	}
 
-	
+
 	capital_modifier = {
 		local_sailors = 0.2
 	}
-	
+
 	capital_country_modifier = {
 		naval_morale_modifier = 0.05
 	}
-	
-	
+
+
 	unique_production_methods = {
 		admiralty_requirements = {
 			tools = 0.1
@@ -236,18 +236,18 @@ war_college = {
 	is_foreign = no
 	pop_type = burghers
 	max_levels = 1
-	
+
 	category = government_category
-	
+
 	employment_size = large_burgher_employment
-	
+
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	expensive = yes
 	build_time = large_capital_build_time
-	
+
 	location_potential = {
 		is_capital = yes
 	}
@@ -258,13 +258,13 @@ war_college = {
 	capital_modifier = {
 		local_manpower = 0.2
 	}
-	
+
 	capital_country_modifier = {
 		land_morale_modifier = 0.05
 	}
-	
+
 	unique_production_methods = {
-	
+
 		war_college_requirements = {
 			tools = 0.2
 			weaponry = 0.5
@@ -288,38 +288,38 @@ tax_assessor = {
 	is_foreign = no
 	pop_type = burghers
 	max_levels = 1
-	
+
 	category = government_category
-	
+
 	employment_size = large_burgher_employment
-	
+
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	expensive = yes
 	build_time = large_capital_build_time
-	
+
 	location_potential = {
 		is_capital = yes
 	}
 	remove_if = {
 		is_no_longer_capital = yes
 	}
-	
+
 	capital_modifier = {
 		local_crown_estate_power = 0.25
 	}
-	
+
 	capital_country_modifier = {
 		global_estate_max_tax = 0.1
 		global_crown_estate_power = 0.1
 		monthly_towards_absolutism = societal_value_tiny_monthly_move
 	}
-	
-	
+
+
 	unique_production_methods = {
-	
+
 		tax_assessor_requirements = {
 			tools = 0.2
 			paper = 1.0
@@ -338,34 +338,34 @@ supreme_court = {
 	is_foreign = no
 	pop_type = nobles
 	max_levels = 1
-	
+
 	category = government_category
-	
+
 	employment_size = large_noble_employment
-	
+
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	expensive = yes
 	build_time = large_capital_build_time
-	
+
 	location_potential = {
 		is_capital = yes
 	}
 	remove_if = {
 		is_no_longer_capital = yes
 	}
-	
+
 	capital_modifier = {
 		local_monthly_development_modifier = 0.1
 	}
-	
+
 	capital_country_modifier = {
 		global_distance_from_capital_speed_propagation = 0.1
 		global_crown_estate_power = 0.1
 	}
-	
+
 	unique_production_methods = {
 		supreme_court_requirements = {
 			lumber = 0.1
@@ -386,18 +386,18 @@ chancery = {
 	is_foreign = no
 	pop_type = burghers
 	max_levels = chancery_max_level
-	
+
 	category = government_category
-	
+
 	employment_size = generic_burgher_employment
-	
+
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	expensive = yes
 	build_time = large_capital_build_time
-	
+
 	location_potential = {
 		is_capital = yes
 	}
@@ -409,7 +409,7 @@ chancery = {
 			government_type ?= government_type:republic
 		}
 	}
-	
+
 	remove_if = {
 		OR = {
 			is_no_longer_capital = yes
@@ -425,24 +425,24 @@ chancery = {
 		local_burghers_max_literacy = 2.5
 		local_nobles_max_literacy = 2.5
 	}
-	
+
 	capital_country_modifier = {
 		country_cabinet_efficiency = 0.025
 	}
-	
-	
+
+
 	unique_production_methods = {
 		chancery_maintenance = {
 			fine_cloth = 0.1
 			books = 0.1
 			paper = 0.5
 			goods_gold = 0.05
-				
+
 			category = building_maintenance
 		}
 	}
 
-	
+
 	construction_demand = early_capital_building_construction
 	modifier = {
 	}
@@ -453,18 +453,18 @@ republican_assembly = {
 	is_foreign = no
 	pop_type = nobles
 	max_levels = 1
-	
+
 	category = government_category
-	
+
 	employment_size = large_noble_employment
-	
+
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	expensive = yes
 	build_time = large_capital_build_time
-	
+
 	location_potential = {
 		is_capital = yes
 	}
@@ -472,10 +472,10 @@ republican_assembly = {
 	country_potential = {
 		government_type ?= government_type:republic
 	}
-	
+
 	capital_modifier = {
 	}
-	
+
 	remove_if = {
 		OR = {
 			is_no_longer_capital = yes
@@ -483,15 +483,15 @@ republican_assembly = {
 		}
 	}
 
-	
+
 	capital_country_modifier = {
 		monthly_republican_tradition = 0.1
 		country_cabinet_efficiency = 0.05
 	}
-	
-	
-	
-	
+
+
+
+
 	unique_production_methods = {
 		republican_assembly_maintenance = {
 			furniture = 0.1
@@ -501,7 +501,7 @@ republican_assembly = {
 			books = 0.1
 			goods_gold = 0.1
 			marble = 0.1
-				
+
 			category = building_maintenance
 		}
 	}
@@ -516,18 +516,18 @@ royal_garden = {
 	is_foreign = no
 	pop_type = nobles
 	max_levels = 1
-	
+
 	category = government_category
-	
+
 	employment_size = noble_cultural_employment
-	
+
 	town = yes
 	city = yes
 	megalopolis = yes
 
 	expensive = yes
 	build_time = large_capital_build_time
-	
+
 	location_potential = {
 		is_capital = yes
 	}
@@ -544,8 +544,8 @@ royal_garden = {
 		monthly_diplomats = 0.2
 		monthly_prestige = 0.025
 	}
-	
-	
+
+
 	unique_production_methods = {
 		royal_garden_maintenance = {
 			furniture = 0.1
@@ -555,7 +555,7 @@ royal_garden = {
 			books = 0.1
 			goods_gold = 0.05
 			marble = 0.05
-				
+
 			category = building_maintenance
 		}
 	}
@@ -567,19 +567,19 @@ pirate_stronghold = { # ESTATE BUILDING
 	is_foreign = no
 	max_levels = 1
 	pop_type = peasants
-	
-	
+
+
 	category = infrastructure_category
 	employment_size = capital_peasant_employment
-	
+
 	rural_settlement = yes
 	town = yes
 	city = yes
 	megalopolis = yes
-	
+
 	estate = peasants_estate
 	build_time = small_capital_build_time
-	
+
 	expensive = yes
 
 
@@ -592,7 +592,7 @@ pirate_stronghold = { # ESTATE BUILDING
 	country_potential = {
 		has_reform = government_reform:pirate_brethren_reform
 	}
-	
+
 	location_potential = {
 		is_capital = yes
 		is_coastal = yes
@@ -603,7 +603,7 @@ pirate_stronghold = { # ESTATE BUILDING
 			NOT = { has_reform = government_reform:pirate_brethren_reform }
 		}
 	}
-	
+
 	modifier = {
 		local_sailors = 0.02
 		local_maritime_presence = 1
@@ -618,11 +618,11 @@ local_governor = {
 	pop_type = nobles
 	max_levels = 1
 	important_for_UI = yes
-	
+
 	employment_size = large_noble_employment
-	
+
 	category = government_category
-	
+
 	rural_settlement = no
 	town = no
 	city = yes
@@ -630,16 +630,18 @@ local_governor = {
 
 	allow = {
 		custom_tooltip = {
-			text = local_governor_tt
+			text = mrb13_land_governor_tt
 			scope:actor = {
 				total_building_levels_including_construction:local_governor < {
 					value = modifier:num_local_governors
 					subtract = total_building_levels_including_construction:lieutenancy
+					subtract = total_building_levels_including_construction:mrb13_town_governor
+					subtract = total_building_levels_including_construction:mrb13_minor_governor
 				}
 			}
 		}
 		owner = scope:actor #not in subjects
-		trigger_if = { 
+		trigger_if = {
 			limit = { has_building = building_type:seljuk_mint }
 			NOT = { has_building = building_type:seljuk_mint }
 		}
@@ -657,7 +659,7 @@ local_governor = {
 	}
 
 	expensive = yes
-	
+
 	automation_build_allowed = no
 	ai_forbid_shutdown = yes
 	forbidden_for_estates = yes
@@ -687,6 +689,151 @@ local_governor = {
 
 	modifier = {
 		local_proximity_source = 80
+	}
+}
+
+mrb13_town_governor = {
+	audio_tier = 2
+	is_foreign = no
+	pop_type = nobles
+	max_levels = 1
+	important_for_UI = yes
+
+	employment_size = large_noble_employment
+
+	category = government_category
+
+	rural_settlement = no
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	allow = {
+		custom_tooltip = {
+			text = mrb13_land_governor_tt
+			scope:actor = {
+				total_building_levels_including_construction:mrb13_town_governor < {
+					value = modifier:num_local_governors
+					subtract = total_building_levels_including_construction:local_governor
+					subtract = total_building_levels_including_construction:lieutenancy
+					subtract = total_building_levels_including_construction:mrb13_minor_governor
+				}
+			}
+		}
+		owner = scope:actor
+		trigger_if = {
+			limit = { has_building = building_type:seljuk_mint }
+			NOT = { has_building = building_type:seljuk_mint }
+		}
+	}
+
+	location_potential = {
+		has_road_to_capital = yes
+		owner.capital != this
+	}
+
+	remove_if = {
+		location = { has_road_to_capital = no }
+		NOT = { owner = { at_war = yes } }
+		NOT = { owner = { in_civil_war = yes } }
+	}
+
+	automation_build_allowed = no
+	ai_forbid_shutdown = yes
+	forbidden_for_estates = yes
+	important_for_AI = yes
+	ai_ignore_maintenance = yes
+
+	build_time = government_build_time
+	price = mrb13_town_governor_price
+
+	unique_production_methods = {
+		mrb13_town_governor_maintenance = {
+			tools = 0.333
+			masonry = 0.333
+			weaponry = 0.167
+			paper = 1
+			books = 0.333
+			furniture = 0.667
+			fine_cloth = 0.333
+
+			category = building_maintenance
+		}
+	}
+
+	construction_demand = mrb13_town_governor_construction
+
+	modifier = {
+		local_proximity_source = 60
+	}
+}
+
+mrb13_minor_governor = {
+	audio_tier = 2
+	is_foreign = no
+	pop_type = nobles
+	max_levels = 1
+	important_for_UI = yes
+
+	employment_size = normal_noble_employment
+
+	category = government_category
+
+	rural_settlement = no
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	allow = {
+		custom_tooltip = {
+			text = mrb13_land_governor_tt
+			scope:actor = {
+				total_building_levels_including_construction:mrb13_minor_governor < {
+					value = modifier:num_local_governors
+					subtract = total_building_levels_including_construction:local_governor
+					subtract = total_building_levels_including_construction:lieutenancy
+					subtract = total_building_levels_including_construction:mrb13_town_governor
+				}
+			}
+		}
+		owner = scope:actor
+		trigger_if = {
+			limit = { has_building = building_type:seljuk_mint }
+			NOT = { has_building = building_type:seljuk_mint }
+		}
+	}
+
+	location_potential = {
+		owner.capital != this
+	}
+
+	automation_build_allowed = no
+	ai_forbid_shutdown = yes
+	forbidden_for_estates = yes
+	important_for_AI = yes
+	ai_ignore_maintenance = yes
+
+	build_time = government_build_time
+	price = mrb13_minor_governor_price
+
+	unique_production_methods = {
+		mrb13_minor_governor_maintenance = {
+			tools = 0.167
+			masonry = 0.167
+			weaponry = 0.083
+			paper = 0.5
+			books = 0.167
+			furniture = 0.333
+			fine_cloth = 0.167
+
+			category = building_maintenance
+		}
+	}
+
+	construction_demand = mrb13_minor_governor_construction
+
+	modifier = {
+		local_proximity_source = 40
 	}
 }
 
@@ -795,9 +942,12 @@ naval_governor = {
 		}
 		trigger_else = {
 			custom_tooltip = {
-				text = naval_governor_tt
+				text = mrb13_naval_governor_tt
 				scope:actor = {
-					total_building_levels_including_construction:naval_governor < modifier:num_naval_governors
+					total_building_levels_including_construction:naval_governor < {
+						value = modifier:num_naval_governors
+						subtract = total_building_levels_including_construction:mrb13_town_naval_governor
+					}
 				}
 			}
 		}
@@ -846,6 +996,88 @@ naval_governor = {
 
 	modifier = {
 		local_proximity_source = 80
+	}
+}
+
+mrb13_town_naval_governor = {
+	audio_tier = 2
+	is_foreign = no
+	pop_type = nobles
+	max_levels = 1
+	important_for_UI = yes
+
+	employment_size = large_noble_employment
+
+	category = government_category
+
+	rural_settlement = no
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	allow = {
+		trigger_if = {
+			limit = {
+				scope:actor = {
+					modifier:num_naval_governors <= 0
+				}
+			}
+			custom_tooltip = {
+				text = no_naval_governor_tt
+				always = no
+			}
+		}
+		trigger_else = {
+			custom_tooltip = {
+				text = mrb13_naval_governor_tt
+				scope:actor = {
+					total_building_levels_including_construction:mrb13_town_naval_governor < {
+						value = modifier:num_naval_governors
+						subtract = total_building_levels_including_construction:naval_governor
+					}
+				}
+			}
+		}
+		owner = scope:actor
+	}
+
+	location_potential = {
+		NOT = { is_connected_to_through_realm = owner.capital }
+		is_overseas_for_owner = no
+		is_port = yes
+	}
+
+	remove_if = {
+		location = { is_connected_to_through_realm = owner.capital }
+	}
+
+	automation_build_allowed = no
+	ai_forbid_shutdown = yes
+	forbidden_for_estates = yes
+	important_for_AI = yes
+
+	build_time = government_build_time
+	price = mrb13_town_governor_price
+
+	unique_production_methods = {
+		mrb13_town_naval_governor_maintenance = {
+			tools = 0.333
+			masonry = 0.333
+			weaponry = 0.167
+			paper = 1
+			books = 0.333
+			furniture = 0.667
+			naval_supplies = 0.167
+			fine_cloth = 0.167
+
+			category = building_maintenance
+		}
+	}
+
+	construction_demand = mrb13_town_governor_construction
+
+	modifier = {
+		local_proximity_source = 60
 	}
 }
 
