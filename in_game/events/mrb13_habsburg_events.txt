@@ -1,0 +1,58 @@
+# Override: Privilegium Maius no longer requires a Habsburg ruler.
+flavor_hab.1008 = {
+	type = country_event
+	title = flavor_hab.1008.title
+	desc = flavor_hab.1008.desc
+	outcome = neutral
+	#historical_info = flavor_hab.1008.historical_info
+
+	fire_only_once = yes
+
+	dynamic_historical_event = {
+		tag = HAB
+		tag = STY
+		tag = TIR
+		from = 1380.1.1
+		to = 1700.1.1
+		monthly_chance = 50
+	}
+
+	illustration_tags = {
+		10 = happy
+		10 = interior
+	}
+
+	immediate = {
+		event_illustration_estate_effect = { foreground = estate_type:nobles_estate background = estate_type:nobles_estate }
+
+		ruler ?= {
+			save_scope_as = target_ruler
+		}
+	}
+
+	trigger = {
+		has_ruler = yes
+		is_leader_of_international_organization = international_organization:hre
+		owns = location:vienna
+		custom_tooltip = {
+			text = flavor_hab.1008.privilegium_not_granted_tt
+			NOT = {
+				has_variable = privilegium_maius_granted
+			}
+		}
+	}
+
+	option = {
+		name = flavor_hab.1008.a
+		historical_option = yes
+
+		set_variable = privilegium_maius_granted
+		unlock_government_reform_effect = { type = austrian_archduchy_reform }
+		add_reform = government_reform:austrian_archduchy_reform
+		hidden_effect = {
+			ruler ?= {
+				reset_ruler_title = {}
+			}
+		}
+	}
+}
