@@ -1,0 +1,49 @@
+# Override: extend the "Managing the Realm" event window through 1499.
+flavor_vij.1 = {
+	type = country_event
+	title = flavor_vij.1.title
+	desc = flavor_vij.1.desc
+	outcome = neutral
+
+	illustration_tags = {
+		10 = regular
+		10 = interior
+	}
+
+	fire_only_once = yes
+	dynamic_historical_event = {
+		tag = VIJ
+		from = 1337.1.1
+		to = 1500.1.1
+		monthly_chance = 5
+	}
+
+	trigger = {
+		has_primary_or_accepted_culture = culture:telugu
+		has_primary_or_accepted_culture = culture:tamil
+		has_primary_or_accepted_culture = culture:kannadiga
+	}
+
+	immediate = {
+		unlock_policy_effect = { type = multi_lingual_court }
+		event_illustration_estate_effect = { foreground = estate_type:peasants_estate background = estate_type:peasants_estate }
+	}
+
+	option = {
+		name = flavor_vij.1.a
+		add_prestige = prestige_weak_bonus
+		add_policy = policy:multi_lingual_court
+		custom_tooltip = {
+			text = unlock_vij_language_rights.tt
+		}
+	}
+
+	option = {
+		name = flavor_vij.1.b
+		add_legitimacy = legitimacy_weak_penalty
+		add_prestige = prestige_weak_penalty
+		culture = {
+			add_cultural_influence = cultural_influence_weak_bonus
+		}
+	}
+}
