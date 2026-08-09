@@ -1,4 +1,5 @@
 ﻿l_russian:
+ tsardom: "Русское царство"
  STATIC_MODIFIER_NAME_mrb13_asia_institution_penalty: "Азиатская институциональная изоляция"
  STATIC_MODIFIER_DESC_mrb13_asia_institution_penalty: "Эта страна изолирована от распространения институтов и намного дороже принимает институты."
  STATIC_MODIFIER_NAME_mrb13_low_legitimacy_crown_control_penalty: "Низкая легитимность"
