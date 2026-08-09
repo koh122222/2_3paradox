@@ -122,16 +122,6 @@
 		reject_subjugation_reasons = 25
 	}
 
-	modifier = {
-		potential_trigger = {
-			NOR = {
-				has_game_rule = no_rank_restriction
-				has_game_rule = rank_restriction_by_numbers
-			}
-		}
-		block_from_change_to_kingdom_rank = yes
-	}
-
 	international_organization_modifier = {
 		# Standard setup for amount of electors
 		hre_max_elector = 4

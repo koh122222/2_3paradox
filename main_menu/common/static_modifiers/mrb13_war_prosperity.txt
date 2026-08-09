@@ -1,0 +1,30 @@
+# KOH: strengthen prosperity losses from enemy occupation and blockades.
+is_blockaded_by_enemies = {
+	game_data = {
+		category = location
+	}
+	local_monthly_prosperity = -0.035
+	local_maritime_presence = -2.0
+	local_max_control = -0.10
+	hostile_food_multiplier = -0.75
+	local_monthly_development_modifier = -0.20
+	local_trade_embark_disembark_efficiency = -2
+	local_construction_speed = -0.10
+	local_mercenaries_modifier = 0.25
+}
+
+is_occupied = {
+	game_data = {
+		category = location
+	}
+	local_monthly_prosperity = -0.030
+	local_monthly_control = -0.002
+
+	hostile_food_multiplier = -0.5
+
+	local_garrison_growth = -1.0
+
+	local_construction_speed = -0.25
+	local_building_establishment_reduction = 0.005
+	local_mercenaries_modifier = 0.5
+}
