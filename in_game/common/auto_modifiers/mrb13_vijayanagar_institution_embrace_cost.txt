@@ -1,0 +1,10 @@
+mrb13_vijayanagar_institution_embrace_cost = {
+	potential_trigger = {
+		OR = {
+			tag = VIJ
+			tag = HIN
+		}
+	}
+
+	embrace_institution_cost_modifier = 2.0
+}
