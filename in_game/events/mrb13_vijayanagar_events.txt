@@ -1,5 +1,7 @@
-# Override: extend the "Managing the Realm" event window through 1499.
-TRY_REPLACE:flavor_vij.1 = {
+namespace = mrb13_vijayanagar
+
+# Continuation of vanilla "Managing the Realm" after its 1400 expiry.
+mrb13_vijayanagar.1 = {
 	type = country_event
 	title = flavor_vij.1.title
 	desc = flavor_vij.1.desc
@@ -13,9 +15,9 @@ TRY_REPLACE:flavor_vij.1 = {
 	fire_only_once = yes
 	dynamic_historical_event = {
 		tag = VIJ
-		from = 1337.1.1
+		from = 1400.1.1
 		to = 1500.1.1
-		monthly_chance = 5
+		monthly_chance = 99
 	}
 
 	trigger = {
