@@ -1,5 +1,5 @@
 # Override: Privilegium Maius no longer requires a Habsburg ruler.
-flavor_hab.1008 = {
+TRY_REPLACE:flavor_hab.1008 = {
 	type = country_event
 	title = flavor_hab.1008.title
 	desc = flavor_hab.1008.desc

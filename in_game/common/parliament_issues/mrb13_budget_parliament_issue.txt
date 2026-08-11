@@ -1,5 +1,5 @@
 # Override: weaker temporary effects while the budget-balancing debate is active.
-balance_the_budget = {
+TRY_REPLACE:balance_the_budget = {
 	estate = burghers_estate
 
 	modifier_when_in_debate = {

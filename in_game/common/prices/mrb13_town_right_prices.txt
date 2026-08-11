@@ -1,4 +1,4 @@
 # KOH: Make revoking town (urban) rights cost 1 base Stability.
-revoke_town_rights = {
+TRY_REPLACE:revoke_town_rights = {
 	stability = 1
 }
