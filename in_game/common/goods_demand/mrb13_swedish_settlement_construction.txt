@@ -1,0 +1,4 @@
+mrb13_swedish_settler_hamlet_construction = {
+	masonry = 0.2
+	category = building_construction
+}

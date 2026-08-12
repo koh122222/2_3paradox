@@ -1,0 +1,19 @@
+namespace = mrb13_great_britain
+
+mrb13_great_britain.1 = {
+	type = country_event
+	title = mrb13_great_britain.1.title
+	desc = mrb13_great_britain.1.desc
+	outcome = positive
+	hidden = yes
+	trigger = { tag = GBR }
+	immediate = {
+		every_subject = {
+			limit = {
+				capital ?= { region = region:great_britain_region }
+			}
+			add_country_modifier = { modifier = mrb13_british_subject_annexation_protection years = -1 mode = add }
+		}
+	}
+	option = { name = mrb13_great_britain.1.a }
+}

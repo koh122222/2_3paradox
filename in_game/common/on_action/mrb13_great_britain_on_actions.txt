@@ -1,0 +1,8 @@
+on_new_country_formed = {
+	on_actions = { mrb13_great_britain_formation }
+}
+
+mrb13_great_britain_formation = {
+	trigger = { tag = GBR }
+	events = { mrb13_great_britain.1 }
+}

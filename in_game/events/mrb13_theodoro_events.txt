@@ -1,0 +1,21 @@
+namespace = mrb13_theodoro
+
+mrb13_theodoro.1 = {
+	type = country_event
+	title = mrb13_theodoro.1.title
+	desc = mrb13_theodoro.1.desc
+	outcome = neutral
+	fire_only_once = yes
+	trigger = {
+		has_or_had_tag = MOS
+		location:theodoro = {
+			owner = root
+			NOT = { has_building = building_type:mrb13_levadia_palace }
+		}
+	}
+	option = {
+		name = mrb13_theodoro.1.a
+		add_country_modifier = { modifier = mrb13_levadia_palace_bonus years = -1 mode = add }
+		location:theodoro = { construct_building = { building_type = building_type:mrb13_levadia_palace } }
+	}
+}

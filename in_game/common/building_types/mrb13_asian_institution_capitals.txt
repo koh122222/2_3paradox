@@ -1,0 +1,57 @@
+mrb13_japanese_institute = {
+	audio_tier = 3
+	is_special = yes
+	is_foreign = no
+	pop_type = nobles
+	max_levels = 1
+	category = cultural_category
+	employment_size = large_noble_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	expensive = yes
+	build_time = 60
+	forbidden_for_estates = yes
+	location_potential = { is_capital = yes }
+	country_potential = { has_or_had_tag = JAP }
+	remove_if = { is_no_longer_capital = yes }
+	price = mrb13_asian_institute_price
+	modifier = { local_institution_growth_modifier = 4.0 }
+	unique_production_methods = {
+		mrb13_japanese_institute_maintenance = {
+			tools = 2 masonry = 2 weaponry = 1 paper = 6 books = 2 goods_gold = 2 furniture = 4 fine_cloth = 2
+			category = building_maintenance
+		}
+	}
+	construction_demand = local_governor_construction
+	graphical_tags = { palace }
+}
+
+mrb13_majapahit_institute = {
+	audio_tier = 3
+	is_special = yes
+	is_foreign = no
+	pop_type = nobles
+	max_levels = 1
+	category = cultural_category
+	employment_size = large_noble_employment
+	town = yes
+	city = yes
+	megalopolis = yes
+	expensive = yes
+	build_time = 60
+	forbidden_for_estates = yes
+	location_potential = { is_capital = yes }
+	country_potential = { has_or_had_tag = MAJ }
+	remove_if = { is_no_longer_capital = yes }
+	price = mrb13_asian_institute_price
+	modifier = { local_institution_growth_modifier = 2.0 }
+	unique_production_methods = {
+		mrb13_majapahit_institute_maintenance = {
+			tools = 2 masonry = 2 weaponry = 1 paper = 6 books = 2 goods_gold = 2 furniture = 4 fine_cloth = 2
+			category = building_maintenance
+		}
+	}
+	construction_demand = local_governor_construction
+	graphical_tags = { palace }
+}

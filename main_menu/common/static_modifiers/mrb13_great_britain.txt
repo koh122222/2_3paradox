@@ -1,0 +1,4 @@
+mrb13_british_subject_annexation_protection = {
+	game_data = { category = country }
+	hostile_diplomatic_annexation_efficiency = 0.3
+}
