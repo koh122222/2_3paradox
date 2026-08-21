@@ -1,8 +1,16 @@
-on_new_country_formed = {
-	on_actions = { mrb13_great_britain_formation }
+monthly_country_pulse = {
+	on_actions = { mrb13_great_britain_settlement_pulse }
 }
 
-mrb13_great_britain_formation = {
-	trigger = { tag = GBR }
+# Guaranteed monthly check with no date limit. The event stops itself after its
+# only option is selected.
+mrb13_great_britain_settlement_pulse = {
+	trigger = {
+		tag = GBR
+		OR = {
+			NOT = { has_variable = mrb13_great_britain_cultural_settlement_version }
+			var:mrb13_great_britain_cultural_settlement_version < 1
+		}
+	}
 	events = { mrb13_great_britain.1 }
 }

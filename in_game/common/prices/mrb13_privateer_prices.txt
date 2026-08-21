@@ -1,6 +1,6 @@
 TRY_REPLACE:hire_privateer = {
 	sailors = 0.25
-	gold = mrb13_privateer_hire_gold
+	gold = 100
 }
 
 TRY_REPLACE:privateer_maintenance = {

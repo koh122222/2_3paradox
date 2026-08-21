@@ -1,3 +1,0 @@
-NGame = {
-	PRIVATEER_STEAL_MONEY_FACTOR = 0.02
-}

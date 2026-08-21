@@ -8,6 +8,10 @@ mrb2_restoration_of_persia_modifier = {
 	}
 }
 
+# Retained empty solely so old saves can remove the temporary location modifier.
+mrb2_persian_administration_control_modifier = {
+}
+
 mrb2_persia_shia_transition = {
 	tolerance_heretic = 3
 	global_pop_conversion_speed = 0.01

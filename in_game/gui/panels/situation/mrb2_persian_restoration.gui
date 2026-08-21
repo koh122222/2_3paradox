@@ -304,6 +304,71 @@ situation_panel = {
 						textcontext = "[GetModifier('mrb2_restoration_of_persia_modifier').GetDesc]"
 					}
 
+					vbox = {
+						layoutpolicy_horizontal = expanding
+						spacing = 3
+						visible = "[EqualTo_float( FixedPointToFloat(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb2_persia_phase').GetValue), '(float)2.0')]"
+
+						hbox = {
+							layoutpolicy_horizontal = expanding
+							text_single = { text = "mrb2_persia_iranian_population" }
+							expand = {}
+							text_single = {
+								raw_text = "[SituationView.GetPlayer.MakeScope.GetVariable('mrb2_persia_iranian_population_percent').GetValue|1%]"
+							}
+						}
+
+						progressbar = {
+							size = { -1 10 }
+							using = morale_progressbar_bar
+							min = 0
+							max = 1
+							value = "[FixedPointToFloat(SituationView.GetPlayer.MakeScope.GetVariable('mrb2_persia_iranian_population_percent').GetValue)]"
+						}
+					}
+
+					hbox = {
+						layoutpolicy_horizontal = expanding
+						spacing = 6
+						visible = "[EqualTo_float( FixedPointToFloat(SituationView.GetActiveSituation.GetSituation.MakeScope.GetVariable('mrb2_persia_phase').GetValue), '(float)2.0')]"
+
+						icon = {
+							size = { 20 20 }
+							texture = "gfx/interface/icons/map_modes/max_control.dds"
+						}
+						text_single = { text = "mrb2_persia_administration_control" }
+						expand = {}
+						text_single = {
+							raw_text = "#G [SituationView.GetPlayer.MakeScope.GetVariable('mrb2_persia_restoration_control_bonus').GetValue|+=1%]#!"
+						}
+						tooltipwidget = {
+							ContextualTooltipType = {
+								blockoverride "title_text" { text = "mrb2_persia_iranian_population_tooltip_title" }
+								blockoverride "tooltip_content" {
+									vbox = {
+										spacing = 3
+										hbox = {
+											text_single = { text = "mrb2_persia_owned_iranian_population" }
+											expand = {}
+											text_single = { raw_text = "[SituationView.GetPlayer.MakeScope.GetVariable('mrb2_persia_owned_iranian_population').GetValue|K-1] / [SituationView.GetPlayer.MakeScope.GetVariable('mrb2_persia_owned_population').GetValue|K-1]" }
+										}
+										hbox = {
+											text_single = { text = "mrb2_persia_subject_iranian_population" }
+											expand = {}
+											text_single = { raw_text = "[SituationView.GetPlayer.MakeScope.GetVariable('mrb2_persia_subject_iranian_population').GetValue|K-1] / [SituationView.GetPlayer.MakeScope.GetVariable('mrb2_persia_subject_population').GetValue|K-1]" }
+										}
+										divider_flavor_03 = { size = { -1 6 } }
+										hbox = {
+											text_single = { text = "mrb2_persia_weighted_iranian_share" }
+											expand = {}
+											text_single = { raw_text = "[SituationView.GetPlayer.MakeScope.GetVariable('mrb2_persia_iranian_population_percent').GetValue|1%]" }
+										}
+									}
+								}
+							}
+						}
+					}
+
 					hbox = {
 						layoutpolicy_horizontal = expanding
 						spacing = 8

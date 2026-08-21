@@ -1,0 +1,22 @@
+monthly_country_pulse = {
+	on_actions = { mrb13_offlimits_management_recovery }
+}
+
+# Starts for the Persian organizer in both new and already running campaigns.
+mrb13_offlimits_management_recovery = {
+	trigger = {
+		tag = IRA
+		has_or_had_tag = ORM
+	}
+	effect = {
+		if = {
+			limit = {
+				situation:mrb13_offlimits_management = {
+					situation_is_active = no
+					situation_has_ended = no
+				}
+			}
+			activate_situation = situation:mrb13_offlimits_management
+		}
+	}
+}

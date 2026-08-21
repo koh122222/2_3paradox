@@ -1,0 +1,9 @@
+mrb13_cossacks_preserve_tribal_life = {
+	estate = cossacks_estate
+
+	country_modifier = {
+		cossacks_estate_target_satisfaction = small_privilege_target_satisfaction
+		global_cossacks_estate_power = 0.25
+	}
+
+}

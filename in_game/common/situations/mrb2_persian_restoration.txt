@@ -74,6 +74,7 @@ mrb2_persian_restoration = {
 			}
 			c:IRA = {
 				mrb2_annex_persian_region_effect = yes
+				mrb2_update_persian_administration_control_effect = yes
 				if = {
 					limit = { has_country_modifier = mrb2_unification_of_persia_modifier }
 					remove_country_modifier = mrb2_unification_of_persia_modifier
@@ -87,6 +88,7 @@ mrb2_persian_restoration = {
 				unlock_policy_effect = { type = mrb2_persian_restoration_policy }
 				add_policy = policy:mrb2_persian_restoration_policy
 				lock_policy_effect = { type = mrb2_persian_unification_policy }
+				lock_policy_effect = { type = mrb2_persian_restoration_policy }
 				trigger_event_non_silently = mrb2_persia.2
 			}
 		}

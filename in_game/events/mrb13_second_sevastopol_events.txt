@@ -1,0 +1,51 @@
+namespace = mrb13_second_sevastopol
+
+mrb13_second_sevastopol.1 = {
+	type = country_event
+	title = mrb13_second_sevastopol.1.title
+	desc = mrb13_second_sevastopol.1.desc
+	outcome = positive
+	trigger = {
+		NOT = { has_variable = mrb13_second_sevastopol_process_concluded }
+		OR = {
+			tag = FRA
+			tag = POL
+			tag = TUR
+			tag = GEN
+			has_or_had_tag = MOS
+			tag = SPA
+			tag = HAB
+			tag = SWE
+			tag = MAM
+			tag = PER
+		}
+	}
+	option = {
+		name = mrb13_second_sevastopol.1.a
+		set_variable = mrb13_second_sevastopol_process_concluded
+		add_prestige = 5
+
+		# Russia receives the Settler Chancellery as part of the settlement.
+		if = {
+			limit = {
+				has_or_had_tag = MOS
+				capital = {
+					NOT = {
+						region = {
+							any_location_in_region = {
+								has_building = building_type:mrb13_russian_population_office
+							}
+						}
+					}
+				}
+			}
+			capital = {
+				construct_building = {
+					building_type = building_type:mrb13_russian_population_office
+					cost_multiplier = 0
+					instant = yes
+				}
+			}
+		}
+	}
+}

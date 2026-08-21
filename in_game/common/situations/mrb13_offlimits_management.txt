@@ -1,0 +1,16 @@
+mrb13_offlimits_management = {
+	monthly_spawn_chance = 0
+	hint_tag = hint_mrb13_offlimits_management
+
+	can_start = {
+		country_exists = c:IRA
+		c:IRA = { has_or_had_tag = ORM }
+	}
+
+	can_end = { always = no }
+
+	visible = {
+		tag = IRA
+		has_or_had_tag = ORM
+	}
+}

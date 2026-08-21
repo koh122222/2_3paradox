@@ -1,0 +1,6 @@
+TRY_REPLACE:chancery_records = {
+	age = age_2_renaissance
+	icon = smooth_administration
+	chancery_cap_level = 1
+	requires = government_size_renaissance
+}

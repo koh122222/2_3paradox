@@ -1,0 +1,7 @@
+mrb13_pharmaceutical_workshop_advance = {
+	age = age_3_discovery
+	icon = pharmacology_advance
+	requires = rgo_logistics_discovery
+
+	unlock_building = mrb13_pharmaceutical_workshop
+}

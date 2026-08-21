@@ -1,0 +1,7 @@
+mrb13_hospital_administration_advance = {
+	age = age_2_renaissance
+	icon = anatomy_advance
+	requires = anatomy_advance
+
+	unlock_building = mrb13_medical_collegium
+}

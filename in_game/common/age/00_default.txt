@@ -198,6 +198,7 @@ age_4_reformation = {
 		levy_maintenance_modifier = 0.5
 
 		lack_of_control_impact_on_warscore = 0.6
+		global_war_score_efficiency = 0.2
 
 		global_navy_levy_size_modifier = -1.0
 
@@ -272,7 +273,7 @@ age_5_absolutism = {
 
 		lack_of_control_impact_on_warscore = 0.8
 
-		global_war_score_efficiency = 0.2
+		global_war_score_efficiency = 0.4
 
 		construction_center_max_level = 2
 
@@ -341,7 +342,7 @@ age_6_revolutions = {
 
 	months_for_exploration_spread = 300
 	unique = {
-		global_war_score_efficiency = 0.5
+		global_war_score_efficiency = 0.6
 		subject_loyalty = -30
 	}
 

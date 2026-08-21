@@ -1,0 +1,41 @@
+mrb13_cossack_sich = {
+	audio_tier = 2
+	is_foreign = no
+	max_levels = 1
+	pop_type = soldiers
+
+	employment_size = bailiff_employment
+	category = government_category
+
+	rural_settlement = yes
+	expensive = yes
+	build_time = rural_build_time
+
+	forbidden_for_estates = yes
+
+	country_potential = {
+		has_estate_privilege = estate_privilege:mrb13_cossacks_preserve_tribal_life
+	}
+
+	location_potential = {
+		is_overseas_for_owner = no
+		any_pop = {
+			culture ?= culture:cossack_culture
+		}
+	}
+
+	unique_production_methods = {
+		bailiff_input = {
+			paper = 0.1
+			tools = 0.15
+			weaponry = 0.25
+			stone = 0.1
+			category = building_maintenance
+		}
+	}
+
+	modifier = {
+		local_tribal_promotion = -5.0
+		local_tribesmen_pop_growth = 0.05
+	}
+}

@@ -70,3 +70,47 @@ mrb2_persia.2 = {
 		name = mrb2_persia.2.b
 	}
 }
+
+mrb2_persia.3 = {
+	type = country_event
+	hidden = yes
+	title = empty_text
+	desc = empty_text
+
+	trigger = {
+		tag = IRA
+		has_or_had_tag = ORM
+		has_policy = mrb2_persian_restoration_policy
+	}
+
+	immediate = {
+		mrb2_update_persian_administration_control_effect = yes
+	}
+
+	option = { name = empty_text }
+}
+
+mrb2_persia.4 = {
+	type = country_event
+	hidden = yes
+	title = empty_text
+	desc = empty_text
+
+	trigger = {
+		tag = IRA
+		has_or_had_tag = ORM
+		has_policy = mrb2_persian_restoration_policy
+		OR = {
+			NOT = { has_variable = mrb2_persia_administration_calculation_version }
+			var:mrb2_persia_administration_calculation_version < 9
+		}
+	}
+
+	immediate = {
+		mrb2_update_persian_administration_control_effect = yes
+		lock_policy_effect = { type = mrb2_persian_unification_policy }
+		lock_policy_effect = { type = mrb2_persian_restoration_policy }
+	}
+
+	option = { name = empty_text }
+}

@@ -20,8 +20,8 @@
 	
 	unique_production_methods = {
 		natural_medicine_apotechary = {
-			wild_game = 0.0461
-			fiber_crops = 0.1853
+			wild_game = 0.10142
+			fiber_crops = 0.40766
 			
 			produced = medicaments
 			output = 0.5
@@ -30,8 +30,8 @@
 			category = guild_input
 		}
 		ancient_medicine_apotechary = {
-			mercury = 0.0181
-			ivory = 0.0906
+			mercury = 0.03982
+			ivory = 0.19932
 
 			produced = medicaments
 			output = 0.5
@@ -44,6 +44,49 @@
 	modifier = {
 		local_monthly_food_modifier = -0.01
 	}
+}
+
+mrb13_pharmaceutical_workshop = {
+	audio_tier = 2
+	is_foreign = no
+	pop_type = burghers
+	max_levels = workshop_max_level
+	startup_ramp_target = workshop_startup_ramp_target
+
+	category = basic_industry_category
+	employment_size = workshop_employment
+
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	build_time = workshop_build_time
+
+	unique_production_methods = {
+		mrb13_natural_medicine_workshop = {
+			wild_game = 0.08114
+			fiber_crops = 0.32613
+
+			produced = medicaments
+			output = 0.5
+
+			debug_max_profit = workshop_profit_margin
+			category = workshop_input
+		}
+		mrb13_ancient_medicine_workshop = {
+			mercury = 0.03186
+			ivory = 0.15946
+
+			produced = medicaments
+			output = 0.5
+
+			debug_max_profit = workshop_profit_margin
+			category = workshop_input
+		}
+	}
+
+	construction_demand = workshop_construction
+	obsolete = apothecary
 }
 
 jewelry_guild = { #Jewelers, goldmiths, etc
