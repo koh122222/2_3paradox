@@ -7,6 +7,7 @@ yearly_country_pulse = {
 monthly_country_pulse = {
 	on_actions = {
 		mrb2_persia_administration_save_migration_pulse
+		mrb2_persian_disappointment_pulse
 	}
 }
 
@@ -32,4 +33,11 @@ mrb2_persia_administration_save_migration_pulse = {
 		}
 	}
 	events = { mrb2_persia.4 }
+}
+
+mrb2_persian_disappointment_pulse = {
+	trigger = {
+		tag = IRA
+	}
+	events = { mrb2_persia.5 }
 }

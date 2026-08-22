@@ -114,3 +114,24 @@ mrb2_persia.4 = {
 
 	option = { name = empty_text }
 }
+
+mrb2_persia.5 = {
+	type = country_event
+	fire_only_once = yes
+	title = mrb2_persia.5.title
+	desc = mrb2_persia.5.desc
+	outcome = negative
+
+	trigger = {
+		tag = IRA
+	}
+
+	option = {
+		name = mrb2_persia.5.a
+		add_country_modifier = {
+			modifier = mrb2_persian_disappointment
+			years = 5
+			mode = replace
+		}
+	}
+}

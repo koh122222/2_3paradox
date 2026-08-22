@@ -16,3 +16,7 @@ mrb2_persia_shia_transition = {
 	tolerance_heretic = 3
 	global_pop_conversion_speed = 0.01
 }
+
+mrb2_persian_disappointment = {
+	production_efficiency = -0.20
+}

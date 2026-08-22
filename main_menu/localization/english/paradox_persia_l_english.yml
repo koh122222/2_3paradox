@@ -59,3 +59,8 @@
  mrb2_zagros_citadel_desc: "A fortress guarding mountain passes with a reinforced garrison, prepared to endure a long siege."
  mrb2_zagros_citadel_maintenance: "Zagros Citadel Maintenance"
  mrb2_zagros_citadel_limit_tt: "Fewer than 6 Zagros Frontier Citadels are built or under construction."
+ mrb2_persia.5.title: "Persian Disillusionment"
+ mrb2_persia.5.desc: "Recent upheaval and the reconstruction of the realm have shaken the confidence of artisans and merchants. Production will recover, but it will take time."
+ mrb2_persia.5.a: "Endure this period"
+ mrb2_persian_disappointment: "Persian Disillusionment"
+ STATIC_MODIFIER_NAME_mrb2_persian_disappointment: "Persian Disillusionment"

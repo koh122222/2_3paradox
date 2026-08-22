@@ -1,0 +1,265 @@
+TRY_REPLACE:proclaim_decree = {
+	type = internationalorganization
+
+	ai_tick = monthly
+	ai_tick_frequency = 6
+
+	automation_tick = monthly
+	automation_tick_frequency = 3
+	player_automated_category = diplomacy
+
+	potential = {
+		exists = international_organization:middle_kingdom
+		scope:actor = { is_member_of_international_organization = international_organization:middle_kingdom }
+	}
+
+	allow = {
+		international_organization:middle_kingdom = { 
+			var:celestial_authority > 10
+		}
+		scope:actor = { is_leader_of_international_organization = international_organization:middle_kingdom }
+	}
+	
+	price = price:proclaim_decree
+
+	cooldown = {
+		type = proclaim_decree
+		years = 5
+	}
+
+	select_trigger = {
+		looking_for_a = international_organization
+		source = actor
+		target_flag = recipient
+		name = "choose_international_organization"
+		column = {
+			data = name
+		}
+		visible = {
+			international_organization_type = international_organization_type:middle_kingdom
+		}
+	}
+
+	select_trigger = {
+		looking_for_a = policy
+		target_flag = target_policy
+		name = "select_decree"
+		none_available_msg_key = "no_decrees"
+		column = {
+			data = policy_name_desc
+		}
+		visible = {
+			OR = {
+				this = policy:expand_palace_bureaucracy_decree
+				this = policy:conduct_population_census_decree
+				this = policy:increase_tariff_control_decree
+				this = policy:issue_great_warnings_decree
+				this = policy:commence_infrastructure_works_decree
+				this = policy:reinforce_fortifications_decree
+			}
+		}
+	}
+
+	effect = {
+		if = {
+			limit = { exists = scope:target_policy }
+			scope:actor = {
+				change_celestial_authority = { value = celestial_authority_mild_penalty }
+				add_decree_monthly_celestial_authority_loss = yes
+				if = {
+					limit = { modifier:allow_righteousness = yes }
+					add_righteousness = righteousness_mild_bonus
+				}
+				if = {
+					limit = { scope:target_policy = policy:expand_palace_bureaucracy_decree }
+					add_country_modifier = {
+						modifier = expanded_palace_bureaucracy
+						years = 5
+						size = {
+							value = 1
+							add = {
+								value = modifier:country_cabinet_efficiency
+								divide = 2
+							}
+						}
+					}
+				}
+				if = {
+					limit = { scope:target_policy = policy:conduct_population_census_decree }
+					add_country_modifier = {
+						modifier = conducted_population_census
+						years = 5
+						size = {
+							value = 1
+							add = {
+								value = modifier:country_cabinet_efficiency
+								divide = 2
+							}
+							if = {
+								limit = {
+									scope:actor = { has_country_modifier = strengthened_ministry_of_revenue }
+								}
+								add = 0.5
+							}
+						}
+					}
+				}
+				if = {
+					limit = { scope:target_policy = policy:increase_tariff_control_decree }
+					add_country_modifier = {
+						modifier = increased_tariff_control
+						years = 5
+						size = {
+							value = 1
+							add = {
+								value = modifier:country_cabinet_efficiency
+								divide = 2
+							}
+						}
+					}
+				}
+				if = {
+					limit = { scope:target_policy = policy:issue_great_warnings_decree }
+					add_country_modifier = {
+						modifier = issued_great_warnings
+						years = 5
+						size = {
+							value = 1
+							add = {
+								value = modifier:country_cabinet_efficiency
+								divide = 2
+							}
+							if = {
+								limit = {
+									scope:actor = { has_country_modifier = strengthened_ministry_of_justice }
+								}
+								add = 0.1
+							}
+						}
+					}
+				}
+				if = {
+					limit = { scope:target_policy = policy:commence_infrastructure_works_decree }
+					add_country_modifier = {
+						modifier = commenced_infrastructure_works
+						years = 5
+						size = {
+							value = 1
+							add = {
+								value = modifier:country_cabinet_efficiency
+								divide = 2
+							}
+							if = {
+								limit = {
+									scope:actor = { has_country_modifier = strengthened_ministry_of_works }
+								}
+								add = 0.1
+							}
+						}
+					}
+				}
+				if = {
+					limit = { scope:target_policy = policy:reinforce_fortifications_decree }
+					add_country_modifier = {
+						modifier = reinforced_fortifications
+						years = 5
+						size = {
+							value = 1
+							add = {
+								value = modifier:country_cabinet_efficiency
+								divide = 2
+							}
+							if = {
+								limit = {
+									scope:actor = { has_country_modifier = strengthened_ministry_of_war }
+								}
+								add = 0.1
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 0
+		if = {
+			limit = { exists = scope:target_policy }
+			if = {
+				limit = { scope:target_policy = policy:expand_palace_bureaucracy_decree }
+				add = "scope:actor.add_static_modifier_utility(expanded_palace_bureaucracy)"
+			}
+			if = {
+				limit = { scope:target_policy = policy:conduct_population_census_decree }
+				add = "scope:actor.add_static_modifier_utility(conducted_population_census)"
+			}
+			if = {
+				limit = { scope:target_policy = policy:increase_tariff_control_decree }
+				add = "scope:actor.add_static_modifier_utility(increased_tariff_control)"
+			}
+			if = {
+				limit = { scope:target_policy = policy:issue_great_warnings_decree }
+				add = "scope:actor.add_static_modifier_utility(issued_great_warnings)"
+			}
+			if = {
+				limit = { scope:target_policy = policy:commence_infrastructure_works_decree }
+				add = "scope:actor.add_static_modifier_utility(commenced_infrastructure_works)"
+			}
+			if = {
+				limit = { scope:target_policy = policy:reinforce_fortifications_decree }
+				add = "scope:actor.add_static_modifier_utility(reinforced_fortifications)"
+			}
+		}
+		add = {
+			desc = "CAN_EASILY_AFFORD"
+			if = {
+				limit = {
+					scope:actor = {
+						gold >= {
+							value = scope:actor.monthly_income_trade_and_tax
+							multiply = 6
+						}
+					}
+				}
+				value = 50
+			}
+		}
+		add = {
+			desc = "IS_BANKRUPT_TOOLTIP"
+			if = {
+				limit = {	
+					scope:actor = { 
+						is_during_bankruptcy = yes
+					}
+				}
+				value = -1000
+			}
+		}
+		add = {
+			desc = "IS_AT_WAR"
+			if = {
+				limit = {	
+					scope:actor = { 
+						at_war = yes
+					}
+				}
+				value = -25
+			}
+		}
+		add = {
+			desc = "CAN_NOT_AFFORD"
+			if = {
+				limit = {
+					scope:actor = {
+						gold <= {
+							value = scope:actor.monthly_income_trade_and_tax
+							multiply = 6
+						}
+					}
+				}
+				value = -60
+			}
+		}
+	}
+}
