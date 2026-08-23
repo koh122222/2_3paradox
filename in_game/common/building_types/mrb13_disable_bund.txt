@@ -1,0 +1,40 @@
+TRY_REPLACE:bund = {
+	audio_tier = 4
+	is_special = yes
+	is_foreign = no
+	max_levels = bund_cap
+	pop_type = laborers
+
+	category = infrastructure_category
+	employment_size = small_peasant_employment
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	country_potential = { always = no }
+
+	location_potential = {
+		OR = {
+			has_river = yes
+			is_adjacent_to_lake = yes
+		}
+	}
+
+	build_time = infrastructure_build_time
+
+	unique_production_methods = {
+		bund_maintenance = {
+			tools = 0.1
+			category = building_maintenance
+		}
+	}
+
+	construction_demand = village_construction
+
+	modifier = {
+		local_population_capacity = 0.5
+		local_monthly_food_modifier = 0.1
+	}
+}

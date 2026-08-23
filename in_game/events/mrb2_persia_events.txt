@@ -102,7 +102,7 @@ mrb2_persia.4 = {
 		has_policy = mrb2_persian_restoration_policy
 		OR = {
 			NOT = { has_variable = mrb2_persia_administration_calculation_version }
-			var:mrb2_persia_administration_calculation_version < 9
+			var:mrb2_persia_administration_calculation_version < 12
 		}
 	}
 

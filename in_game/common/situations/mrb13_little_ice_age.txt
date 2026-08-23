@@ -30,7 +30,7 @@
 					}
 				}
 			}
-			add_extended_winter = situation:little_ice_age
+			add_extended_winter = this
 		}
 
 	
