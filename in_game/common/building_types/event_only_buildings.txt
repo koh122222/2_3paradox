@@ -1388,6 +1388,7 @@ bodrum_castle = {
 	}
 
 	is_foreign = yes
+		free_building_levels = 1
 
 	modifier = {
 		manpower_to_building_owner = 0.005
@@ -1457,6 +1458,7 @@ chi_macau_port = {
 	audio_tier = 3
 	is_special = yes
 	is_foreign = yes
+		free_building_levels = 1
 	stronger_power_projection = no
 	max_levels = guild_max_level
 	need_good_relation = yes
@@ -1499,6 +1501,7 @@ chi_missionary_building = {
 	audio_tier = 2
 	is_special = yes
 	is_foreign = yes
+		free_building_levels = 1
 	max_levels = 1
 	pop_type = clergy
 	
@@ -1795,6 +1798,7 @@ dutch_trade_outpost = {
 	audio_tier = 3
 	is_special = yes
 	is_foreign = yes
+		free_building_levels = 1
 	pop_type = burghers
 	employment_size = foreign_trade_employment
 	pop_size_created = foreign_trade_employment
@@ -2389,6 +2393,7 @@ swi_collegium_helveticum = {
 	audio_tier = 4
 	is_special = yes
 	is_foreign = yes
+		free_building_levels = 1
 	pop_type = clergy
 	max_levels = 1
 	
@@ -3042,6 +3047,7 @@ ori_portuguese_quarters = {
 	audio_tier = 3
 	is_special = yes
 	is_foreign = yes
+		free_building_levels = 1
 	pop_type = burghers
 	employment_size = foreign_trade_employment
 	pop_size_created = foreign_trade_employment

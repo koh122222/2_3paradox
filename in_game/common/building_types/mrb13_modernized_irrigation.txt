@@ -37,7 +37,7 @@ modernized_irrigation = {
 	modifier = {
 		local_population_capacity = 2.5
 		local_monthly_food_modifier = 0.05
-		free_building_levels = 2
+		free_building_levels = 3
 		local_monthly_development_modifier = 0.04
 		local_burghers_desired_pop = 0.05
 	}

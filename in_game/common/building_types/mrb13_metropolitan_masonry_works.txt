@@ -16,9 +16,16 @@ metropolitan_masonry_works = {
 	}
 	unique_production_methods = {
 		metropolitan_masonry_production = {
-			clay = 4
-			tools = 0.5
-			liquor = 1
+			clay = 11
+			liquor = 0.2
+			produced = masonry
+			output = 4.5
+			debug_max_profit = 0.5
+			category = building_maintenance
+		}
+		metropolitan_masonry_stone_production = {
+			stone = 5.5
+			liquor = 0.2
 			produced = masonry
 			output = 4.5
 			debug_max_profit = 0.5
