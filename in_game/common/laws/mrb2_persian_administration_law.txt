@@ -21,16 +21,23 @@ mrb2_persian_administration_law = {
 	}
 
 	mrb2_persian_restoration_policy = {
-		years = 2
+		# The policy is set exclusively by the restoration situation.
+		# It must activate immediately when its dynamic scale is refreshed.
+		years = 0
 
 		location_modifier = {
+			scale = {
+				# Refreshed annually on Persian locations by the restoration effect.
+				# A location modifier is evaluated in location scope, not country scope.
+				value = var:mrb2_persia_restoration_control_location_scale
+			}
 			potential_trigger = {
 				custom_tooltip = {
 					text = mrb2_locations_in_persia_gain_tt
 					region = region:persia_region
 				}
 			}
-			local_max_control = 0.20
+			local_max_control = 1
 		}
 	}
 }

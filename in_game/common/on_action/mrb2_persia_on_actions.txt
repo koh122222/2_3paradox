@@ -1,0 +1,43 @@
+yearly_country_pulse = {
+	on_actions = {
+		mrb2_persia_administration_yearly_pulse
+	}
+}
+
+monthly_country_pulse = {
+	on_actions = {
+		mrb2_persia_administration_save_migration_pulse
+		mrb2_persian_disappointment_pulse
+	}
+}
+
+mrb2_persia_administration_yearly_pulse = {
+	trigger = {
+		tag = IRA
+		has_or_had_tag = ORM
+		has_policy = mrb2_persian_restoration_policy
+	}
+	events = { mrb2_persia.3 }
+}
+
+# Old saves have no calculation variables. This narrow one-time pulse initializes
+# them on the next month after loading, then the yearly pulse takes over.
+mrb2_persia_administration_save_migration_pulse = {
+	trigger = {
+		tag = IRA
+		has_or_had_tag = ORM
+		has_policy = mrb2_persian_restoration_policy
+		OR = {
+			NOT = { has_variable = mrb2_persia_administration_calculation_version }
+			var:mrb2_persia_administration_calculation_version < 12
+		}
+	}
+	events = { mrb2_persia.4 }
+}
+
+mrb2_persian_disappointment_pulse = {
+	trigger = {
+		tag = IRA
+	}
+	events = { mrb2_persia.5 }
+}

@@ -1,0 +1,20 @@
+namespace = mrb13_art_sale
+
+mrb13_art_sale.1 = {
+	type = country_event
+	title = mrb13_art_sale.1.title
+	desc = mrb13_art_sale.1.desc
+	is_triggered_only = yes
+
+	option = {
+		name = mrb13_art_sale.1.a
+		if = {
+			limit = { uses_government_power = republican_tradition }
+			add_republican_tradition = -30
+		}
+		else_if = {
+			limit = { uses_government_power = legitimacy }
+			add_legitimacy = -30
+		}
+	}
+}

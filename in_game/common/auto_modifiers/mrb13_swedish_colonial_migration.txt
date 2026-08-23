@@ -1,0 +1,4 @@
+mrb13_swedish_colonial_migration = {
+	potential_trigger = { has_or_had_tag = SWE }
+	colonial_migration_size_modifier = 0.5
+}

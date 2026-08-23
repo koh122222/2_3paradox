@@ -1,0 +1,22 @@
+monthly_country_pulse = {
+	on_actions = { mrb13_second_sevastopol_monthly_pulse }
+}
+
+mrb13_second_sevastopol_monthly_pulse = {
+	trigger = {
+		NOT = { has_variable = mrb13_second_sevastopol_process_concluded }
+		OR = {
+			tag = FRA
+			tag = POL
+			tag = TUR
+			tag = GEN
+			has_or_had_tag = MOS
+			tag = SPA
+			tag = HAB
+			tag = SWE
+			tag = MAM
+			tag = PER
+		}
+	}
+	events = { mrb13_second_sevastopol.1 }
+}

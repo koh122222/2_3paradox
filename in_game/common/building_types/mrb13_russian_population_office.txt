@@ -34,11 +34,11 @@ mrb13_russian_population_office = {
 		}
 	}
 
-	build_time = 30
+	build_time = 365
 	construction_demand = mrb13_russian_population_office_construction
 
 	modifier = {
-		local_migration_attraction = 3.0
+		local_migration_attraction = 0.5
 	}
 
 	unique_production_methods = {

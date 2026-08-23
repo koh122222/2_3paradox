@@ -1,0 +1,50 @@
+namespace = mrb13_great_britain
+
+mrb13_great_britain.1 = {
+	type = country_event
+	title = mrb13_great_britain.1.title
+	desc = mrb13_great_britain.1.desc
+	outcome = positive
+	trigger = {
+		tag = GBR
+		OR = {
+			NOT = { has_variable = mrb13_great_britain_cultural_settlement_version }
+			var:mrb13_great_britain_cultural_settlement_version < 1
+		}
+	}
+	option = {
+		name = mrb13_great_britain.1.a
+		# Cultural views are mutable at runtime; make the change only once Great Britain exists.
+		culture:english = {
+			set_cultural_view = { target = culture:northumbrian value = kindred }
+			reverse_set_cultural_view = { target = culture:northumbrian value = kindred }
+			set_cultural_view = { target = culture:scottish value = kindred }
+			reverse_set_cultural_view = { target = culture:scottish value = kindred }
+			set_cultural_view = { target = culture:welsh value = kindred }
+			reverse_set_cultural_view = { target = culture:welsh value = kindred }
+			set_cultural_view = { target = culture:cornish value = kindred }
+			reverse_set_cultural_view = { target = culture:cornish value = kindred }
+			set_cultural_view = { target = culture:highland value = kindred }
+			reverse_set_cultural_view = { target = culture:highland value = kindred }
+			set_cultural_view = { target = culture:anglo_irish value = kindred }
+			reverse_set_cultural_view = { target = culture:anglo_irish value = kindred }
+			set_cultural_view = { target = culture:irish value = positive }
+			reverse_set_cultural_view = { target = culture:irish value = positive }
+		}
+
+		every_subject = {
+			limit = {
+				capital ?= {
+					OR = {
+						region = region:great_britain_region
+						region = region:ireland_region
+					}
+				}
+			}
+			add_country_modifier = { modifier = mrb13_british_subject_annexation_protection years = -1 mode = add }
+		}
+
+		# Marks both newly formed countries and campaigns that predate this event.
+		set_variable = { name = mrb13_great_britain_cultural_settlement_version value = 1 }
+	}
+}

@@ -1,0 +1,4 @@
+mrb13_trade_vs_tax_societal_value_move = {
+	value = societal_value_monthly_move
+	multiply = 1.5
+}

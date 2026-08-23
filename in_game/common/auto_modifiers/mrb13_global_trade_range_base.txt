@@ -1,0 +1,4 @@
+mrb13_global_trade_range_base = {
+	potential_trigger = { always = yes }
+	trade_range = -50
+}

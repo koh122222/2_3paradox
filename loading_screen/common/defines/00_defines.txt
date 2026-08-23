@@ -1862,7 +1862,7 @@ NEconomy = {
 	COURT_SPENDING_FRACTON = 0.1
 	DIPLOMATIC_SPENDING_FRACTION = 0.1
 
-	PRIVATEER_STEAL_MONEY_FACTOR = 0.01
+	PRIVATEER_STEAL_MONEY_FACTOR = 0.02
 	PRIVATEER_OPINION_INCOME_FLOOR = 5.0			# Min monthly income (ducats) used as anchor when scaling the place-privateers opinion hit; prevents tiny/bleeding countries from blowing up the divisor.
 	PRIVATEER_OPINION_FULL_IMPACT_FRACTION = 0.10	# Fraction of victim's monthly income stolen by a single placement that yields the full opinion_placed_privateers bias value. Smaller plunder scales linearly down to zero.
 
@@ -2063,7 +2063,7 @@ NDiplomacy = {
 	STABILITY_BLOCK_THRESHOLD = -50
 	
 	STAB_HIT_GOOD_PEACE = -10
-	SELL_CORE_STABILITY_COST = -20 # Stability lost per core location sold diplomatically
+	SELL_CORE_STABILITY_COST = 0 # Stability lost per core location sold diplomatically
 	SELL_CORE_REBEL_MODIFIER_YEARS = 10 # Duration in years of the rebel growth modifier after selling a core
 	
 	#additive base values

@@ -1,0 +1,175 @@
+situation_panel = {
+	blockoverride "situation_top_subheader_content" {}
+
+	blockoverride "situation_panel_main_content" {
+		vbox = {
+			layoutpolicy_horizontal = expanding
+			spacing = 8
+			widget = {
+				layoutpolicy_horizontal = expanding
+				size = { 510 72 }
+				using = bg_dark_paper_card
+				using = bg_cabinet_card_frame
+				text_multi = {
+					margin = { 12 8 }
+					size = { 486 56 }
+					fontsize = 18
+					autoresize = no
+					multiline = yes
+					text = "mrb13_offlimits_management_overview"
+				}
+			}
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				using = bg_dark_paper_card
+				using = bg_cabinet_card_frame
+				widget = {
+					layoutpolicy_horizontal = expanding
+					size = { 510 34 }
+					using = bg_card_header_01_military
+					text_single = { margin = { 10 7 } text = "mrb13_offlimits_management_controls" }
+				}
+				button_regular = {
+					margin = { 12 8 }
+					layoutpolicy_horizontal = expanding
+					size = { -1 28 }
+					enabled = yes
+					text = "mrb13_offlimits_toggle_france"
+					action_tooltip = {
+						on_action = "[GetScriptedGui('mrb13_offlimits_toggle_france').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]"
+					}
+				}
+				button_regular = {
+					margin = { 12 8 }
+					layoutpolicy_horizontal = expanding
+					size = { -1 28 }
+					enabled = yes
+					text = "mrb13_offlimits_toggle_castile"
+					action_tooltip = {
+						on_action = "[GetScriptedGui('mrb13_offlimits_toggle_castile').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]"
+					}
+				}
+				button_regular = {
+					margin = { 12 8 }
+					layoutpolicy_horizontal = expanding
+					size = { -1 28 }
+					enabled = yes
+					text = "mrb13_offlimits_toggle_england"
+					action_tooltip = {
+						on_action = "[GetScriptedGui('mrb13_offlimits_toggle_england').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]"
+					}
+				}
+				button_regular = {
+					margin = { 12 8 }
+					layoutpolicy_horizontal = expanding
+					size = { -1 28 }
+					enabled = yes
+					text = "mrb13_offlimits_toggle_austria"
+					action_tooltip = {
+						on_action = "[GetScriptedGui('mrb13_offlimits_toggle_austria').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]"
+					}
+				}
+				button_regular = {
+					margin = { 12 8 }
+					layoutpolicy_horizontal = expanding
+					size = { -1 28 }
+					enabled = yes
+					text = "mrb13_offlimits_toggle_moscow"
+					action_tooltip = {
+						on_action = "[GetScriptedGui('mrb13_offlimits_toggle_moscow').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]"
+					}
+				}
+				button_regular = {
+					margin = { 12 8 }
+					layoutpolicy_horizontal = expanding
+					size = { -1 28 }
+					enabled = yes
+					text = "mrb13_offlimits_toggle_poland"
+					action_tooltip = {
+						on_action = "[GetScriptedGui('mrb13_offlimits_toggle_poland').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]"
+					}
+				}
+				button_regular = {
+					margin = { 12 8 }
+					layoutpolicy_horizontal = expanding
+					size = { -1 28 }
+					enabled = yes
+					text = "mrb13_offlimits_toggle_ottomans"
+					action_tooltip = {
+						on_action = "[GetScriptedGui('mrb13_offlimits_toggle_ottomans').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]"
+					}
+				}
+				button_regular = {
+					margin = { 12 8 }
+					layoutpolicy_horizontal = expanding
+					size = { -1 28 }
+					enabled = yes
+					text = "mrb13_offlimits_toggle_vijayanagar"
+					action_tooltip = {
+						on_action = "[GetScriptedGui('mrb13_offlimits_toggle_vijayanagar').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]"
+					}
+				}
+				button_regular = {
+					margin = { 12 8 }
+					layoutpolicy_horizontal = expanding
+					size = { -1 28 }
+					enabled = yes
+					text = "mrb13_offlimits_toggle_majapahit"
+					action_tooltip = {
+						on_action = "[GetScriptedGui('mrb13_offlimits_toggle_majapahit').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]"
+					}
+				}
+				button_regular = {
+					margin = { 12 8 }
+					layoutpolicy_horizontal = expanding
+					size = { -1 28 }
+					enabled = yes
+					text = "mrb13_offlimits_toggle_mamluks"
+					action_tooltip = {
+						on_action = "[GetScriptedGui('mrb13_offlimits_toggle_mamluks').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]"
+					}
+				}
+				button_regular = {
+					margin = { 12 8 }
+					layoutpolicy_horizontal = expanding
+					size = { -1 28 }
+					enabled = yes
+					text = "mrb13_offlimits_toggle_japan"
+					action_tooltip = {
+						on_action = "[GetScriptedGui('mrb13_offlimits_toggle_japan').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]"
+					}
+				}
+				button_regular = {
+					margin = { 12 8 }
+					layoutpolicy_horizontal = expanding
+					size = { -1 28 }
+					enabled = yes
+					text = "mrb13_offlimits_toggle_italy"
+					action_tooltip = {
+						on_action = "[GetScriptedGui('mrb13_offlimits_toggle_italy').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]"
+					}
+				}
+				button_regular = {
+					margin = { 12 8 }
+					layoutpolicy_horizontal = expanding
+					size = { -1 28 }
+					enabled = yes
+					text = "mrb13_offlimits_toggle_persia"
+					action_tooltip = {
+						on_action = "[GetScriptedGui('mrb13_offlimits_toggle_persia').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]"
+					}
+				}
+				button_regular = {
+					margin = { 12 8 }
+					layoutpolicy_horizontal = expanding
+					size = { -1 28 }
+					enabled = yes
+					text = "mrb13_offlimits_toggle_sweden"
+					action_tooltip = {
+						on_action = "[GetScriptedGui('mrb13_offlimits_toggle_sweden').Execute(GuiScope.SetRoot(SituationView.GetPlayer.MakeScope).End)]"
+					}
+				}
+			}
+		}
+	}
+}

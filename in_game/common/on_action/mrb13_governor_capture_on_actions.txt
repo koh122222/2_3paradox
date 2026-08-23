@@ -1,0 +1,34 @@
+# Alternative governors are state administration buildings and do not transfer to a new owner.
+on_location_changed_owner = {
+	on_actions = {
+		mrb13_destroy_governor_on_owner_change
+	}
+}
+
+mrb13_destroy_governor_on_owner_change = {
+	trigger = {
+		any_buildings_in_location = {
+			OR = {
+				building_type = building_type:mrb13_town_governor
+				building_type = building_type:mrb13_minor_governor
+				building_type = building_type:mrb13_town_naval_governor
+			}
+		}
+	}
+
+	effect = {
+		every_buildings_in_location = {
+			limit = {
+				OR = {
+					building_type = building_type:mrb13_town_governor
+					building_type = building_type:mrb13_minor_governor
+					building_type = building_type:mrb13_town_naval_governor
+				}
+			}
+			save_temporary_scope_as = mrb13_captured_governor
+			PREV = {
+				destroy_building = scope:mrb13_captured_governor
+			}
+		}
+	}
+}

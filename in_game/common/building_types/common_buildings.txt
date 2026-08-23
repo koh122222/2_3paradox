@@ -539,10 +539,8 @@ clay_pit = {
 	unique_production_methods = {
 		clay_pit_maintenance = {
 			produced = clay
-			output = 6
-			tools = 0.5
-			lumber = 1
-			liquor = 1
+			output = 1
+			lumber = 0.2778
 			category = building_maintenance
 			debug_max_profit = rural_profit_margin
 		}

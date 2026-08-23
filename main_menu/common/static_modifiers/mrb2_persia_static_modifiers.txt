@@ -8,7 +8,25 @@ mrb2_restoration_of_persia_modifier = {
 	}
 }
 
+# Retained empty solely so old saves can remove the temporary location modifier.
+mrb2_persian_administration_control_modifier = {
+}
+
+# Offsets Qanat Garden benefits according to the annual Iranian-culture share.
+# The modifier size equals garden levels times the missing effectiveness.
+mrb2_qanat_gardens_cultural_efficiency_penalty = {
+	local_population_capacity = -25.0
+	local_population_capacity_modifier = -0.10
+	local_population_growth = -0.0005
+	local_monthly_development_modifier = -0.05
+	local_monthly_prosperity = -0.0001
+}
+
 mrb2_persia_shia_transition = {
 	tolerance_heretic = 3
 	global_pop_conversion_speed = 0.01
+}
+
+mrb2_persian_disappointment = {
+	global_production_efficiency = -0.20
 }

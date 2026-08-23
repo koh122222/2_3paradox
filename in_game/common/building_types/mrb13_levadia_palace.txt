@@ -1,0 +1,17 @@
+mrb13_levadia_palace = {
+	audio_tier = 3
+	is_special = yes
+	is_foreign = no
+	pop_type = nobles
+	max_levels = 1
+	category = government_category
+	employment_size = 0.01
+	town = yes
+	city = yes
+	megalopolis = yes
+	forbidden_for_estates = yes
+	location_potential = { this = location:theodoro }
+	country_potential = { has_or_had_tag = MOS }
+	modifier = { local_proximity_source = 5 }
+	graphical_tags = { palace }
+}

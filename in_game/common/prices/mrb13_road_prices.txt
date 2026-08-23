@@ -1,0 +1,16 @@
+# KOH: revised road construction prices.
+TRY_REPLACE:build_gravel_road = {
+	gold = 10
+}
+
+TRY_REPLACE:build_paved_road = {
+	gold = 50
+}
+
+TRY_REPLACE:build_modern_road = {
+	gold = 200
+}
+
+TRY_REPLACE:build_railroad = {
+	gold = 500
+}

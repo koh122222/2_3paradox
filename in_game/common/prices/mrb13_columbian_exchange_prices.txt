@@ -1,0 +1,4 @@
+mrb13_move_valuable_new_world_good = {
+	prestige = 70
+	gold = 100
+}

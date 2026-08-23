@@ -1,0 +1,18 @@
+mrb13_resettlement_chamber_construction = {
+	cloth = 10
+	masonry = 10
+	lumber = 10
+	tools = 5
+	goods_gold = 0.2
+
+	category = building_construction
+}
+
+mrb13_exile_outpost_construction = {
+	paper = 0.2
+	tools = 0.3
+	weaponry = 0.5
+	stone = 0.2
+
+	category = building_construction
+}

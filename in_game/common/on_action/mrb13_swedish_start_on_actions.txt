@@ -1,0 +1,9 @@
+on_game_start = {
+	on_actions = { mrb13_swedish_stockholm_city }
+}
+
+mrb13_swedish_stockholm_city = {
+	effect = {
+		location:stockholm = { change_location_rank_effect = { location_rank = location_rank:city } }
+	}
+}

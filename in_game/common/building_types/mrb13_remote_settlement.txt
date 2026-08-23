@@ -83,8 +83,8 @@ mrb13_swedish_remote_settlement = {
 	construction_demand = mrb13_remote_settlement_construction
 
 	modifier = {
-		local_max_control = 0.2
-		local_market_access = 0.3
+		local_max_control = 0.3
+		local_market_access = 0.4
 		local_trade_protection_factor = 0.2
 	}
 

@@ -1,0 +1,23 @@
+mrb13_privateer_hire_gold = {
+	value = 100
+	if = {
+		limit = { current_age_or_later = { age = age_6_revolutions } }
+		add = { value = current_year subtract = 1337 multiply = 5 }
+	}
+	else_if = {
+		limit = { current_age_or_later = { age = age_5_absolutism } }
+		add = { value = current_year subtract = 1337 multiply = 4 }
+	}
+	else_if = {
+		limit = { current_age_or_later = { age = age_4_reformation } }
+		add = { value = current_year subtract = 1337 multiply = 3 }
+	}
+	else_if = {
+		limit = { current_age_or_later = { age = age_3_discovery } }
+		add = { value = current_year subtract = 1337 multiply = 2 }
+	}
+	else_if = {
+		limit = { current_age_or_later = { age = age_2_renaissance } }
+		add = { value = current_year subtract = 1337 }
+	}
+}

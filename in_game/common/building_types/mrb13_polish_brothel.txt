@@ -1,0 +1,39 @@
+brothel = {
+	audio_tier = 1
+	is_foreign = no
+	stronger_power_projection = no
+	max_levels = 2
+	need_good_relation = no
+	pop_type = peasants
+
+	category = cultural_category
+
+	employment_size = pirate_building_employment
+
+	rural_settlement = no
+	town = yes
+	city = yes
+	megalopolis = yes
+	country_potential = {
+		OR = {
+			has_reform = government_reform:pirate_brethren_reform
+			has_or_had_tag = POL
+		}
+	}
+	location_potential = {
+		OR = {
+			is_coastal = yes
+			this = location:warsaw
+		}
+	}
+
+	possible_production_methods = {
+		brothel_maintenance
+	}
+	build_time = pirate_build_time
+
+	modifier = {
+		local_disease_resistance = -0.05
+		local_population_growth = 0.0005
+	}
+}

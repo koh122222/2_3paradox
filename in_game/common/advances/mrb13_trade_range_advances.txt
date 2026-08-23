@@ -1,0 +1,23 @@
+TRY_REPLACE:trade_range_advance_age_3 = {
+	age = age_3_discovery
+	icon = ship_building_advance
+	requires = maritime_advance_age_3
+	trade_range = 125
+}
+
+TRY_REPLACE:merchants_and_trade = {
+	age = age_2_renaissance
+	icon = global_trade_routes_advance
+	requires = banking_advance
+	naval_range = 250
+	trade_range = 125
+	colonial_range = 250
+	ai_preference_tags = { exploration }
+}
+
+TRY_REPLACE:trade_range_advance_age_2 = {
+	age = age_2_renaissance
+	icon = zmw_merchant_taxes
+	requires = standardized_coins
+	trade_range = 125
+}

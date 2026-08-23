@@ -1,0 +1,20 @@
+mrb13_east_asia_institution_growth_penalty = {
+	potential_trigger = {
+		original_capital ?= {
+			OR = {
+				region = region:indonesia_region
+				region = region:indochina_region
+				region = region:south_china_region
+				region = region:east_china_region
+				region = region:north_china_region
+				region = region:west_china_region
+				region = region:korea_region
+				region = region:japan_region
+				region = region:manchuria_region
+				region = region:melanesia_region
+			}
+		}
+	}
+
+	global_institution_growth_modifier = -0.5
+}

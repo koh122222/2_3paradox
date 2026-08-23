@@ -1,0 +1,4 @@
+mrb13_levadia_palace_bonus = {
+	game_data = { category = country }
+	global_crown_estate_power = 0.01
+}

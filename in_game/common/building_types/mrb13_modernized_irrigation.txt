@@ -27,6 +27,7 @@ modernized_irrigation = {
 		modernized_irrigation_maintenance = {
 			tools = 0.2
 			pottery = 0.6
+			masonry = 0.1
 			category = building_maintenance
 		}
 	}
@@ -36,7 +37,8 @@ modernized_irrigation = {
 	modifier = {
 		local_population_capacity = 2.5
 		local_monthly_food_modifier = 0.05
-		free_building_levels = 1
+		free_building_levels = 2
+		local_monthly_development_modifier = 0.04
 		local_burghers_desired_pop = 0.05
 	}
 

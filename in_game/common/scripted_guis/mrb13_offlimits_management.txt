@@ -1,0 +1,321 @@
+mrb13_offlimits_toggle_france = {
+	scope = country
+	effect = {
+		root = {
+			if = {
+				limit = { has_variable = mrb13_offlimits_france_active }
+				every_country = {
+					limit = { has_or_had_tag = FRA }
+					remove_country_modifier = mrb13_france_offlimits
+				}
+				remove_variable = mrb13_offlimits_france_active
+			}
+			else = {
+				every_country = {
+					limit = { has_or_had_tag = FRA }
+					add_country_modifier = { modifier = mrb13_france_offlimits months = -1 mode = replace }
+				}
+				set_variable = { name = mrb13_offlimits_france_active value = 1 }
+			}
+		}
+	}
+}
+
+mrb13_offlimits_toggle_castile = {
+	scope = country
+	effect = {
+		root = {
+			if = {
+				limit = { has_variable = mrb13_offlimits_castile_active }
+				every_country = {
+					limit = { has_or_had_tag = CAS }
+					remove_country_modifier = mrb13_france_offlimits
+				}
+				remove_variable = mrb13_offlimits_castile_active
+			}
+			else = {
+				every_country = {
+					limit = { has_or_had_tag = CAS }
+					add_country_modifier = { modifier = mrb13_france_offlimits months = -1 mode = replace }
+				}
+				set_variable = { name = mrb13_offlimits_castile_active value = 1 }
+			}
+		}
+	}
+}
+
+mrb13_offlimits_toggle_england = {
+	scope = country
+	effect = {
+		root = {
+			if = {
+				limit = { has_variable = mrb13_offlimits_england_active }
+				every_country = {
+					limit = { has_or_had_tag = ENG }
+					remove_country_modifier = mrb13_france_offlimits
+				}
+				remove_variable = mrb13_offlimits_england_active
+			}
+			else = {
+				every_country = {
+					limit = { has_or_had_tag = ENG }
+					add_country_modifier = { modifier = mrb13_france_offlimits months = -1 mode = replace }
+				}
+				set_variable = { name = mrb13_offlimits_england_active value = 1 }
+			}
+		}
+	}
+}
+
+mrb13_offlimits_toggle_austria = {
+	scope = country
+	effect = {
+		root = {
+			if = {
+				limit = { has_variable = mrb13_offlimits_austria_active }
+				every_country = {
+					limit = { has_or_had_tag = HAB }
+					remove_country_modifier = mrb13_france_offlimits
+				}
+				remove_variable = mrb13_offlimits_austria_active
+			}
+			else = {
+				every_country = {
+					limit = { has_or_had_tag = HAB }
+					add_country_modifier = { modifier = mrb13_france_offlimits months = -1 mode = replace }
+				}
+				set_variable = { name = mrb13_offlimits_austria_active value = 1 }
+			}
+		}
+	}
+}
+
+mrb13_offlimits_toggle_moscow = {
+	scope = country
+	effect = {
+		root = {
+			if = {
+				limit = { has_variable = mrb13_offlimits_moscow_active }
+				every_country = {
+					limit = { has_or_had_tag = MOS }
+					remove_country_modifier = mrb13_france_offlimits
+				}
+				remove_variable = mrb13_offlimits_moscow_active
+			}
+			else = {
+				every_country = {
+					limit = { has_or_had_tag = MOS }
+					add_country_modifier = { modifier = mrb13_france_offlimits months = -1 mode = replace }
+				}
+				set_variable = { name = mrb13_offlimits_moscow_active value = 1 }
+			}
+		}
+	}
+}
+
+mrb13_offlimits_toggle_poland = {
+	scope = country
+	effect = {
+		root = {
+			if = {
+				limit = { has_variable = mrb13_offlimits_poland_active }
+				every_country = {
+					limit = { has_or_had_tag = POL }
+					remove_country_modifier = mrb13_france_offlimits
+				}
+				remove_variable = mrb13_offlimits_poland_active
+			}
+			else = {
+				every_country = {
+					limit = { has_or_had_tag = POL }
+					add_country_modifier = { modifier = mrb13_france_offlimits months = -1 mode = replace }
+				}
+				set_variable = { name = mrb13_offlimits_poland_active value = 1 }
+			}
+		}
+	}
+}
+
+mrb13_offlimits_toggle_ottomans = {
+	scope = country
+	effect = {
+		root = {
+			if = {
+				limit = { has_variable = mrb13_offlimits_ottomans_active }
+				every_country = {
+					limit = { has_or_had_tag = TUR }
+					remove_country_modifier = mrb13_france_offlimits
+				}
+				remove_variable = mrb13_offlimits_ottomans_active
+			}
+			else = {
+				every_country = {
+					limit = { has_or_had_tag = TUR }
+					add_country_modifier = { modifier = mrb13_france_offlimits months = -1 mode = replace }
+				}
+				set_variable = { name = mrb13_offlimits_ottomans_active value = 1 }
+			}
+		}
+	}
+}
+
+mrb13_offlimits_toggle_vijayanagar = {
+	scope = country
+	effect = {
+		root = {
+			if = {
+				limit = { has_variable = mrb13_offlimits_vijayanagar_active }
+				every_country = {
+					limit = { has_or_had_tag = VIJ }
+					remove_country_modifier = mrb13_france_offlimits
+				}
+				remove_variable = mrb13_offlimits_vijayanagar_active
+			}
+			else = {
+				every_country = {
+					limit = { has_or_had_tag = VIJ }
+					add_country_modifier = { modifier = mrb13_france_offlimits months = -1 mode = replace }
+				}
+				set_variable = { name = mrb13_offlimits_vijayanagar_active value = 1 }
+			}
+		}
+	}
+}
+
+mrb13_offlimits_toggle_majapahit = {
+	scope = country
+	effect = {
+		root = {
+			if = {
+				limit = { has_variable = mrb13_offlimits_majapahit_active }
+				every_country = {
+					limit = { has_or_had_tag = MAJ }
+					remove_country_modifier = mrb13_france_offlimits
+				}
+				remove_variable = mrb13_offlimits_majapahit_active
+			}
+			else = {
+				every_country = {
+					limit = { has_or_had_tag = MAJ }
+					add_country_modifier = { modifier = mrb13_france_offlimits months = -1 mode = replace }
+				}
+				set_variable = { name = mrb13_offlimits_majapahit_active value = 1 }
+			}
+		}
+	}
+}
+
+mrb13_offlimits_toggle_mamluks = {
+	scope = country
+	effect = {
+		root = {
+			if = {
+				limit = { has_variable = mrb13_offlimits_mamluks_active }
+				every_country = {
+					limit = { has_or_had_tag = MAM }
+					remove_country_modifier = mrb13_france_offlimits
+				}
+				remove_variable = mrb13_offlimits_mamluks_active
+			}
+			else = {
+				every_country = {
+					limit = { has_or_had_tag = MAM }
+					add_country_modifier = { modifier = mrb13_france_offlimits months = -1 mode = replace }
+				}
+				set_variable = { name = mrb13_offlimits_mamluks_active value = 1 }
+			}
+		}
+	}
+}
+
+mrb13_offlimits_toggle_japan = {
+	scope = country
+	effect = {
+		root = {
+			if = {
+				limit = { has_variable = mrb13_offlimits_japan_active }
+				every_country = {
+					limit = { OR = { has_or_had_tag = JAP has_or_had_tag = SHI } }
+					remove_country_modifier = mrb13_france_offlimits
+				}
+				remove_variable = mrb13_offlimits_japan_active
+			}
+			else = {
+				every_country = {
+					limit = { OR = { has_or_had_tag = JAP has_or_had_tag = SHI } }
+					add_country_modifier = { modifier = mrb13_france_offlimits months = -1 mode = replace }
+				}
+				set_variable = { name = mrb13_offlimits_japan_active value = 1 }
+			}
+		}
+	}
+}
+
+mrb13_offlimits_toggle_italy = {
+	scope = country
+	effect = {
+		root = {
+			if = {
+				limit = { has_variable = mrb13_offlimits_italy_active }
+				every_country = {
+					limit = { has_or_had_tag = GEN }
+					remove_country_modifier = mrb13_france_offlimits
+				}
+				remove_variable = mrb13_offlimits_italy_active
+			}
+			else = {
+				every_country = {
+					limit = { has_or_had_tag = GEN }
+					add_country_modifier = { modifier = mrb13_france_offlimits months = -1 mode = replace }
+				}
+				set_variable = { name = mrb13_offlimits_italy_active value = 1 }
+			}
+		}
+	}
+}
+
+mrb13_offlimits_toggle_persia = {
+	scope = country
+	effect = {
+		root = {
+			if = {
+				limit = { has_variable = mrb13_offlimits_persia_active }
+				every_country = {
+					limit = { has_or_had_tag = ORM }
+					remove_country_modifier = mrb13_france_offlimits
+				}
+				remove_variable = mrb13_offlimits_persia_active
+			}
+			else = {
+				every_country = {
+					limit = { has_or_had_tag = ORM }
+					add_country_modifier = { modifier = mrb13_france_offlimits months = -1 mode = replace }
+				}
+				set_variable = { name = mrb13_offlimits_persia_active value = 1 }
+			}
+		}
+	}
+}
+
+mrb13_offlimits_toggle_sweden = {
+	scope = country
+	effect = {
+		root = {
+			if = {
+				limit = { has_variable = mrb13_offlimits_sweden_active }
+				every_country = {
+					limit = { has_or_had_tag = SWE }
+					remove_country_modifier = mrb13_france_offlimits
+				}
+				remove_variable = mrb13_offlimits_sweden_active
+			}
+			else = {
+				every_country = {
+					limit = { has_or_had_tag = SWE }
+					add_country_modifier = { modifier = mrb13_france_offlimits months = -1 mode = replace }
+				}
+				set_variable = { name = mrb13_offlimits_sweden_active value = 1 }
+			}
+		}
+	}
+}

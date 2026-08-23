@@ -1,6 +1,6 @@
 farming_settlement_advance = {
 	age = age_3_discovery
-	requires = rural_rgo_disc_advance
+	requires = green_vitriol
 
 	unlock_building = farming_settlement
 	unlock_building = modernized_irrigation

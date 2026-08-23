@@ -1,0 +1,77 @@
+TRY_REPLACE:hospital = {
+	audio_tier = 2
+	is_foreign = no
+	pop_type = clergy
+	max_levels = 1
+	employment_size = clergy_medical_employment
+
+	category = infrastructure_category
+
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	location_potential = {
+		development >= 20
+	}
+
+	expensive = yes
+	build_time = generic_town_build_time
+
+	possible_production_methods = {
+		hospital_maintenance
+	}
+	graphical_tags = { medium_religious }
+
+	construction_demand = town_building_construction
+
+	modifier = {
+		local_disease_resistance = 0.1
+		local_life_expectancy = 5
+	}
+}
+
+mrb13_medical_collegium = {
+	audio_tier = 3
+	is_foreign = no
+	pop_type = clergy
+	max_levels = 1
+	employment_size = clergy_medical_employment
+
+	category = infrastructure_category
+
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	location_potential = {
+		development >= 20
+	}
+
+	allow = {
+		has_building = building_type:hospital
+	}
+
+	country_potential = {
+		has_advance = mrb13_hospital_administration_advance
+	}
+
+	expensive = yes
+	build_time = generic_town_build_time
+	graphical_tags = { medium_religious }
+	price = mrb13_medical_collegium_price
+	construction_demand = town_building_construction
+
+	modifier = {
+		free_building_levels = 1
+		local_disease_resistance = 0.3
+		local_monthly_development_modifier = 0.05
+	}
+
+	unique_production_methods = {
+		mrb13_medical_collegium_maintenance = {
+			medicaments = 4
+			category = building_maintenance
+		}
+	}
+}

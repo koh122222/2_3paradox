@@ -1,0 +1,8 @@
+mrb13_resettlement_administration_advance = {
+	age = age_2_renaissance
+	icon = smooth_administration
+	requires = chancery_records
+
+	unlock_building = mrb13_resettlement_chamber
+	unlock_building = mrb13_exile_outpost
+}

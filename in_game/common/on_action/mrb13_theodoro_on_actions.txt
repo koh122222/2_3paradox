@@ -1,0 +1,14 @@
+monthly_country_pulse = {
+	on_actions = { mrb13_theodoro_levadia_check }
+}
+
+mrb13_theodoro_levadia_check = {
+	trigger = {
+		has_or_had_tag = MOS
+		location:theodoro = {
+			owner = root
+			NOT = { has_building = building_type:mrb13_levadia_palace }
+		}
+	}
+	events = { mrb13_theodoro.1 }
+}

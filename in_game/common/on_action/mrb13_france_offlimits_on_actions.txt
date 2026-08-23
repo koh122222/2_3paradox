@@ -1,65 +1,11 @@
-on_game_start = {
-	on_actions = {
-		mrb13_france_offlimits_setup
-	}
-}
-
 monthly_country_pulse = {
 	on_actions = {
-		mrb13_france_offlimits_remove_france
-		mrb13_france_offlimits_remove_ottoman
 		mrb13_france_offlimits_war_check
-	}
-}
-
-yearly_country_pulse = {
-	on_actions = {
-		mrb13_france_offlimits_remove_france
-		mrb13_france_offlimits_remove_ottoman
-	}
-}
-
-mrb13_france_offlimits_setup = {
-	effect = {
-		if = {
-			limit = {
-				country_exists = c:FRA
-				c:FRA = {
-					has_country_modifier = mrb13_france_offlimits
-				}
-			}
-			c:FRA = {
-				remove_country_modifier = mrb13_france_offlimits
-			}
-		}
-	}
-}
-
-mrb13_france_offlimits_remove_france = {
-	trigger = {
-		tag = FRA
-		has_country_modifier = mrb13_france_offlimits
-	}
-
-	effect = {
-		remove_country_modifier = mrb13_france_offlimits
-	}
-}
-
-mrb13_france_offlimits_remove_ottoman = {
-	trigger = {
-		tag = TUR
-		has_country_modifier = mrb13_france_offlimits
-	}
-
-	effect = {
-		remove_country_modifier = mrb13_france_offlimits
 	}
 }
 
 mrb13_france_offlimits_war_check = {
 	trigger = {
-		tag = TUR
 		has_country_modifier = mrb13_france_offlimits
 		at_war = yes
 	}

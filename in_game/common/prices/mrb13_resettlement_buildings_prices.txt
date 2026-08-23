@@ -1,0 +1,7 @@
+mrb13_resettlement_chamber_price = {
+	gold = 800
+}
+
+mrb13_exile_outpost_price = {
+	gold = 200
+}

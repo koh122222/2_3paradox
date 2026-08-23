@@ -1,0 +1,19 @@
+# KOH: Global Trade can dynamically spawn only in major markets.
+TRY_REPLACE:global_trade_plausible_location = {
+	has_institution = institution:banking
+	has_institution = institution:new_world
+
+	OR = {
+		continent = continent:europe
+		sub_continent = sub_continent:north_africa
+	}
+
+	is_market_center = yes
+	OR = {
+		location_rank = location_rank:city
+		location_rank = location_rank:megalopolis
+	}
+	market = {
+		total_goods_value_traded > 5000
+	}
+}
