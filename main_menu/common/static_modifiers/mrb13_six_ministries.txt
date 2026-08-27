@@ -1,0 +1,22 @@
+TRY_REPLACE:strengthened_ministry_of_revenue = {
+	game_data = { category = country }
+	minting_income_factor = 0.1
+	minting_inflation_threshold = 0.01
+	global_estate_max_tax = 0.05
+}
+
+TRY_REPLACE:strengthened_ministry_of_war = {
+	game_data = { category = country }
+	army_maintenance_efficiency = 0.1
+	fort_maintenance_efficiency = 0.1
+	army_logistics_distance_modifier = 0.1
+}
+
+TRY_REPLACE:strengthened_ministry_of_works = {
+	game_data = { category = country }
+	build_gravel_road_cost_modifier = -0.1
+	build_paved_road_cost_modifier = -0.1
+	build_modern_road_cost_modifier = -0.1
+	build_railroad_cost_modifier = -0.1
+	global_build_buildings_efficiency = 0.1
+}

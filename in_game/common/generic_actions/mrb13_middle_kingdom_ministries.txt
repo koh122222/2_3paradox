@@ -1,6 +1,0 @@
-# "Three Departments" no longer unlocks the Ministry strengthening action.
-TRY_REPLACE:strengthen_ministry = {
-	potential = {
-		always = no
-	}
-}
