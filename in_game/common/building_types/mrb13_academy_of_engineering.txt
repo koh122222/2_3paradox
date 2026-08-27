@@ -13,16 +13,17 @@ academy_of_engineering = {
 	modifier = {
 		local_masonry_output_modifier = 1.0
 		local_sand_output_modifier = 1.0
-		local_stone_output_modifier = 1.0
 		local_clay_output_modifier = 1.0
 		local_nobles_desired_pop = 0.1
 	}
 	unique_production_methods = {
 		academy_of_engineering_maintenance = {
-			instruments = 5
+			tools = 5
 			wine = 1
 			fine_cloth = 1
 			paper = 3
+			furniture = 1
+			books = 1
 			category = building_maintenance
 		}
 	}
