@@ -209,7 +209,7 @@ chartered_companies = {
 	
 	requires = safe_exploration_techniques_advance
 	
-	trade_range = 200
+	trade_range = 400
 	colonial_range = 1000
 
 	unlock_casus_belli = cb_exploration

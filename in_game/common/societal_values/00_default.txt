@@ -174,7 +174,8 @@ mercantilism_vs_free_trade = {
 		global_merchant_power = 0.2
 		
 		global_trade_protection_factor = -0.25
-		selling_efficiency = small_trade_efficiency_bonus		
+		selling_efficiency = small_trade_efficiency_bonus
+		foreign_export_from_market_efficiency = 0.1
 		
 		
 

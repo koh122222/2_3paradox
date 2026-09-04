@@ -13,6 +13,8 @@
  mrb13_offlimits_toggle_moscow: "Off-limits: Moscow / Russia"
  mrb13_offlimits_toggle_poland: "Off-limits: Poland"
  mrb13_offlimits_toggle_ottomans: "Off-limits: Ottomans"
+ AUTO_MODIFIER_NAME_mrb13_major_player_antagonism_decay: "Accelerated Antagonism Decay"
+ AUTO_MODIFIER_DESC_mrb13_major_player_antagonism_decay: "Temporary sources of antagonism decay much faster."
  AUTO_MODIFIER_NAME_mrb13_asia_institution_penalty: "Asian Institutional Isolation"
  AUTO_MODIFIER_DESC_mrb13_asia_institution_penalty: "This country is isolated from institution spread and pays far more to embrace institutions."
  STATIC_MODIFIER_NAME_mrb13_low_legitimacy_crown_control_penalty: "Low Legitimacy"

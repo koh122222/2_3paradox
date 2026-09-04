@@ -1,0 +1,9 @@
+TRY_REPLACE:commenced_infrastructure_works = {
+	game_data = {
+		category = country
+	}
+	global_road_building_time = -0.05
+	build_gravel_road_cost_modifier = -0.10
+	build_paved_road_cost_modifier = -0.10
+	build_modern_road_cost_modifier = -0.10
+}
