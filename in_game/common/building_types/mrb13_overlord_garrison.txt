@@ -1,0 +1,56 @@
+mrb13_overlord_garrison = {
+	audio_tier = 2
+	is_foreign = yes
+	want_foreign_pop_created = no
+	pop_type = soldiers
+	max_levels = 1
+	category = military_category
+	forbidden_for_estates = yes
+
+	# One hundred soldiers. This foreign building employs the subject's local population.
+	employment_size = 0.1
+
+	rural_settlement = yes
+	town = yes
+	city = yes
+	megalopolis = yes
+
+	price = mrb13_overlord_garrison_price
+	build_time = soldier_building
+	expensive = yes
+
+	# Only the overlord building it in one of their own subjects may place it.
+	location_potential = {
+		owner ?= {
+			is_subject = yes
+			overlord ?= scope:actor
+		}
+	}
+	allow = {
+		owner ?= {
+			is_subject = yes
+			overlord ?= scope:actor
+		}
+	}
+
+	unique_production_methods = {
+		mrb13_overlord_garrison_maintenance = {
+			weaponry = 0.5
+			cloth = 0.5
+			category = building_maintenance
+		}
+	}
+	construction_demand = soldier_building_construction
+
+	modifier = {
+		cannot_upgrade_location = yes
+		can_recruit_regiment_in_this_location = yes
+	}
+
+	# The garrison turns the location into a permanently rural subject outpost.
+	on_built = {
+		location = {
+			change_location_rank = location_rank:rural_settlement
+		}
+	}
+}

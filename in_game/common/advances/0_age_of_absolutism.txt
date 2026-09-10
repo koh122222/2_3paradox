@@ -433,6 +433,7 @@ artists_advance_absolutism = {
 absolutist_court = {
 	age = age_5_absolutism
 	icon = court_accounting
+	unlock_building = mrb13_overlord_garrison
 	
 	global_crown_estate_power = 0.05
 	estate_power_from_cabinet = -0.5

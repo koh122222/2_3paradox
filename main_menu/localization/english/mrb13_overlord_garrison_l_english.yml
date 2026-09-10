@@ -1,0 +1,5 @@
+l_english:
+ mrb13_overlord_garrison: "Overlord Garrison"
+ mrb13_overlord_garrison_desc: "A foreign military outpost that can be constructed only by an overlord in a subject's location. It employs 100 Soldiers, reduces the location to a Rural Settlement upon construction, and prevents future rank upgrades."
+ mrb13_overlord_garrison_maintenance: "Overlord Garrison Maintenance"
+ mrb13_overlord_garrison_maintenance_desc: "Consumes 0.5 Weaponry and 0.5 Cloth."
