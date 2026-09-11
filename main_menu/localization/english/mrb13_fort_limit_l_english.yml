@@ -1,0 +1,5 @@
+﻿l_english:
+ AUTO_MODIFIER_NAME_mrb13_fort_limit_base: "Base Fort Limit"
+ AUTO_MODIFIER_DESC_mrb13_fort_limit_base: "The base fort limit is increased to 10."
+ AUTO_MODIFIER_NAME_mrb13_fort_limit_location_scaling: "Fort Limit Location Rebalance"
+ AUTO_MODIFIER_DESC_mrb13_fort_limit_location_scaling: "Reduces the base location contribution to fort limit to 0.018 per location."

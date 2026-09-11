@@ -42,7 +42,7 @@ megalopolis = {
 	
 	country_modifier = {
 		monthly_doom = 0.06
-		fort_limit = 2
+		fort_limit = 0.2
 	}
 	
 	capital_country_modifier = {
@@ -114,7 +114,7 @@ city = {
 	
 	country_modifier = {
 		monthly_doom = 0.03
-		fort_limit = 1
+		fort_limit = 0.1
 	}
 	
 	allow = {

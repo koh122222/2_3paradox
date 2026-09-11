@@ -1,0 +1,30 @@
+﻿# Replaces the sixth-age Imperialism war goal and adds its fifth-age counterpart.
+TRY_REPLACE:take_capital_imperial = {
+	type = take_capital
+
+	attacker = {
+		conquer_cost = 0.02
+		subjugate_cost = 0.02
+	}
+
+	defender = {
+		conquer_cost = 0.02
+		subjugate_cost = 0.02
+	}
+	ticking_war_score = 0.5
+}
+
+take_capital_early_imperial = {
+	type = take_capital
+
+	attacker = {
+		conquer_cost = 0.3
+		subjugate_cost = 0.3
+	}
+
+	defender = {
+		conquer_cost = 0.3
+		subjugate_cost = 0.3
+	}
+	ticking_war_score = 0.5
+}

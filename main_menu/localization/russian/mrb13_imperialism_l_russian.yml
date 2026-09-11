@@ -1,0 +1,6 @@
+﻿l_russian:
+ cb_early_imperialism: "Ранний империализм"
+ cb_early_imperialism_PROV: "Претензии ранних империалистов на [COUNTRY.Custom('CL_ACC')|L]"
+ cb_early_imperialism_desc: "Наше государство достаточно сильно, чтобы расширять свои владения силой."
+ war_goal_take_capital_early_imperial: "$generic_war_goal_take_capital$"
+ war_goal_take_capital_early_imperial_desc: "[Concept('war_goal', 'Цель войны')|e] — захватить вражескую столицу."

@@ -1,0 +1,9 @@
+﻿# City walls use this maintenance method, including the special variants that
+# explicitly reference city_walls_maintenance.
+city_walls_maintenance = {
+	stone = 1.0
+	tools = 0.5
+	weaponry = 1.0
+	tar = 0.25
+	category = building_maintenance
+}

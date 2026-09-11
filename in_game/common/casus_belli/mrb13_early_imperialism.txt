@@ -1,0 +1,26 @@
+﻿# Fifth-age counterpart to Imperialism.
+cb_early_imperialism = {
+	years = 25
+
+	create_visible = {
+		current_age = age_5_absolutism
+	}
+
+	create_enabled = {
+		OR = {
+			country_rank = country_rank:rank_kingdom
+			country_rank = country_rank:rank_empire
+		}
+		current_age = age_5_absolutism
+		is_subject = no
+	}
+
+	war_goal_type = take_capital_early_imperial
+
+	ai_will_do = {
+		add = {
+			desc = "BASE"
+			value = 10
+		}
+	}
+}

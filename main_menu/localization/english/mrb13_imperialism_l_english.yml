@@ -1,0 +1,6 @@
+﻿l_english:
+ cb_early_imperialism: "Early Imperialism"
+ cb_early_imperialism_PROV: "Early imperialist claim on [COUNTRY.GetName]"
+ cb_early_imperialism_desc: "Our state is powerful enough to expand its dominion by force."
+ war_goal_take_capital_early_imperial: "$generic_war_goal_take_capital$"
+ war_goal_take_capital_early_imperial_desc: "The [war_goal|e] is to take the enemy capital."

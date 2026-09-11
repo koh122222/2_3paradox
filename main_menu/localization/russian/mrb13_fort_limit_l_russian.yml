@@ -1,0 +1,5 @@
+﻿l_russian:
+ AUTO_MODIFIER_NAME_mrb13_fort_limit_base: "Базовый предел крепостей"
+ AUTO_MODIFIER_DESC_mrb13_fort_limit_base: "Базовый предел крепостей увеличен до 10."
+ AUTO_MODIFIER_NAME_mrb13_fort_limit_location_scaling: "Перебалансировка предела крепостей от районов"
+ AUTO_MODIFIER_DESC_mrb13_fort_limit_location_scaling: "Снижает базовый вклад районов в предел крепостей до 0,018 за район."
