@@ -3,13 +3,13 @@ TRY_REPLACE:take_capital_imperial = {
 	type = take_capital
 
 	attacker = {
-		conquer_cost = 0.02
-		subjugate_cost = 0.02
+		conquer_cost = 0.05
+		subjugate_cost = 0.05
 	}
 
 	defender = {
-		conquer_cost = 0.02
-		subjugate_cost = 0.02
+		conquer_cost = 0.05
+		subjugate_cost = 0.05
 	}
 	ticking_war_score = 0.5
 }

@@ -1,0 +1,4 @@
+mrb13_war_exhaustion_cap = {
+	potential_trigger = { always = yes }
+	max_war_exhaustion = 10
+}

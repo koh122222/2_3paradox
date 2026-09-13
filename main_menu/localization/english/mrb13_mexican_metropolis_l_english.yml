@@ -1,0 +1,6 @@
+﻿l_english:
+ STATIC_MODIFIER_NAME_mrb13_mexican_metropolis_foundation: "Mexican Metropolitan Expansion"
+ STATIC_MODIFIER_DESC_mrb13_mexican_metropolis_foundation: "The cost of founding a megalopolis is reduced by 80%, and construction is 50% faster."
+ mrb13_mexican_metropolis.1.title: "Mexican Metropolitan Expansion"
+ mrb13_mexican_metropolis.1.desc: "A concerted program of urban development will allow Mexico to build a new generation of great cities."
+ mrb13_mexican_metropolis.1.a: "Begin the expansion"

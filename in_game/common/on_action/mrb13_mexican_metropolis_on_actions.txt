@@ -1,0 +1,66 @@
+monthly_country_pulse = {
+	on_actions = {
+		mrb13_mexican_metropolis_pulse
+		mrb13_raised_levies_debuff_pulse
+	}
+}
+
+# Guaranteed monthly check with no date limit. The event marks itself as resolved.
+mrb13_mexican_metropolis_pulse = {
+	trigger = {
+		tag = MEX
+		OR = {
+			NOT = { has_variable = mrb13_mexican_metropolis_foundation_version }
+			var:mrb13_mexican_metropolis_foundation_version < 1
+		}
+	}
+	events = { mrb13_mexican_metropolis.1 }
+}
+
+# Each raised levy subunit exposes its home location. Refresh a short-lived
+# age-specific modifier there, avoiding any scan of a country's locations.
+mrb13_raised_levies_debuff_pulse = {
+	trigger = { has_raised_army_levies = yes }
+	effect = {
+		if = {
+			limit = { current_age = age_3_discovery }
+			every_army = {
+				limit = { any_sub_unit = { is_levy = yes } }
+				every_sub_unit = {
+					limit = { is_levy = yes }
+					subunit_home = { add_location_modifier = { modifier = mrb13_raised_levies_age_3 days = 35 mode = replace } }
+				}
+			}
+		}
+		else_if = {
+			limit = { current_age = age_4_reformation }
+			every_army = {
+				limit = { any_sub_unit = { is_levy = yes } }
+				every_sub_unit = {
+					limit = { is_levy = yes }
+					subunit_home = { add_location_modifier = { modifier = mrb13_raised_levies_age_4 days = 35 mode = replace } }
+				}
+			}
+		}
+		else_if = {
+			limit = { current_age = age_5_absolutism }
+			every_army = {
+				limit = { any_sub_unit = { is_levy = yes } }
+				every_sub_unit = {
+					limit = { is_levy = yes }
+					subunit_home = { add_location_modifier = { modifier = mrb13_raised_levies_age_5 days = 35 mode = replace } }
+				}
+			}
+		}
+		else_if = {
+			limit = { current_age = age_6_revolutions }
+			every_army = {
+				limit = { any_sub_unit = { is_levy = yes } }
+				every_sub_unit = {
+					limit = { is_levy = yes }
+					subunit_home = { add_location_modifier = { modifier = mrb13_raised_levies_age_6 days = 35 mode = replace } }
+				}
+			}
+		}
+	}
+}

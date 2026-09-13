@@ -1,0 +1,2 @@
+﻿l_russian:
+ NUMBER_BUILDING: "#T Количество сооружений типа «[BuildingItem.GetBuildingType.GetNameWithNoTooltip]»#!"

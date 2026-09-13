@@ -281,6 +281,15 @@ fine_cloth_manufactory = {
 			category = guild_input
 			debug_max_profit = manufactory_profit_margin
 		}
+
+		fur_trim_manufactory_maintenance = {
+			fur = 1.25
+			produced = fine_cloth
+			output = 0.4
+
+			debug_max_profit = manufactory_profit_margin
+			category = guild_input
+		}
 	}
 
 	custom_tags = { midgame_manufactory }
@@ -337,6 +346,17 @@ fine_cloth_mill = {
 			category = mills_input
 		}
 
+	}
+
+	unique_production_methods = {
+		fur_trim_mill_maintenance = {
+			fur = 2.5
+			produced = fine_cloth
+			output = 0.8
+
+			debug_max_profit = mills_profit_margin
+			category = mills_input
+		}
 	}
 	
 	custom_tags = { lategame_manufactory }

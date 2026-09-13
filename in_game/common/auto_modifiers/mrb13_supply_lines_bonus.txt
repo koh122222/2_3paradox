@@ -1,0 +1,4 @@
+mrb13_supply_lines_bonus = {
+	potential_trigger = { has_advance = supply_lines }
+	army_logistics_distance = 25
+}

@@ -1,0 +1,24 @@
+namespace = mrb13_mexican_metropolis
+
+mrb13_mexican_metropolis.1 = {
+	type = country_event
+	title = mrb13_mexican_metropolis.1.title
+	desc = mrb13_mexican_metropolis.1.desc
+	outcome = positive
+	trigger = {
+		tag = MEX
+		OR = {
+			NOT = { has_variable = mrb13_mexican_metropolis_foundation_version }
+			var:mrb13_mexican_metropolis_foundation_version < 1
+		}
+	}
+	option = {
+		name = mrb13_mexican_metropolis.1.a
+		add_country_modifier = {
+			modifier = mrb13_mexican_metropolis_foundation
+			years = 20
+			mode = add
+		}
+		set_variable = { name = mrb13_mexican_metropolis_foundation_version value = 1 }
+	}
+}

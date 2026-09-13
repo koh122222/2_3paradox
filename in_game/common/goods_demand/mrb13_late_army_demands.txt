@@ -1,0 +1,109 @@
+# Late-era regiments consume 2.5 times the normal quantity of maintenance goods.
+mrb13_age_5_light_infantry_maintenance = {
+	firearms = 0.25
+	weaponry = 0.25
+	leather = 0.15
+	category = regiment_maintenance
+}
+mrb13_age_5_heavy_infantry_maintenance = {
+	firearms = 0.25
+	weaponry = 0.25
+	leather = 0.15
+	tools = 0.10
+	category = regiment_maintenance
+}
+mrb13_age_5_light_cavalry_maintenance = {
+	leather = 0.20
+	cloth = 0.20
+	horses = 1.25
+	weaponry = 0.25
+	category = regiment_maintenance
+}
+mrb13_age_5_heavy_cavalry_maintenance = {
+	leather = 0.25
+	weaponry = 0.50
+	cloth = 0.25
+	horses = 2.50
+	tools = 0.50
+	category = regiment_maintenance
+}
+mrb13_age_5_artillery_maintenance = {
+	cannons = 2.50
+	copper = 0.50
+	tin = 0.25
+	category = regiment_maintenance
+}
+mrb13_age_5_auxiliary_maintenance = {
+	paper = 0.10
+	medicaments = 0.10
+	tools = 0.10
+	leather = 0.10
+	salt = 0.125
+	category = regiment_maintenance
+}
+
+mrb13_age_6_light_infantry_maintenance = {
+	firearms = 0.25
+	weaponry = 0.25
+	leather = 0.15
+	category = regiment_maintenance
+}
+mrb13_age_6_heavy_infantry_maintenance = {
+	firearms = 0.25
+	weaponry = 0.25
+	leather = 0.15
+	tools = 0.10
+	category = regiment_maintenance
+}
+mrb13_age_6_light_cavalry_maintenance = {
+	leather = 0.20
+	cloth = 0.20
+	horses = 1.25
+	weaponry = 0.25
+	category = regiment_maintenance
+}
+mrb13_age_6_heavy_cavalry_maintenance = {
+	leather = 0.25
+	weaponry = 0.50
+	cloth = 0.25
+	horses = 2.50
+	tools = 0.50
+	category = regiment_maintenance
+}
+mrb13_age_6_artillery_maintenance = {
+	cannons = 2.50
+	copper = 0.50
+	tin = 0.25
+	category = regiment_maintenance
+}
+mrb13_age_6_auxiliary_maintenance = {
+	paper = 0.10
+	medicaments = 0.10
+	tools = 0.10
+	leather = 0.10
+	salt = 0.125
+	category = regiment_maintenance
+}
+
+mrb13_age_6_rifle_infantry_maintenance = {
+	firearms = 1.50
+	weaponry = 0.25
+	leather = 0.15
+	category = regiment_maintenance
+}
+mrb13_age_5_expensive_heavy_cavalry_maintenance = {
+	leather = 0.50
+	weaponry = 1.00
+	cloth = 0.50
+	horses = 5.00
+	tools = 1.00
+	category = regiment_maintenance
+}
+mrb13_age_6_expensive_heavy_cavalry_maintenance = {
+	leather = 0.50
+	weaponry = 1.00
+	cloth = 0.50
+	horses = 5.00
+	tools = 1.00
+	category = regiment_maintenance
+}

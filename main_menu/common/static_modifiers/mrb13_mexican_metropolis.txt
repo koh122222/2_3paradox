@@ -1,0 +1,5 @@
+mrb13_mexican_metropolis_foundation = {
+	game_data = { category = country }
+	megalopolis_upgrade_cost_modifier = -0.8
+	global_construction_speed = 0.5
+}

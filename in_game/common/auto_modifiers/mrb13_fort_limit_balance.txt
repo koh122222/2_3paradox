@@ -1,7 +1,7 @@
 ﻿# Fort limit rebalance. These modifiers adjust the vanilla base and location
 # scaling without replacing the full vanilla country auto-modifier file.
 mrb13_fort_limit_base = {
-	potential_trigger = { always = yes }
+	potential_trigger = { is_subject = no }
 	fort_limit = 9
 }
 

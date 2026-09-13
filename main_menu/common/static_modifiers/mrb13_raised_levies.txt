@@ -1,0 +1,24 @@
+# Added to the home location of each raised army-levy subunit.
+mrb13_raised_levies_age_3 = {
+	game_data = { category = location }
+	local_raw_material_output = -0.10
+	local_monthly_food_modifier = -0.10
+}
+
+mrb13_raised_levies_age_4 = {
+	game_data = { category = location }
+	local_raw_material_output = -0.30
+	local_monthly_food_modifier = -0.30
+}
+
+mrb13_raised_levies_age_5 = {
+	game_data = { category = location }
+	local_raw_material_output = -0.50
+	local_monthly_food_modifier = -0.50
+}
+
+mrb13_raised_levies_age_6 = {
+	game_data = { category = location }
+	local_raw_material_output = -0.70
+	local_monthly_food_modifier = -0.70
+}

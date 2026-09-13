@@ -313,6 +313,8 @@ military_revolution_advance = {
 	age = age_5_absolutism
 
 	possible_frontage_modifier = 0.10
+	num_local_governors = 1
+	num_naval_governors = 1
 	depth = 0
 	ai_weight = { add = 100 }
 

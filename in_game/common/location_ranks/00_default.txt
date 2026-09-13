@@ -55,7 +55,6 @@ megalopolis = {
 		population >= 200.000
 		modifier:cannot_upgrade_location = no
 		owner ?= {
-			is_subject = no
 			has_embraced_institution = institution:printing_press
 		}
 	}
